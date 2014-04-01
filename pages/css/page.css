@@ -1,0 +1,348 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.clr {
+  clear: both;
+  height: 0px;
+  line-height: 0px;
+}
+.clr-after {
+  clear: both;
+  height: 0px;
+  line-height: 0px;
+  display: block;
+  content: "";
+}
+#sky {
+  padding: 20px;
+}
+#sky .sky-wrapper {
+  margin: 0 auto;
+}
+#sky .sky-wrapper div {
+  float: left;
+}
+#sky .sky-wrapper ul {
+  float: right;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 32px;
+  line-height: 32px;
+}
+#sky .sky-wrapper ul li {
+  float: left;
+  border-left: 1px dotted #AAA;
+}
+#sky .sky-wrapper ul li a {
+  display: inline-block;
+  padding: 0 10px;
+  text-decoration: none;
+  color: #666;
+  font-size: 16px;
+}
+#sky .sky-wrapper ul li a:hover {
+  color: #333;
+  background-color: #DDD;
+}
+#sky .sky-wrapper ul:after {
+  clear: both;
+  height: 0px;
+  line-height: 0px;
+  display: block;
+  content: "";
+}
+#sky .sky-wrapper:after {
+  clear: both;
+  height: 0px;
+  line-height: 0px;
+  display: block;
+  content: "";
+}
+#sky .logo {
+  background: url(logo_32.png) no-repeat;
+  width: 32px;
+  height: 32px;
+}
+#sky .title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #999;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 10px;
+}
+body,
+font,
+td,
+form,
+p {
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0px;
+}
+body {
+  margin: 0;
+}
+#footer {
+  padding: 20px;
+  margin: 20px 0 0 0;
+  border-top: 1px solid #DDD;
+  min-height: 200px;
+}
+#footer .footer-wrapper {
+  margin: 0 auto;
+}
+#footer .footer-wrapper div {
+  float: left;
+}
+#footer .footer-wrapper ul {
+  float: left;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 32px;
+  line-height: 32px;
+}
+#footer .footer-wrapper ul li {
+  float: left;
+  border-left: 1px dotted #AAA;
+}
+#footer .footer-wrapper ul li a {
+  display: inline-block;
+  padding: 0 10px;
+  text-decoration: none;
+  color: #666;
+  font-size: 16px;
+}
+#footer .footer-wrapper ul li a:hover {
+  color: #333;
+  background-color: #AAA;
+}
+#footer .footer-wrapper ul:after {
+  clear: both;
+  height: 0px;
+  line-height: 0px;
+  display: block;
+  content: "";
+}
+#footer .footer-wrapper .copyright {
+  float: right;
+  color: #666;
+  font-size: 11px;
+}
+#footer .footer-wrapper:after {
+  clear: both;
+  height: 0px;
+  line-height: 0px;
+  display: block;
+  content: "";
+}
+#footer .logo {
+  background: url(logo_32.png) no-repeat;
+  width: 32px;
+  height: 32px;
+}
+#footer .title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #AAA;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 10px;
+}
+.doc-title {
+  font-size: 28px;
+  font-weight: bold;
+  padding: 16px;
+  padding-top: 30px;
+  text-align: center;
+}
+.doc-info {
+  margin: 10px;
+  padding: 8px 20px;
+}
+.doc-info .doc-lm {
+  font-size: 9px;
+  float: left;
+  color: #CCC;
+  font-family: Times;
+}
+.doc-info .doc-tags {
+  float: left;
+}
+.doc-info .doc-tags a {
+  vertical-align: top;
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #AAF;
+}
+.doc-info .doc-tags a:before {
+  color: #DDD;
+  vertical-align: top;
+  display: inline-block;
+  content: "|";
+  margin-right: 8px;
+  overflow: hidden;
+}
+.doc-info .doc-tags a:hover {
+  text-decoration: underline;
+  color: #00F;
+}
+.doc-info .doc-au {
+  font-size: 9px;
+  float: right;
+  padding: 0 10px;
+}
+.doc-info .doc-au i,
+.doc-info .doc-au em,
+.doc-info .doc-au b {
+  font-style: normal;
+  color: #AAA;
+}
+.doc-info:after {
+  clear: both;
+  height: 0px;
+  line-height: 0px;
+  display: block;
+  content: "";
+}
+.doc-content p {
+  margin: 10px 50px;
+}
+.doc-content blockquote {
+  border-left: 3px solid #CCC;
+  margin: 10px 60px;
+  padding: 4px 10px;
+  font-size: 12px;
+  color: #888;
+}
+.doc-content img {
+  border: 0px;
+  max-width: 640px;
+}
+.doc-content blockquote p {
+  margin: 0px;
+}
+.doc-content i {
+  color: #666;
+}
+.doc-content .doc-hr {
+  margin: 16px 20px;
+  height: 1px;
+  line-height: 1px;
+  overflow: hidden;
+  border-top: 1px dashed #CCC;
+}
+.doc-content h1 {
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 2px;
+  padding: 5px;
+  padding-left: 20px;
+}
+.doc-content h2 {
+  color: #00C;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 2px;
+  padding: 5px;
+  padding-left: 40px;
+}
+.doc-content h3,
+.doc-content h4,
+.doc-content h5,
+.doc-content h6 {
+  color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 2px;
+  padding: 5px;
+  padding-left: 60px;
+}
+.doc-content table {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 40px;
+}
+.doc-content pre {
+  color: #126;
+  font-family: Courier New;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0px;
+  padding: 10px;
+  margin: 0 10px 0 60px;
+  background-color: #EEE;
+  border: 1px dashed #BBB;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.doc-content code {
+  color: #621;
+  background: #FFD;
+  border: 1px solid #CCC;
+  margin: 0 2px;
+  padding: 0 4px;
+}
+.doc-content ul,
+.doc-content ol {
+  margin-left: 50px;
+  padding-left: 30px;
+}
+.doc-content ul ul,
+.doc-content ul ol,
+.doc-content ol ol,
+.doc-content ol ul {
+  margin-left: 10px;
+  padding-left: 10px;
+}
+#chute {
+  width: 260px;
+  padding: 0px 20px 20px 20px;
+  position: absolute;
+  border-right: 1px dashed #DDD;
+}
+#chute ol {
+  padding-left: 24px;
+}
+#chute li {
+  color: #666;
+  font-size: 10px;
+}
+#chute li a {
+  color: #3AF;
+  text-decoration: none;
+}
+#chute li a:hover {
+  color: #19F;
+  text-decoration: underline;
+}
+#chute li a.current,
+#chute li a.current:hover {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  background-color: #FFA;
+}
+#chute li b {
+  cursor: pointer;
+}
+#chute li b:hover {
+  background-color: #EEE;
+}
+#chute li.hidesub b:after {
+  content: "...";
+}
+#chute li.hidesub ol {
+  display: none;
+}
+#arena {
+  padding: 0 240px 10px 260px;
+}

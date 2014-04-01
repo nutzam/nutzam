@@ -1,0 +1,45 @@
+#sky {
+    padding:20px;
+    .sky-wrapper {
+        margin:0 auto;
+        div {float:left;}
+        ul {
+            float:right;
+            margin:0;
+            padding:0;
+            list-style:none;
+            height:32px;
+            line-height:32px;
+            li {
+                float:left;
+                border-left:1px dotted #AAA;
+                a {
+                    display:inline-block;
+                    padding:0 10px;
+                    text-decoration:none;
+                    color:#666;
+                    font-size:16px;
+                }
+                a:hover {
+                    color:#333;
+                    background-color:#DDD;
+                }
+            }
+        }
+        ul:after {.clr-after;}
+    }
+    .sky-wrapper:after {.clr-after;}
+    .logo {
+        background:url(logo_32.png) no-repeat;
+        width: 32px;
+        height: 32px;
+    }
+    .title {
+        font-size:24px;
+        font-weight: bold;
+        color:#999;
+        height:32px;
+        line-height: 32px;
+        padding:0 10px;
+    }
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<doc title="Nutz的网站" author="zozoh(zozohtnt@gmail.com)">
+	<doc path="core" title="Nutz核心包" doc-base="~/workspace/git/github/nutz/doc/zdoc"/>
+    <doc path="zdoc" title="zDoc"      doc-base="~/workspace/git/github/zdoc/doc/md"/>
+</doc>

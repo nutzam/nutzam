@@ -1,0 +1,120 @@
+.doc-title{
+	font-size: 28px;
+	font-weight: bold;
+	padding: 16px;
+	padding-top:30px;
+	text-align:center;
+}
+.doc-info {
+	margin:10px;
+	padding: 8px 20px;
+    .doc-lm {
+        font-size:9px;
+        float:left; color:#CCC; font-family: Times;
+    }
+    .doc-tags {
+        float:left;
+        a {
+            vertical-align: top;
+            display: inline-block;
+            margin-left:8px;
+            font-size: 14px;
+            text-decoration: none;
+            color: #AAF;
+        }
+        a:before {
+            color:#DDD;
+            vertical-align: top;
+            display: inline-block;
+            content: "|";
+            margin-right:8px;
+            overflow: hidden;
+        }
+        a:hover {
+            text-decoration:underline;
+            color:#00F;
+        }
+    }
+    .doc-au {
+        font-size:9px;
+        float:right;
+        padding:0 10px;
+        i, em, b {font-style: normal;color:#AAA;}
+    }
+}
+.doc-info:after {.clr-after;}
+.doc-content {
+    p{margin:10px 50px;}
+    blockquote {
+    	border-left:3px solid #CCC;
+    	margin: 10px 60px;
+    	padding: 4px 10px;
+    	font-size:12px;
+    	color:#888;
+    }
+    img {border:0px; max-width:640px;}
+    blockquote p{margin:0px;}
+    i {color:#666;}
+    .doc-hr{
+        margin:16px 20px; height:1px; line-height:1px; overflow:hidden;
+        border-top:1px dashed #CCC;
+    }
+    h1{
+    	color:#000;
+    	font-size:20px;
+    	font-weight:bold;
+    	margin:2px;
+    	padding:5px;
+    	padding-left:20px;
+    }
+    h2{
+    	color:#00C;
+    	font-size:16px;
+    	font-weight:bold;
+    	margin:2px;
+    	padding:5px;
+    	padding-left:40px;
+    }
+    h3,h4,h5,h6{
+    	color: #000000;
+    	font-size:14px;
+    	font-weight:bold;
+    	margin:2px;
+    	padding:5px;
+    	padding-left:60px;
+    }
+    table{
+    	margin-top:10px;
+    	margin-bottom:10px;
+    	margin-left:40px;
+    }
+    pre{
+    	color: #126;
+    	font-family:Courier New;
+    	font-size: 12px;
+    	line-height: 18px;
+    	letter-spacing: 0px;
+    	padding: 10px;
+    	margin:0 10px 0 60px;
+    	background-color: #EEE;
+    	border:1px dashed #BBB;
+    	word-wrap:break-word;
+        word-break: break-all;
+    }
+    code {
+    	color: #621;
+    	background: #FFD;
+    	border:1px solid #CCC;
+    	margin:0 2px;
+    	padding:0 4px;
+    }
+    ul, ol{
+    	margin-left:50px;
+    	padding-left:30px;
+    }
+    ul ul, ul ol, ol ol, ol ul {
+    	margin-left:10px;	
+    	padding-left:10px;
+    }
+}
+

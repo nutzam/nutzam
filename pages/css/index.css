@@ -1,0 +1,163 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.clr {
+  clear: both;
+  height: 0px;
+  line-height: 0px;
+}
+.clr-after {
+  clear: both;
+  height: 0px;
+  line-height: 0px;
+  display: block;
+  content: "";
+}
+#sky {
+  padding: 20px;
+}
+#sky .sky-wrapper {
+  width: 1000px;
+  margin: 0 auto;
+}
+#sky .sky-wrapper div {
+  float: left;
+}
+#sky .sky-wrapper ul {
+  float: right;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 32px;
+  line-height: 32px;
+}
+#sky .sky-wrapper ul li {
+  float: left;
+  border-left: 1px dotted #AAA;
+}
+#sky .sky-wrapper ul li a {
+  display: inline-block;
+  padding: 0 10px;
+  text-decoration: none;
+  color: #666;
+  font-size: 16px;
+}
+#sky .sky-wrapper ul li a:hover {
+  color: #333;
+  background-color: #DDD;
+}
+#sky .sky-wrapper ul:after {
+  clear: both;
+  height: 0px;
+  line-height: 0px;
+  display: block;
+  content: "";
+}
+#sky .sky-wrapper:after {
+  clear: both;
+  height: 0px;
+  line-height: 0px;
+  display: block;
+  content: "";
+}
+#sky .logo {
+  background: url(logo_32.png) no-repeat;
+  width: 32px;
+  height: 32px;
+}
+#sky .title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #999;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 10px;
+}
+body,
+font,
+td,
+form,
+p {
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0px;
+}
+body {
+  margin: 0;
+}
+#footer {
+  padding: 20px;
+  margin: 20px 0 0 0;
+  border-top: 1px solid #DDD;
+  min-height: 200px;
+}
+#footer .footer-wrapper {
+  width: 1000px;
+  margin: 0 auto;
+}
+#footer .footer-wrapper div {
+  float: left;
+}
+#footer .footer-wrapper ul {
+  float: left;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 32px;
+  line-height: 32px;
+}
+#footer .footer-wrapper ul li {
+  float: left;
+  border-left: 1px dotted #AAA;
+}
+#footer .footer-wrapper ul li a {
+  display: inline-block;
+  padding: 0 10px;
+  text-decoration: none;
+  color: #666;
+  font-size: 16px;
+}
+#footer .footer-wrapper ul li a:hover {
+  color: #333;
+  background-color: #AAA;
+}
+#footer .footer-wrapper ul:after {
+  clear: both;
+  height: 0px;
+  line-height: 0px;
+  display: block;
+  content: "";
+}
+#footer .footer-wrapper .copyright {
+  float: right;
+  color: #666;
+  font-size: 11px;
+}
+#footer .footer-wrapper:after {
+  clear: both;
+  height: 0px;
+  line-height: 0px;
+  display: block;
+  content: "";
+}
+#footer .logo {
+  background: url(zozoh_32.png) no-repeat;
+  width: 32px;
+  height: 32px;
+}
+#footer .title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #666;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 10px;
+}
+#zdocContent {
+  width: 62%;
+  min-width: 600px;
+  margin: auto;
+}
