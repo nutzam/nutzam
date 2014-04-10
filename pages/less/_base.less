@@ -16,8 +16,6 @@
     content:"";
 }
 
-@import "_sky.less";
-
 body, font, td, form, p{
     font-family: arial, sans-serif;
     font-size: 14px;
@@ -28,5 +26,22 @@ body, font, td, form, p{
 body {
     margin:0;
 }
+@page-width : 1000px;
+@link-color : #08F;
+@link-hover : #6AF;
+a {color:@link-color;text-decoration:none;}
+a:hover {color:@link-hover; text-decoration:underline;}
 
-@import "_footer.less";
+.logo {
+    background:url(logo_32.png) no-repeat;
+    display:inline-block;
+    width: 32px;
+    height: 32px;
+}
+
+.logo64 {
+    background:url(logo_64.png) no-repeat;
+    display:inline-block;
+    width: 64px;
+    height: 64px;
+}

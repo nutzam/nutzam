@@ -1,0 +1,207 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.clr {
+  clear: both;
+  height: 0px;
+  line-height: 0px;
+}
+.clr-after {
+  clear: both;
+  height: 0px;
+  line-height: 0px;
+  display: block;
+  content: "";
+}
+body,
+font,
+td,
+form,
+p {
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0px;
+}
+body {
+  margin: 0;
+}
+a {
+  color: #0088ff;
+  text-decoration: none;
+}
+a:hover {
+  color: #66aaff;
+  text-decoration: underline;
+}
+.logo {
+  background: url(logo_32.png) no-repeat;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+.logo64 {
+  background: url(logo_64.png) no-repeat;
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+}
+#sky {
+  margin: 0 auto;
+  padding: 10px 0;
+  width: 1000px;
+  position: relative;
+}
+#sky .left img {
+  width: 24px;
+  height: 24px;
+  border: 0;
+  vertical-align: middle;
+}
+#sky .left i {
+  display: inline-block;
+  vertical-align: middle;
+  height: 32px;
+  line-height: 36px;
+  font-style: normal;
+  font-size: 16px;
+  margin: 0 4px;
+  color: #444;
+  text-shadow: 0 0 1px #888;
+}
+#sky .right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 50px;
+  font-size: 12px;
+}
+#sky .right a {
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  color: #888;
+  margin: 0 20px;
+  padding: 0 8px;
+  line-height: 46px;
+  border-top: 3px solid #FFF;
+}
+#sky .right a:hover {
+  border-color: #F80;
+  color: #F80;
+}
+#sky:after {
+  clear: both;
+  height: 0px;
+  line-height: 0px;
+  display: block;
+  content: "";
+}
+#menu {
+  background-color: #EEE;
+  padding: 8px;
+  border-width: 1px 0 1px 0;
+  border-color: #DDD;
+  border-style: solid;
+}
+#menu .menu_inner {
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+#menu .menu_inner .slogan {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#menu .menu_inner .slogan em {
+  display: block;
+  font-size: 10px;
+  color: #AAA;
+  font-style: normal;
+}
+#menu .menu_inner .menu_items {
+  padding-left: 180px;
+}
+#menu .menu_inner .menu_items a {
+  display: block;
+  float: left;
+  font-size: 12px;
+  padding: 0 16px;
+  text-shadow: 0 0 1px #AAA;
+  border-left: 1px solid #DDD;
+}
+#menu .menu_inner .menu_items a:hover {
+  color: #08F;
+}
+#menu .menu_inner .menu_items:after {
+  clear: both;
+  height: 0px;
+  line-height: 0px;
+  display: block;
+  content: "";
+}
+#footer {
+  border-top: 1px dashed #CCC;
+  margin: 0;
+  padding: 10px 0 40px 0;
+  text-align: center;
+  font-weight: normal;
+  color: #AAA;
+  font-size: 12px;
+}
+.slider {
+  width: 1000px;
+  height: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+.slider_scroller {
+  width: 999999px;
+  position: absolute;
+}
+.slider_scroller div {
+  float: left;
+}
+.slider_scroller:after {
+  clear: both;
+  height: 0px;
+  line-height: 0px;
+  display: block;
+  content: "";
+}
+#fe {
+  min-height: 320px;
+  text-align: center;
+  background-color: #08F;
+}
+#arena {
+  margin: 10px auto;
+  padding: 10px 0;
+  width: 800px;
+}
+#arena .column {
+  float: left;
+  width: 266.6666666666667px;
+  font-size: 12px;
+}
+#arena .column h4 {
+  padding: 0;
+  margin: 0;
+}
+#arena .column ul {
+  list-style: none;
+  padding: 0 0 0 10px;
+  margin: 0 0 0 12px;
+  border-left: 3px solid #EEE;
+}
+#arena:after {
+  clear: both;
+  height: 0px;
+  line-height: 0px;
+  display: block;
+  content: "";
+}

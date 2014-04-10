@@ -1,45 +1,56 @@
 #sky {
-    padding:20px;
-    .sky-wrapper {
-        margin:0 auto;
-        div {float:left;}
-        ul {
-            float:right;
-            margin:0;
-            padding:0;
-            list-style:none;
+    margin:0 auto; padding:10px 0;
+    width:@page-width;
+    position:relative;
+    .left {
+        img {width:24px;height:24px;border:0;vertical-align:middle;}
+        i {
+            display:inline-block;vertical-align:middle;
             height:32px;
-            line-height:32px;
-            li {
-                float:left;
-                border-left:1px dotted #AAA;
-                a {
-                    display:inline-block;
-                    padding:0 10px;
-                    text-decoration:none;
-                    color:#666;
-                    font-size:16px;
-                }
-                a:hover {
-                    color:#333;
-                    background-color:#DDD;
-                }
-            }
+            line-height:36px;
+            font-style:normal; font-size:16px;
+            margin:0 4px;
+            color:#444;
+            text-shadow:0 0 1px #888;
         }
-        ul:after {.clr-after;}
     }
-    .sky-wrapper:after {.clr-after;}
-    .logo {
-        background:url(logo_32.png) no-repeat;
-        width: 32px;
-        height: 32px;
+    .right {
+        position:absolute; right:0;top:0;
+        height:50px; font-size: 12px;
+        a {
+            text-decoration:none;display:inline-block; vertical-align:middle;
+            color:#888; margin:0 20px; padding:0 8px;
+            line-height:46px;
+            border-top:3px solid #FFF;
+        }
+        a:hover {
+            border-color:#F80; color:#F80;
+        }
     }
-    .title {
-        font-size:24px;
-        font-weight: bold;
-        color:#999;
-        height:32px;
-        line-height: 32px;
-        padding:0 10px;
+}
+#sky:after{.clr-after;}
+
+#menu {
+    background-color:#EEE; padding:8px;
+    border-width:1px 0 1px 0; border-color:#DDD; border-style:solid;
+    .menu_inner {
+        width:@page-width;
+        margin:0 auto;
+        position:relative;
+        .slogan {
+            position:absolute; top:0; left:0;
+            em {display:block;font-size:10px;color:#AAA;font-style:normal;}
+        }
+        .menu_items {
+            padding-left:180px;
+            a {
+                display:block; float:left;
+                font-size:12px;padding:0 16px;
+                text-shadow:0 0 1px #AAA;
+                border-left:1px solid #DDD;
+            }
+            a:hover {color:#08F;}
+        }
+        .menu_items:after {.clr-after;}
     }
 }

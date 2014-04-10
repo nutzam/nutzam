@@ -1,0 +1,38 @@
+@import "_base.less";
+@import "_sky.less";
+@import "_footer.less";
+.slider {
+    width:1000px;
+    height:400px;
+    margin:0 auto;
+    overflow:hidden;
+    position:relative;
+}
+.slider_scroller {
+    width:999999px;
+    position:absolute;
+    div {
+        float:left;
+    }
+}
+.slider_scroller:after {.clr-after;}
+#fe {
+    min-height:320px; text-align:center;
+    background-color:#08F;
+}
+@arena-width: 800px;
+#arena {
+    margin:10px auto; padding:10px 0;
+    width:@arena-width;
+    .column {
+        float:left; width: (@arena-width / 3);
+        font-size:12px;
+        h4 {padding:0;margin:0;}
+        ul {
+            list-style:none;
+            padding:0 0 0 10px;; margin:0 0 0 12px;
+            border-left:3px solid #EEE;
+        }
+    }
+}
+#arena:after {.clr-after;}
