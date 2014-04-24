@@ -1,0 +1,7 @@
+#! /bin/sh
+export JAVA_HOME=~/opt/java/jdk
+export DEPS=~/nutz/deps/web
+export OUTPUT=~/nutz/output
+export PROJECT_HOME=~/workspace/git/github/nutzam/web
+
+ant -f $PROJECT_HOME/build/build.xml
