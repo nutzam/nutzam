@@ -5,13 +5,15 @@
 }
 .clr {
   clear: both;
-  height: 0px;
-  line-height: 0px;
+  height: 1px;
+  line-height: 1px;
+  overflow: hidden;
 }
 .clr-after {
   clear: both;
-  height: 0px;
-  line-height: 0px;
+  height: 1px;
+  line-height: 1px;
+  overflow: hidden;
   display: block;
   content: "";
 }
@@ -94,8 +96,9 @@ a:hover {
 }
 #sky:after {
   clear: both;
-  height: 0px;
-  line-height: 0px;
+  height: 1px;
+  line-height: 1px;
+  overflow: hidden;
   display: block;
   content: "";
 }
@@ -138,8 +141,9 @@ a:hover {
 }
 #menu .menu_inner .menu_items:after {
   clear: both;
-  height: 0px;
-  line-height: 0px;
+  height: 1px;
+  line-height: 1px;
+  overflow: hidden;
   display: block;
   content: "";
 }
@@ -205,8 +209,9 @@ a:hover {
 }
 .doc-info:after {
   clear: both;
-  height: 0px;
-  line-height: 0px;
+  height: 1px;
+  line-height: 1px;
+  overflow: hidden;
   display: block;
   content: "";
 }

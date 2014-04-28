@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
+import org.nutz.dao.Cnd;
 import org.nutz.dao.Dao;
 import org.nutz.ioc.loader.annotation.Inject;
 import org.nutz.ioc.loader.annotation.IocBean;
@@ -59,6 +60,7 @@ public class DownloadModule {
                     di = new DownInfo();
                     di.setFinger(Lang.md5(f));
                     di.setName(Files.getName(f));
+                    di.setType(Files.getSuffixName(f));
                     di.setPath(f.getAbsolutePath());
                     di.setCreateTime(new Date(f.lastModified()));
                     di.setSize(f.length());
@@ -69,8 +71,11 @@ public class DownloadModule {
                     if (force) {
                         di.setFinger(Lang.md5(f));
                         di.setName(Files.getName(f));
+                        di.setType(Files.getSuffixName(f));
                         di.setPath(f.getAbsolutePath());
-                        di.setCreateTime(new Date(f.lastModified()));
+                        if (null == di.getCreateTime()) {
+                            di.setCreateTime(new Date(f.lastModified()));
+                        }
                         di.setSize(f.length());
                         Json.toJsonFile(fi, di, JsonFormat.forLook());
                     }
@@ -91,7 +96,15 @@ public class DownloadModule {
         dao.fastInsert(map.values());
 
         // 返回
-        return dao.query(DownInfo.class, null);
+        return dao.query(DownInfo.class,
+                         Cnd.orderBy().desc("level").desc("lastModified"));
+    }
+
+    @At("/list")
+    @Ok("jsp:jsp.down.list")
+    public List<DownInfo> getList() {
+        return dao.query(DownInfo.class,
+                         Cnd.orderBy().desc("level").desc("lastModified"));
     }
 
     public void on_create() {

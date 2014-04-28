@@ -156,21 +156,33 @@ a:hover {
   color: #AAA;
   font-size: 12px;
 }
-.slider {
-  width: 1000px;
-  height: 400px;
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
+#arena {
+  width: 800px;
+  margin: 20px auto;
 }
-.slider_scroller {
-  width: 999999px;
-  position: absolute;
+#arena em {
+  font-style: normal;
 }
-.slider_scroller div {
-  float: left;
+#arena .di {
+  padding: 20px;
 }
-.slider_scroller:after {
+#arena .di .di-nm {
+  padding: 10px 20px;
+  background-color: #EEE;
+  font-size: 18px;
+  border-radius: 4px;
+}
+#arena .di .di-nm .di-sz {
+  font-size: 12px;
+  color: #080;
+  margin-left: 20px;
+}
+#arena .di .di-nm .di-ct {
+  float: right;
+  color: #888;
+  font-size: 12px;
+}
+#arena .di .di-nm:after {
   clear: both;
   height: 1px;
   line-height: 1px;
@@ -178,32 +190,29 @@ a:hover {
   display: block;
   content: "";
 }
-#fe {
-  min-height: 320px;
-  text-align: center;
-  background-color: #08F;
+#arena .di .di-c {
+  font-size: 10px;
+  padding: 10px;
+  float: right;
 }
-#arena {
-  margin: 10px auto;
-  padding: 10px 0;
-  width: 800px;
+#arena .di .di-c em {
+  font-size: 16px;
 }
-#arena .column {
-  float: left;
-  width: 266.6666666666667px;
+#arena .di .di-fg {
+  padding: 10px;
+}
+#arena .di .di-fg b {
+  color: #888;
+}
+#arena .di .di-fg em {
+  color: #080;
+}
+#arena .di .di-do {
+  clear: both;
   font-size: 12px;
+  padding: 0 20px;
 }
-#arena .column h4 {
-  padding: 0;
-  margin: 0;
-}
-#arena .column ul {
-  list-style: none;
-  padding: 0 0 0 10px;
-  margin: 0 0 0 12px;
-  border-left: 3px solid #EEE;
-}
-#arena:after {
+#arena .di:after {
   clear: both;
   height: 1px;
   line-height: 1px;

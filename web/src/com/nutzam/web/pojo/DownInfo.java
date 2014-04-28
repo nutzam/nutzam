@@ -18,6 +18,16 @@ public class DownInfo {
     @ColDefine(type = ColType.VARCHAR, width = 256)
     private String name;
 
+    @Column("tp")
+    @ColDefine(type = ColType.VARCHAR, width = 12)
+    private String type;
+
+    /**
+     * 推荐级别，默认 0 ，-1 不推荐下载，>=1 当前推荐下载，
+     */
+    @Column("lv")
+    private int level;
+
     /**
      * 在磁盘上的完整路径
      */
@@ -65,6 +75,22 @@ public class DownInfo {
         this.name = name;
     }
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int leval) {
+        this.level = leval;
+    }
+
     public String getPath() {
         return path;
     }
@@ -87,6 +113,24 @@ public class DownInfo {
 
     public void setSize(long size) {
         this.size = size;
+    }
+
+    private static final double SZU = 1024;
+
+    public String getSizeForRead() {
+        if (size < SZU) {
+            return String.format("%d bytes", size);
+        }
+        double n = (double)size / SZU;
+        if (n < SZU) {
+            return String.format("%5.2f KB", n);
+        }
+        n = n / SZU;
+        if (n < SZU) {
+            return String.format("%5.2f MB", n);
+        }
+        n = n / SZU;
+        return String.format("%5.2f GB", n);
     }
 
     public int getCount() {
