@@ -50,103 +50,6 @@ a:hover {
   width: 64px;
   height: 64px;
 }
-#sky {
-  margin: 0 auto;
-  padding: 10px 0;
-  width: 1000px;
-  position: relative;
-}
-#sky .left img {
-  width: 24px;
-  height: 24px;
-  border: 0;
-  vertical-align: middle;
-}
-#sky .left i {
-  display: inline-block;
-  vertical-align: middle;
-  height: 32px;
-  line-height: 36px;
-  font-style: normal;
-  font-size: 16px;
-  margin: 0 4px;
-  color: #444;
-  text-shadow: 0 0 1px #888;
-}
-#sky .right {
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 50px;
-  font-size: 12px;
-}
-#sky .right a {
-  text-decoration: none;
-  display: inline-block;
-  vertical-align: middle;
-  color: #888;
-  margin: 0 20px;
-  padding: 0 8px;
-  line-height: 46px;
-  border-top: 3px solid #FFF;
-}
-#sky .right a:hover {
-  border-color: #F80;
-  color: #F80;
-}
-#sky:after {
-  clear: both;
-  height: 1px;
-  line-height: 1px;
-  overflow: hidden;
-  display: block;
-  content: "";
-}
-#menu {
-  background-color: #EEE;
-  padding: 8px;
-  border-width: 1px 0 1px 0;
-  border-color: #DDD;
-  border-style: solid;
-}
-#menu .menu_inner {
-  width: 1000px;
-  margin: 0 auto;
-  position: relative;
-}
-#menu .menu_inner .slogan {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-#menu .menu_inner .slogan em {
-  display: block;
-  font-size: 10px;
-  color: #AAA;
-  font-style: normal;
-}
-#menu .menu_inner .menu_items {
-  padding-left: 180px;
-}
-#menu .menu_inner .menu_items a {
-  display: block;
-  float: left;
-  font-size: 12px;
-  padding: 0 16px;
-  text-shadow: 0 0 1px #AAA;
-  border-left: 1px solid #DDD;
-}
-#menu .menu_inner .menu_items a:hover {
-  color: #08F;
-}
-#menu .menu_inner .menu_items:after {
-  clear: both;
-  height: 1px;
-  line-height: 1px;
-  overflow: hidden;
-  display: block;
-  content: "";
-}
 #footer {
   border-top: 1px dashed #CCC;
   margin: 0;
@@ -156,67 +59,104 @@ a:hover {
   color: #AAA;
   font-size: 12px;
 }
-#arena {
-  width: 800px;
-  margin: 20px auto;
-}
-#arena em {
-  font-style: normal;
-}
-#arena .di {
+#sky {
   padding: 20px;
 }
-#arena .di .di-nm {
-  padding: 10px 20px;
-  background-color: #EEE;
+#sky .sky-inner {
+  width: 800px;
+  margin: 0 auto;
+}
+#sky .sky-inner a {
+  position: absolute;
   font-size: 18px;
-  border-radius: 4px;
-}
-#arena .di .di-nm .di-sz {
-  font-size: 12px;
-  color: #080;
-  margin-left: 20px;
-}
-#arena .di .di-nm .di-ct {
-  float: right;
   color: #888;
-  font-size: 12px;
 }
-#arena .di .di-nm:after {
-  clear: both;
-  height: 1px;
-  line-height: 1px;
-  overflow: hidden;
+#sky .sky-inner a:hover {
+  text-decoration: none;
+  color: #AAA;
+}
+#sky .sky-inner img {
   display: block;
-  content: "";
+  margin: 0 auto;
 }
-#arena .di .di-c {
+#arena {
+  width: 800px;
+  margin: 0px auto;
+}
+#arena h3 {
+  padding: 10px 16px;
+  background-color: #EEE;
+  border-radius: 4px;
+  font-size: 14px;
+}
+#arena th {
+  font-weight: normal;
   font-size: 10px;
-  padding: 10px;
-  float: right;
 }
-#arena .di .di-c em {
+.dlist table {
+  margin: 20px 0 50px 0;
+}
+.dlist table tr:nth-child(2n) {
+  background: #E0E0E0;
+}
+.dlist table td {
+  font-size: 12px;
+  padding: 4px;
+}
+.dlist table .di-ct,
+.dlist table .di-sz {
+  text-align: right;
+  font-size: 10px;
+}
+.dlist table .di-ct {
+  color: #888;
+}
+.dlist table thead .dlist-sz {
+  padding: 2px;
+  text-align: right;
+}
+.dlist table tfoot .dlist-sz {
+  padding: 8px;
+  text-align: center;
+}
+.dlist table .dlist-col-titles th {
+  padding: 6px;
+  background-color: #57A;
+  color: #FFF;
+}
+.dlist em {
+  font-style: normal;
+}
+.dinfo table {
+  width: 400px;
+  margin: 20px auto;
+}
+.dinfo table td {
+  padding: 6px;
+  font-size: 14px;
+}
+.dinfo table .fldnm {
+  text-align: right;
+  color: #AAA;
+}
+.dinfo table .fldval {
+  color: #080;
   font-size: 16px;
 }
-#arena .di .di-fg {
-  padding: 10px;
-}
-#arena .di .di-fg b {
-  color: #888;
-}
-#arena .di .di-fg em {
-  color: #080;
-}
-#arena .di .di-do {
-  clear: both;
-  font-size: 12px;
-  padding: 0 20px;
-}
-#arena .di:after {
-  clear: both;
-  height: 1px;
-  line-height: 1px;
-  overflow: hidden;
+.dinfo a.down-btn {
   display: block;
-  content: "";
+  width: 400px;
+  margin: 20px auto;
+  padding: 14px;
+  border-radius: 4px;
+  background-color: #08F;
+  color: #FFF;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+}
+.dinfo a.down-btn:hover {
+  background-color: #3AF;
+  color: #FF0;
+  text-decoration: none;
 }

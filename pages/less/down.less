@@ -1,38 +1,84 @@
 @import "_base.less";
-@import "_sky.less";
 @import "_footer.less";
 
+@main-width : 800px;
+
+#sky {
+    padding:20px;
+    .sky-inner {
+        width: @main-width;
+        margin: 0 auto;
+        a {position:absolute; font-size:18px; color:#888;}
+        a:hover {text-decoration:none; color:#AAA;}
+        img {display:block; margin:0 auto;}
+    }
+}
+
 #arena {
-    width:800px;
-    margin:20px auto;
-    em {font-style:normal;}
-    .di {
-        padding:20px;
-        .di-nm {
-            padding:10px 20px;
-            background-color:#EEE;
-            font-size:18px;
-            border-radius: 4px;
-            .di-sz {font-size:12px; color:#080;margin-left:20px;}
-            .di-ct{float:right;color:#888;font-size:12px;}
+    width:@main-width;
+    margin:0px auto;
+    h3 {
+        padding:10px 16px; background-color:#EEE; border-radius:4px;
+        font-size:14px;
+    }
+    th {font-weight:normal;font-size:10px;}
+}
+
+.dlist {
+    table {
+        margin:20px 0 50px 0;
+        tr:nth-child(2n){
+            background:#E0E0E0;
         }
-        .di-nm:after{.clr-after;}
-        .di-c {
-            font-size:10px;
-            padding:10px;
-            float:right;
-            em {font-size:16px;}
-        }
-        .di-fg {
-            padding:10px;
-            b  {color:#888;}
-            em {color:#080;}
-        }
-        .di-do {
-            clear:both;
+        td {
             font-size:12px;
-            padding:0 20px;
+            padding:4px;
+        }
+        .di-ct, .di-sz, {text-align:right;font-size:10px;}
+        .di-ct {color:#888;}
+        thead {.dlist-sz {padding:2px;text-align:right;}}
+        tfoot {.dlist-sz {padding:8px;text-align:center;}}
+        .dlist-col-titles th{
+            padding:6px;
+            background-color:#57A;
+            color:#FFF;
         }
     }
-    .di:after {.clr-after;}
+    em {font-style:normal;}
+    
 }
+
+@dinfo-width :400px;
+.dinfo {
+    table {
+        width:@dinfo-width; margin:20px auto;
+        td {padding:6px; font-size:14px;}
+        .fldnm {text-align:right; color:#AAA;}
+        .fldval{color:#080; font-size:16px;}
+    }
+    a.down-btn {
+        display:block; width:@dinfo-width; margin:20px auto;
+        padding:14px; border-radius:4px; background-color:#08F;
+        color:#FFF; cursor:pointer;
+        text-align:center; font-size:16px;
+    }
+    a.down-btn:hover {
+        background-color:#3AF; color:#FF0; text-decoration:none;
+    } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

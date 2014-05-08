@@ -1,8 +1,9 @@
 package com.nutzam.web.pojo;
 
 import java.util.Date;
-
 import org.nutz.dao.entity.annotation.*;
+import org.nutz.lang.Strings;
+import org.nutz.lang.Times;
 
 @Table("t_down")
 public class DownInfo {
@@ -115,22 +116,9 @@ public class DownInfo {
         this.size = size;
     }
 
-    private static final double SZU = 1024;
 
     public String getSizeForRead() {
-        if (size < SZU) {
-            return String.format("%d bytes", size);
-        }
-        double n = (double)size / SZU;
-        if (n < SZU) {
-            return String.format("%5.2f KB", n);
-        }
-        n = n / SZU;
-        if (n < SZU) {
-            return String.format("%5.2f MB", n);
-        }
-        n = n / SZU;
-        return String.format("%5.2f GB", n);
+        return Strings.formatSizeForReadBy1024(size);
     }
 
     public int getCount() {
@@ -143,6 +131,10 @@ public class DownInfo {
 
     public Date getCreateTime() {
         return createTime;
+    }
+
+    public String getCreateTimeForRead() {
+        return Times.formatForRead(createTime);
     }
 
     public void setCreateTime(Date createTime) {

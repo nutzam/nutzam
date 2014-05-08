@@ -20,6 +20,7 @@ import org.nutz.lang.util.FileVisitor;
 import org.nutz.log.Log;
 import org.nutz.log.Logs;
 import org.nutz.mvc.annotation.*;
+import org.nutz.mvc.view.HttpStatusView;
 
 import com.nutzam.web.pojo.DownInfo;
 
@@ -41,7 +42,7 @@ public class DownloadModule {
      * @return 生成后的下载列表
      */
     @At("/genlist")
-    @Ok("jsp:jsp.show_text")
+    @Ok(">>:/down/list")
     public List<DownInfo> genList(@Param("f") final boolean force) {
         final HashMap<String, DownInfo> map = new HashMap<String, DownInfo>();
         // 遍历下载文件夹
@@ -61,7 +62,7 @@ public class DownloadModule {
                     di.setFinger(Lang.md5(f));
                     di.setName(Files.getName(f));
                     di.setType(Files.getSuffixName(f));
-                    di.setPath(f.getAbsolutePath());
+                    di.setPath(Disks.getRelativePath(home, f.getAbsolutePath()));
                     di.setCreateTime(new Date(f.lastModified()));
                     di.setSize(f.length());
                     di.setLastModified(Times.now());
@@ -72,7 +73,8 @@ public class DownloadModule {
                         di.setFinger(Lang.md5(f));
                         di.setName(Files.getName(f));
                         di.setType(Files.getSuffixName(f));
-                        di.setPath(f.getAbsolutePath());
+                        di.setPath(Disks.getRelativePath(home,
+                                                         f.getAbsolutePath()));
                         if (null == di.getCreateTime()) {
                             di.setCreateTime(new Date(f.lastModified()));
                         }
@@ -105,6 +107,30 @@ public class DownloadModule {
     public List<DownInfo> getList() {
         return dao.query(DownInfo.class,
                          Cnd.orderBy().desc("level").desc("lastModified"));
+    }
+
+    @At("/get/?")
+    @Ok("jsp:jsp.down.info")
+    public DownInfo get(String fg) {
+        return dao.fetch(DownInfo.class, fg);
+    }
+
+    @At("/read/?")
+    @Ok("raw:stream")
+    @Fail("http")
+    public File read(String fg) {
+        DownInfo di = dao.fetch(DownInfo.class, fg);
+        if (null == di)
+            throw new HttpStatusView.HttpStatusException(404,
+                                                         "File finger'%s' not found!",
+                                                         fg);
+        File f = Files.findFile(home + "/" + di.getPath());
+        if (null == f)
+            throw new HttpStatusView.HttpStatusException(404,
+                                                         "File '%s/%s' noexists",
+                                                         home,
+                                                         di.getPath());
+        return f;
     }
 
     public void on_create() {

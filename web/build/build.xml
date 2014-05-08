@@ -31,9 +31,6 @@
 		<copy todir="${SRC}">
 			<fileset dir="${PROJECT_HOME}/src" includes="**/*.java" />
 		</copy>
-		<copy todir="${SRC}">
-			<fileset dir="${PROJECT_HOME}/tmpl-freemarker" includes="**/*.java" />
-		</copy>
 		<mkdir dir="${TMP}" />
 	</target>
 
@@ -54,7 +51,7 @@
 
 	<target name="jar" depends="compile">
 		<echo message="TMP: ${TMP}" />
-		<jar destfile="${DEST}/zdoc-${v}.jar" 
+		<jar destfile="${DEST}/nutzam-${v}.jar" 
 			 basedir="${TMP}"
 			 includes="**" />
 	</target>
