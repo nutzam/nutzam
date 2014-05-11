@@ -44,6 +44,7 @@ public class DownloadModule {
     @At("/genlist")
     @Ok(">>:/down/list")
     public List<DownInfo> genList(@Param("f") final boolean force) {
+        log.infof("!GEN-LIST %b", force);
         final HashMap<String, DownInfo> map = new HashMap<String, DownInfo>();
         // 遍历下载文件夹
         Disks.visitFile(home, null, true, new FileVisitor() {
