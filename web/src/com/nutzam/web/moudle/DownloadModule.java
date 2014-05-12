@@ -1,7 +1,6 @@
 package com.nutzam.web.moudle;
 
 import java.io.File;
-import java.nio.charset.Charset;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -55,9 +54,9 @@ public class DownloadModule {
                     return;
 
                 if (log.isInfoEnabled()) {
-                    String str = new String(f.getName().getBytes(),
-                                            Charset.forName("GB2312"));
-                    log.infof("file : %s : (GB2312: %s)", f.getName(), str);
+                    String rph = Disks.getRelativePath(home,
+                                                       f.getAbsolutePath());
+                    log.infof("scan file file : %s", rph);
 
                 }
 

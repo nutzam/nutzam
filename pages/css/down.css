@@ -103,6 +103,16 @@ a:hover {
   font-size: 12px;
   padding: 4px;
 }
+.dlist table .di-down a {
+  display: inline-block;
+  background: url(sprites.png) no-repeat;
+  width: 24px;
+  height: 24px;
+  opacity: 0.5;
+}
+.dlist table .di-down a:hover {
+  opacity: 1.0;
+}
 .dlist table .di-ct,
 .dlist table .di-sz {
   text-align: right;

@@ -37,7 +37,10 @@
 	<tbody>
 	<c:forEach var="di" items="${obj}">
 		<tr>
-			<td>&nbsp;</td>
+			<td class="di-down">
+				<a href="${base}/down/read/${di.finger}"
+				   title="${msg['di.down.tip']}">&nbsp;</a>
+			</td>
 			<td class="di-nm">
 				<a href="${base}/down/get/${di.finger}">${di.name}</a>
 				<em>${di.comment}</em>
