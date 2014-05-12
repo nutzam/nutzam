@@ -140,7 +140,9 @@ public class DownloadModule {
         // 增加计数
         di.setCount(di.getCount()+1);
         di.setLastModified(Times.now());
-        Json.toJsonFile(f, di, JsonFormat.forLook());
+        File fi = Files.createFileIfNoExists2(f.getAbsolutePath()
+                                              + ".dinfo");
+        Json.toJsonFile(fi, di, JsonFormat.forLook());
         dao.update(di);
         // 返回文件
         return f;
