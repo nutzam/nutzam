@@ -118,12 +118,17 @@ a:hover {
   color: #888;
 }
 .dlist table .di-ct,
-.dlist table .di-sz {
+.dlist table .di-sz,
+.dlist table .di-c {
   text-align: right;
   font-size: 10px;
 }
 .dlist table .di-ct {
   color: #888;
+}
+.dlist table .di-c {
+  color: #F80;
+  padding-right: 10px;
 }
 .dlist table thead .dlist-sz {
   padding: 2px;
@@ -135,7 +140,7 @@ a:hover {
 }
 .dlist table .dlist-col-titles th {
   padding: 6px;
-  background-color: #57A;
+  background-color: #7da6de;
   color: #FFF;
 }
 .dlist em {
