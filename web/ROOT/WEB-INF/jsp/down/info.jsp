@@ -20,8 +20,8 @@
 		<a href="/">${msg['page.title.down']}</a>
 		&gt; <b>${obj.name}</b>
 	</h3>
-	<c:if test="${di.comment}">
-	<div class="di-comm">${di.comment}</div>
+	<c:if test="${fn:length(obj.comment)>0}">
+	<div class="di-comm">${obj.comment}</div>
 	</c:if>
 	<table cellspacing="0" cellpadding="0" border="0">
 		<tr><td class="fldnm">${msg['di.fg']}:</td><td class="fldval">${obj.finger}</td></tr>

@@ -113,6 +113,10 @@ a:hover {
 .dlist table .di-down a:hover {
   opacity: 1.0;
 }
+.dlist table .di-nm em {
+  margin-left: 10px;
+  color: #888;
+}
 .dlist table .di-ct,
 .dlist table .di-sz {
   text-align: right;
@@ -136,6 +140,12 @@ a:hover {
 }
 .dlist em {
   font-style: normal;
+}
+.dinfo .di-comm {
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  padding: 16px 0;
 }
 .dinfo table {
   width: 400px;
