@@ -41,7 +41,7 @@ public class DownloadModule {
      * @return 生成后的下载列表
      */
     @At("/genlist")
-    @Ok(">>:/down/list")
+    @Ok(">>:/")
     public List<DownInfo> genList(@Param("f") final boolean force) {
         log.infof("!GEN-LIST %b", force);
         final HashMap<String, DownInfo> map = new HashMap<String, DownInfo>();
