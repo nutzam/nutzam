@@ -38,11 +38,11 @@
 	<c:forEach var="di" items="${obj}">
 		<tr>
 			<td class="di-down">
-				<a href="${base}/down/read/${di.finger}"
+				<a href="${base}/read/${di.finger}"
 				   title="${msg['di.down.tip']}">&nbsp;</a>
 			</td>
 			<td class="di-nm">
-				<a href="${base}/down/get/${di.finger}">${di.name}</a>
+				<a href="${base}/get/${di.finger}">${di.name}</a>
 				<em>${di.comment}</em>
 			</td>
 			<td class="di-ct">${di.createTimeForRead}</td>
