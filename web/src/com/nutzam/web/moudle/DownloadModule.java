@@ -25,7 +25,6 @@ import org.nutz.mvc.view.HttpStatusView;
 import com.nutzam.web.pojo.DownInfo;
 
 @IocBean(create = "on_create")
-@At("/down")
 public class DownloadModule {
 
     private static final Log log = Logs.get();
@@ -110,7 +109,7 @@ public class DownloadModule {
                          Cnd.orderBy().desc("level").desc("lastModified"));
     }
 
-    @At("/list")
+    @At("/")
     @Ok("jsp:jsp.down.list")
     public List<DownInfo> getList() {
         return dao.query(DownInfo.class,
