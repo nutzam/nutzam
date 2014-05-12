@@ -6,7 +6,7 @@
     <div class="right">
         <a href="${page.bpath}index.html">首页</a>
         <a target="_blank" href="https://github.com/nutzam/nutzdemo">Demo</a>
-        <a target="_blank" href="http://downloads.nutzam.com">下载</a>
+        <a href="http://downloads.nutzam.com">下载</a>
         <a target="_blank" href="http://nutz.cn">短点</a>
     </div>
 </div>
