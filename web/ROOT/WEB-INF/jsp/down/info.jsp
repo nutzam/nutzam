@@ -29,7 +29,7 @@
 		<tr><td class="fldnm">${msg['di.ct']}:</td><td class="fldval"><fmt:formatDate value="${obj.createTime}" pattern="yyyy-MM-dd HH:mm"/></td></tr>
 		<tr><td class="fldnm">${msg['di.c']}:</td><td class="fldval">${obj.count}</td></tr>
 	</table>
-	<a class="down-btn" href="${base}/down/read/${obj.finger}">${msg['di.do.download']}</a>
+	<a class="down-btn" href="${base}/read/${obj.finger}">${msg['di.do.download']}</a>
 </div>
 <%@include file="/WEB-INF/jsp/_footer.jsp" %>
 </body>

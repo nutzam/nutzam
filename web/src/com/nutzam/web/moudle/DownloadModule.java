@@ -113,7 +113,7 @@ public class DownloadModule {
     @Ok("jsp:jsp.down.list")
     public List<DownInfo> getList() {
         return dao.query(DownInfo.class,
-                         Cnd.orderBy().desc("level").desc("lastModified"));
+                         Cnd.orderBy().desc("level").desc("name"));
     }
 
     @At("/get/?")
