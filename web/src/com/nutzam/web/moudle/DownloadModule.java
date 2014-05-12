@@ -137,6 +137,12 @@ public class DownloadModule {
                                                          "File '%s/%s' noexists",
                                                          home,
                                                          di.getPath());
+        // 增加计数
+        di.setCount(di.getCount()+1);
+        di.setLastModified(Times.now());
+        Json.toJsonFile(f, di, JsonFormat.forLook());
+        dao.update(di);
+        // 返回文件
         return f;
     }
 
