@@ -17,7 +17,7 @@
 <%@include file="/WEB-INF/jsp/_sky.jsp" %>
 <div id="arena" class="dinfo">
 	<h3>
-		<a href="../list">${msg['page.title.down']}</a>
+		<a href="/">${msg['page.title.down']}</a>
 		&gt; <b>${obj.name}</b>
 	</h3>
 	<c:if test="${di.comment}">
