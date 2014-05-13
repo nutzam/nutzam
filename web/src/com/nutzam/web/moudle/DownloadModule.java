@@ -82,9 +82,7 @@ public class DownloadModule {
                         di.setType(Files.getSuffixName(f));
                         di.setPath(Disks.getRelativePath(home,
                                                          f.getAbsolutePath()));
-                        if (null == di.getCreateTime()) {
-                            di.setCreateTime(new Date(f.lastModified()));
-                        }
+                        di.setCreateTime(new Date(f.lastModified()));
                         di.setSize(f.length());
                         Json.toJsonFile(fi, di, JsonFormat.forLook());
                     }
@@ -138,10 +136,9 @@ public class DownloadModule {
                                                          home,
                                                          di.getPath());
         // 增加计数
-        di.setCount(di.getCount()+1);
+        di.setCount(di.getCount() + 1);
         di.setLastModified(Times.now());
-        File fi = Files.createFileIfNoExists2(f.getAbsolutePath()
-                                              + ".dinfo");
+        File fi = Files.createFileIfNoExists2(f.getAbsolutePath() + ".dinfo");
         Json.toJsonFile(fi, di, JsonFormat.forLook());
         dao.update(di);
         // 返回文件
