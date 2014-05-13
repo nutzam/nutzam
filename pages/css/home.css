@@ -188,6 +188,15 @@ a:hover {
   padding: 10px 0;
   width: 800px;
 }
+#arena .news {
+  padding: 20px;
+  text-align: center;
+  font-size: 16px;
+  background-color: #FF8;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px dashed #CCC;
+}
 #arena .column {
   float: left;
   width: 266.6666666666667px;
