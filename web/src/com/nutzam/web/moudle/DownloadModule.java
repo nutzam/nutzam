@@ -120,6 +120,12 @@ public class DownloadModule {
         return dao.fetch(DownInfo.class, fg);
     }
 
+    @At("/fetch")
+    @Ok("jsp:jsp.down.info")
+    public DownInfo getByName(@Param("nm") String name) {
+        return dao.fetch(DownInfo.class, Cnd.where("name", "=", name));
+    }
+
     @At("/read/?")
     @Ok("raw:stream")
     @Fail("http")
