@@ -192,14 +192,14 @@ a:hover {
   padding: 20px;
   text-align: center;
   font-size: 16px;
-  background-color: #FF8;
+  background-color: #FCF;
   margin-bottom: 20px;
   border-radius: 6px;
   border: 1px dashed #CCC;
 }
 #arena .column {
   float: left;
-  width: 266.6666666666667px;
+  width: 266.66666667px;
   font-size: 12px;
 }
 #arena .column h4 {
