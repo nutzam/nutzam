@@ -1,4 +1,4 @@
-package com.nutzam.web.moudle;
+package com.nutzam.web.module;
 
 import java.io.File;
 import java.util.Date;
