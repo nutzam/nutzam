@@ -7,8 +7,8 @@
         <a href="${page.bpath}index.html">首页</a>
         <a target="_blank" href="https://github.com/nutzam/nutzdemo">Demo</a>
         <a href="http://downloads.nutzam.com">下载</a>
-        <a target="_blank" href="${page.bpath}core/nutz_preface.html">文档/a>
-        <a target="_blank" href="http://nutzbook.wendal.net/">入门手册/a>
+        <a target="_blank" href="${page.bpath}core/nutz_preface.html">文档</a>
+        <a target="_blank" href="http://nutzbook.wendal.net/">入门手册</a>
         <a target="_blank" href="${page.bpath}/javadoc/">API</a>
         <a target="_blank" href="http://nutz.cn">社区</a>
     </div>
