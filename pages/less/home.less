@@ -1,41 +1,92 @@
 @import "_base.less";
 @import "_sky.less";
 @import "_footer.less";
-.slider {
-    width:1000px;
-    height:400px;
-    margin:0 auto;
-    overflow:hidden;
-    position:relative;
-}
-.slider_scroller {
-    width:999999px;
-    position:absolute;
-    div {
-        float:left;
-    }
-}
-.slider_scroller:after {.clr-after;}
-#fe {
-    min-height:320px; text-align:center;
-    background-color:#08F;
-}
+
 @arena-width: 800px;
-#arena {
-    margin:10px auto; padding:10px 0;
-    width:@arena-width;
-    .news {
-        padding:20px;
-        text-align:center;
-        font-size:16px;
-        background-color:#FFA;
-        margin-bottom:20px;
-        border-radius:6px;
-        border:1px dashed #CCC;
+@feH : 480px;
+@swH : 10px;
+
+html, body {height:100%;}
+
+.fe {
+    background-color:#000; height:@feH;  position: relative;  
+    .slider-con {
+        width:100%; height:100%; overflow: hidden; position: relative;
+        .slider {
+            padding:0; margin:0; list-style: none; transition: 1.2s; 
+            position: absolute; left:0; top:0; bottom:0; height:100%; width:100000px; 
+            li {
+                height: @feH; float: left;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+        }
+        .slider:after {.clr-after;}
     }
+    .slider-switcher {
+        position: absolute; bottom:0; left:0; padding:20px; z-index: 1000;
+        ol {
+            padding:0; margin:0; list-style: none;
+            li {
+                height: @swH; width: @swH; border-radius: @swH; transition: 0.3s; 
+                background: rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.6);
+                margin: 0 4px; display: inline-block; vertical-align: middle; cursor: pointer;
+            }
+            li[highlight] {
+                height: @swH * 1.4; width: @swH * 1.4; border-radius: @swH * 2; 
+                background: rgba(255,128,0,0.8); border:1px solid rgba(255,255,255,0.6);
+            }
+        }
+
+    }
+    .fe-con {
+        position: absolute; top:0; left: 0; right: 0; bottom:0;
+        padding: 20px;
+        > div {
+            width:100%; height:100%; position: relative;
+            section {
+                position: absolute;
+                h4 {padding:8px; margin:0; font-size: 1.5em; text-shadow:1px 1px 1px rgba(0,0,0,0.6);}
+                a {color:#00F; text-decoration: none;}
+                a:hover {color:#A40; text-decoration: underline;}
+            }
+            section:first-child {
+                width:@arena-width / 2; top:0; left:0; background: rgba(255,255,255,0.5);
+                padding: 12px; border-radius: 6px; color:#444;
+                h4{ border-bottom:1px dashed rgba(0,0,0,0.2);}
+                .tip{
+                    text-align: center;
+                    img {width:150px;}
+                }
+            }
+            section:last-child {
+                width:@arena-width / 2; top:0; bottom:0; right:0; background: rgba(0,0,0,0.3);
+                padding: 20px; border-radius: 6px;
+                color:#CCC;
+                h4{ border-bottom:1px dashed rgba(255,255,255,0.4);}
+                a {color:#DDD; text-decoration: none;}
+                a:hover {color:#FFF; text-decoration: underline;}
+                a.downbtn {
+                    display: block; padding:8px; text-align: center;
+                    background: #08F; color:#FFF; border-radius: 4px;
+                    box-shadow: 2px 2px 6px #333; 
+                }
+                a.downbtn:hover{text-decoration: none; text-shadow:1px 1px 1px rgba(0,0,0,0.6);}
+                .morelink {
+                    padding:10px; text-align:center;
+                }
+            }
+        }
+    }
+}
+
+.arena {
+    margin:10px auto; padding:10px 0;
+    width:@arena-width; 
+    font-size: 14px; line-height: 32px;
     .column {
         float:left; width: (@arena-width / 3);
-        font-size:12px;
         h4 {padding:0;margin:0;}
         ul {
             list-style:none;
@@ -44,4 +95,4 @@
         }
     }
 }
-#arena:after {.clr-after;}
+.arena:after {.clr-after;}

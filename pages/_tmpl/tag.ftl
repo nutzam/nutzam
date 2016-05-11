@@ -1,7 +1,9 @@
 <html>
 <head>
-    <meta charset="UTF-8">
-    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${page.title} - ${siteTitle}</title>
     <link rel="stylesheet" type="text/css" href="../css/tags.css">
     <script language="javascript" src="../js/jquery.js"></script>

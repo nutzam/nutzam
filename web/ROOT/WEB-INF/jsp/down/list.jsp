@@ -23,7 +23,7 @@
 	<thead>
 		<tr>
 			<th colspan="5" class="dlist-sz">
-				<z:msg key="di.sum">{n:${fn:length(obj)}}</z:msg>
+				共有 ${fn:length(obj)} 条记录
 			</th>
 		</tr>
 		<tr class="dlist-col-titles">
@@ -54,7 +54,7 @@
 	<tfoot>
 		<tr>
 			<th colspan="5" class="dlist-sz">
-				<z:msg key="di.sum">{n:${fn:length(obj)}}</z:msg>
+				共有 ${fn:length(obj)} 条记录
 			</th>
 		</tr>
 	</tfoot>

@@ -51,13 +51,17 @@ a:hover {
   height: 64px;
 }
 #footer {
-  border-top: 1px dashed #CCC;
+  border-top: 1px dashed #BCF;
   margin: 0;
   padding: 10px 0 40px 0;
   text-align: center;
   font-weight: normal;
-  color: #AAA;
+  color: #BCF;
   font-size: 12px;
+  height: 400px;
+}
+#footer div.footer-logo {
+  padding: 10px;
 }
 #sky {
   padding: 20px;
