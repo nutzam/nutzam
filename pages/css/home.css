@@ -253,7 +253,7 @@ body {
   padding: 8px;
   margin: 0;
   font-size: 1.5em;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
 }
 .fe .fe-con > div section a {
   color: #00F;
@@ -263,7 +263,8 @@ body {
   color: #A40;
   text-decoration: underline;
 }
-.fe .fe-con > div section:first-child {
+.fe .fe-con > div section.fe-left {
+  display: none;
   width: 400px;
   top: 0;
   left: 0;
@@ -272,37 +273,37 @@ body {
   border-radius: 6px;
   color: #444;
 }
-.fe .fe-con > div section:first-child h4 {
+.fe .fe-con > div section.fe-left h4 {
   border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
 }
-.fe .fe-con > div section:first-child .tip {
+.fe .fe-con > div section.fe-left .tip {
   text-align: center;
 }
-.fe .fe-con > div section:first-child .tip img {
+.fe .fe-con > div section.fe-left .tip img {
   width: 150px;
 }
-.fe .fe-con > div section:last-child {
+.fe .fe-con > div section.fe-right {
   width: 400px;
   top: 0;
   bottom: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 6px;
   color: #CCC;
 }
-.fe .fe-con > div section:last-child h4 {
+.fe .fe-con > div section.fe-right h4 {
   border-bottom: 1px dashed rgba(255, 255, 255, 0.4);
 }
-.fe .fe-con > div section:last-child a {
+.fe .fe-con > div section.fe-right a {
   color: #DDD;
   text-decoration: none;
 }
-.fe .fe-con > div section:last-child a:hover {
+.fe .fe-con > div section.fe-right a:hover {
   color: #FFF;
   text-decoration: underline;
 }
-.fe .fe-con > div section:last-child a.downbtn {
+.fe .fe-con > div section.fe-right a.downbtn {
   display: block;
   padding: 8px;
   text-align: center;
@@ -311,11 +312,11 @@ body {
   border-radius: 4px;
   box-shadow: 2px 2px 6px #333;
 }
-.fe .fe-con > div section:last-child a.downbtn:hover {
+.fe .fe-con > div section.fe-right a.downbtn:hover {
   text-decoration: none;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
 }
-.fe .fe-con > div section:last-child .morelink {
+.fe .fe-con > div section.fe-right .morelink {
   padding: 10px;
   text-align: center;
 }
