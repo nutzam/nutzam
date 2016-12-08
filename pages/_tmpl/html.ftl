@@ -16,5 +16,6 @@ page-depth="${page.depth}">
 <#include "lib:sky.ftl">
 ${doc.content}
 <#include "lib:footer.ftl">
+<div id='backtotop'>回到顶部</div>
 </body>
 </html>

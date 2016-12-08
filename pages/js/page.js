@@ -31,5 +31,29 @@ $(document).ready(function(){
     }).delegate('.zdoc-index-node b','click',function(){
         $(this).parent().toggleClass('hidesub');
     });
+	//============================================
+	  var $backtotop = $('#backtotop');
+	  var top = 200;
+
+	  function moveBacktotop() {
+	    $backtotop.css({ top: top, right: 0});
+	  }
+
+	  $backtotop.click(function () {
+	    $('html,body').animate({ scrollTop: 0 });
+	    return false;
+	  });
+	  $(window).scroll(function () {
+	    var windowHeight = $(window).scrollTop();
+	    if (windowHeight > 200) {
+	      $backtotop.fadeIn();
+	    } else {
+	      $backtotop.fadeOut();
+	    }
+	  });
+
+	  moveBacktotop();
+	  $(window).resize(moveBacktotop);
+	//============================================
 });
 })(window.jQuery);
