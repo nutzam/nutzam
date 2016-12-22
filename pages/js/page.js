@@ -18,6 +18,8 @@ $(document).ready(function(){
 
         // 修改 page title
         $('#sky .title').text($('#siteIndex', this).attr('tree-title'));
+		
+        $('.zdoc-index-node').addClass("hidesub");
         
         // 修改 tree.html 的链接并高亮 tree.html 的项目
         var pageHref = window.location.href;
@@ -26,6 +28,7 @@ $(document).ready(function(){
                 $(this).attr('href', rpath + $(this).attr('href'));
             if(this.href == pageHref){
                 $(this).addClass("current");
+                $(this).parents(".zdoc-index-node").removeClass("hidesub");
             }
         });
     }).delegate('.zdoc-index-node b','click',function(){
