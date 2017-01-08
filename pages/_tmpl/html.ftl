@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${doc.title} - ${siteTitle}</title>
-    <script language="Javascript" src="${doc.bpath}js/jquery.js"></script>
-    <script language="Javascript" src="${doc.bpath}js/home.js"></script>
     <link rel="stylesheet" type="text/css" href="${doc.bpath}css/home.css">
 </head>
 <body 
@@ -17,5 +15,7 @@ page-depth="${page.depth}">
 ${doc.content}
 <#include "lib:footer.ftl">
 <div id='backtotop'>回到顶部</div>
+<script language="Javascript" src="${doc.bpath}js/jquery.js"></script>
+<script language="Javascript" src="${doc.bpath}js/home.js"></script>
 </body>
 </html>
