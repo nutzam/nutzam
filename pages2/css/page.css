@@ -1,0 +1,355 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.clr {
+  clear: both;
+  height: 1px;
+  line-height: 1px;
+  overflow: hidden;
+}
+.clr-after {
+  clear: both;
+  height: 1px;
+  line-height: 1px;
+  overflow: hidden;
+  display: block;
+  content: "";
+}
+body,
+font,
+td,
+form,
+p {
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0px;
+}
+body {
+  margin: 0;
+}
+a {
+  color: #0088ff;
+  text-decoration: none;
+}
+a:hover {
+  color: #66aaff;
+  text-decoration: underline;
+}
+.logo {
+  background: url(logo_32.png) no-repeat;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+.logo64 {
+  background: url(logo_64.png) no-repeat;
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+}
+#sky {
+  margin: 0 auto;
+  padding: 10px 0;
+  width: 1000px;
+  position: relative;
+}
+#sky .left img {
+  width: 24px;
+  height: 24px;
+  border: 0;
+  vertical-align: middle;
+}
+#sky .left i {
+  display: inline-block;
+  vertical-align: middle;
+  height: 32px;
+  line-height: 36px;
+  font-style: normal;
+  font-size: 16px;
+  margin: 0 4px;
+  color: #444;
+  text-shadow: 0 0 1px #888;
+}
+#sky .right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 50px;
+  font-size: 12px;
+}
+#sky .right a {
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  color: #888;
+  margin: 0 20px;
+  padding: 0 8px;
+  line-height: 46px;
+  border-top: 3px solid #FFF;
+}
+#sky .right a:hover {
+  border-color: #F80;
+  color: #F80;
+}
+#sky:after {
+  clear: both;
+  height: 1px;
+  line-height: 1px;
+  overflow: hidden;
+  display: block;
+  content: "";
+}
+#menu {
+  background-color: #EEE;
+  padding: 8px;
+  border-width: 1px 0 1px 0;
+  border-color: #DDD;
+  border-style: solid;
+}
+#menu .menu_inner {
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+#menu .menu_inner .slogan {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#menu .menu_inner .slogan em {
+  display: block;
+  font-size: 10px;
+  color: #AAA;
+  font-style: normal;
+}
+#menu .menu_inner .menu_items {
+  padding-left: 180px;
+}
+#menu .menu_inner .menu_items a {
+  display: block;
+  float: left;
+  font-size: 12px;
+  padding: 0 16px;
+  text-shadow: 0 0 1px #AAA;
+  border-left: 1px solid #DDD;
+}
+#menu .menu_inner .menu_items a:hover {
+  color: #08F;
+}
+#menu .menu_inner .menu_items:after {
+  clear: both;
+  height: 1px;
+  line-height: 1px;
+  overflow: hidden;
+  display: block;
+  content: "";
+}
+#footer {
+  border-top: 1px dashed #BCF;
+  margin: 0;
+  padding: 10px 0 40px 0;
+  text-align: center;
+  font-weight: normal;
+  color: #BCF;
+  font-size: 12px;
+  height: 400px;
+}
+#footer div.footer-logo {
+  padding: 10px;
+}
+.doc-title {
+  font-size: 28px;
+  font-weight: bold;
+  padding: 16px;
+  padding-top: 30px;
+  text-align: center;
+}
+.doc-info {
+  margin: 10px;
+  padding: 8px 20px;
+}
+.doc-info .doc-lm {
+  font-size: 9px;
+  float: left;
+  color: #CCC;
+  font-family: Times;
+}
+.doc-info .doc-tags {
+  float: left;
+}
+.doc-info .doc-tags a {
+  vertical-align: top;
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #AAF;
+}
+.doc-info .doc-tags a:before {
+  color: #DDD;
+  vertical-align: top;
+  display: inline-block;
+  content: "|";
+  margin-right: 8px;
+  overflow: hidden;
+}
+.doc-info .doc-tags a:hover {
+  text-decoration: underline;
+  color: #00F;
+}
+.doc-info .doc-au {
+  font-size: 9px;
+  float: right;
+  padding: 0 10px;
+}
+.doc-info .doc-au i,
+.doc-info .doc-au em,
+.doc-info .doc-au b {
+  font-style: normal;
+  color: #AAA;
+}
+.doc-info:after {
+  clear: both;
+  height: 1px;
+  line-height: 1px;
+  overflow: hidden;
+  display: block;
+  content: "";
+}
+.doc-content p {
+  margin: 10px 50px;
+}
+.doc-content blockquote {
+  border-left: 3px solid #CCC;
+  margin: 10px 60px;
+  padding: 4px 10px;
+  font-size: 12px;
+  color: #888;
+}
+.doc-content img {
+  border: 0px;
+  max-width: 640px;
+}
+.doc-content blockquote p {
+  margin: 0px;
+}
+.doc-content i {
+  color: #666;
+}
+.doc-content .doc-hr {
+  margin: 16px 20px;
+  height: 1px;
+  line-height: 1px;
+  overflow: hidden;
+  border-top: 1px dashed #CCC;
+}
+.doc-content h1 {
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 2px;
+  padding: 5px;
+  padding-left: 20px;
+}
+.doc-content h2 {
+  color: #00C;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 2px;
+  padding: 5px;
+  padding-left: 40px;
+}
+.doc-content h3,
+.doc-content h4,
+.doc-content h5,
+.doc-content h6 {
+  color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 2px;
+  padding: 5px;
+  padding-left: 60px;
+}
+.doc-content table {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 40px;
+}
+.doc-content pre {
+  color: #126;
+  font-family: Courier New;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0px;
+  padding: 10px;
+  margin: 0 10px 0 60px;
+  background-color: #EEE;
+  border: 1px dashed #BBB;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.doc-content code {
+  color: #621;
+  background: #FFD;
+  border: 1px solid #CCC;
+  margin: 0 2px;
+  padding: 0 4px;
+}
+.doc-content ul,
+.doc-content ol {
+  margin-left: 50px;
+  padding-left: 30px;
+}
+.doc-content ul ul,
+.doc-content ul ol,
+.doc-content ol ol,
+.doc-content ol ul {
+  margin-left: 10px;
+  padding-left: 10px;
+}
+#chute {
+  width: 260px;
+  padding: 0px 20px 20px 20px;
+  position: absolute;
+  border-right: 1px dashed #DDD;
+}
+#chute ol {
+  padding-left: 24px;
+}
+#chute li {
+  color: #666;
+  font-size: 12px;
+}
+#chute li a {
+  color: #3AF;
+  text-decoration: none;
+}
+#chute li a:hover {
+  color: #19F;
+  text-decoration: underline;
+}
+#chute li a.current,
+#chute li a.current:hover {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  background-color: #FFA;
+}
+#chute li b {
+  cursor: pointer;
+}
+#chute li b:hover {
+  background-color: #EEE;
+}
+#chute li.hidesub b:after {
+  content: "...";
+}
+#chute li.hidesub ol {
+  display: none;
+}
+#arena {
+  padding: 0 240px 10px 260px;
+}

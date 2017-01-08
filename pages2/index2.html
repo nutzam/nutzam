@@ -1,0 +1,109 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutz - 程序员小伙伴们的另一个选择</title>
+    <script language="Javascript" src="js/jquery.js"></script>
+    <script language="Javascript" src="js/home.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <script>
+    function do_resize(){
+        $(".fe .slider>li").css("width", $(".fe").width());
+    }
+    function on_click_switcher(){
+        var jLi   = $(this);
+        var index = jLi.attr("index") * 1;
+        var off   = $(".fe .slider>li").width() * index;
+        $(".fe .slider").css("left", off*-1);
+        jLi.parent().children().removeAttr("highlight");
+        jLi.attr("highlight","yes");
+    }
+    $(function(){
+        $(".fe .slider>li")
+            .css("width", $(".fe").width())
+            .each(function(index){
+                $(".slider-switcher ol").append('<li index="'+index+'">');
+            });
+
+        $(".slider-switcher ol li").click(on_click_switcher);
+
+        window.onresize = do_resize;
+
+        $(".slider-switcher ol li:first-child").click();
+
+        window.setInterval(function(){
+            var jLi = $(".slider-switcher ol li[highlight]").next();
+            if(jLi.size() == 0){
+                $(".slider-switcher ol li:first-child").click();
+            }else{
+                jLi.click();
+            }
+        }, 10000);
+    });
+    </script>
+</head>
+<body>
+    <div class="fe">
+        <div class="slider-con">
+            <ul class="slider">
+                <li style="background-image:url(imgs/1_r_59/00.jpg)"></li>
+                <li style="background-image:url(imgs/1_r_59/01.jpg)"></li>
+                <li style="background-image:url(imgs/1_r_59/02.jpg)"></li>
+            </ul>
+        </div>
+        <div class="slider-switcher"><ol></ol></div>
+        <div class="fe-con"><div>
+            <section class="fe-left">
+                <h4>鄱阳湖黄丫头鱼</h4>
+                <div class="tip"><img src="imgs/1_r_56/tip.png"></div>
+                <p>黄丫头鱼是江西人对黄颡鱼的俗称，它肉质细嫩无小刺，味道鲜美营养丰富，是江西人嗜食的一种淡水鱼。在江西，产自鄱阳湖的黄丫头其品质较其它地区的更胜一筹。黄丫头鱼具有利小便，消水肿，发痘疹，醒酒的功效。红烧黄丫头非常好吃哟，感觉特别滑嫩，是一道相当不错的下酒菜哟。
+                <p align="right"><a target="_blank" href="http://nutz.cn/yvr/t/rlq8pik42cit0rkasmbepalnm9"> > 申请一个nutz版本冠名</a>
+            </section>
+            <section class="fe-right">
+                <h4>Nutz1.r.59(盐焗腰果)正式发布</h4>
+                <ul>
+                    <li>体积小巧(1M+) 且无依赖</li>
+                    <li>功能强大: Dao, Mvc, Json, Ioc 以及各种帮助函数</li>
+                    <li>全面的文档 + 极低的学习曲线</li>
+                    <li>1000+ JUnit 保证质量坚若磐石</li>
+                    <li>数年来被广泛应用到包括服务器，Android，嵌入式等各种开发场景</li>
+                    <li>活跃的 <a target="_blank" href="http://github.com/nutzam/nutz/issues">Issue 列表</a>推动功能不断进化</li>
+                    <li>充满JI情的<a target="_blank" href="https://nutz.cn">社区</a> ... </li>
+                </ul>
+                <a class="downbtn" href="http://downloads.nutzam.com/get/f84478dd77adb7dc8d4164ad4dae48c0">下载 Nutz1.r.59</a>
+                <div class="morelink">
+                    <a href="/core/history/1_r_59.html">Nutz1.r.59发行注记</a>
+                </div>
+            </section>
+        </div></div>
+    </div>
+    <div class="arena">
+        <div class="column" style="border:0px;">
+            <h4>最新更新</h4>
+            <ul>
+                <li><a target="_blank" href="https://jfrog.nutz.cn/artifactory/snapshots/org/nutz/nutz/">最新Nutz.jar</a>
+                <li><a target="_blank" href="https://github.com/nutzam/nutz/commits/master">最新的代码提交</a>
+                <li><a target="_blank" href="https://github.com/nutzam/nutz/graphs/contributors">贡献者们</a>
+            </ul>
+        </div>
+        <div class="column">
+            <h4>相关资源</h4>
+            <ul>
+                <li><a target="_blank" href="https://github.com/nutzam/nutz">项目代码托管(Github)</a>
+                <li><a href="http://downloads.nutzam.com">下载列表</a>
+                <li><a href="https://github.com/nutzam/nutz/releases">发布列表</a>
+                <li><a target="_blank" href="https://github.com/nutzam/nutz/issues?labels=FAQ&milestone=&page=1&state=closed">FAQ</a>
+            </ul>
+        </div>
+        <div class="column">
+            <h4>社区</h4>
+            <ul>
+                <li> <a target="_blank" href="https://nutz.cn">Nutz官方社区</a> <i>(你的问题总会被解答)</i>
+                <li> <a target="_blank" href="http://qun.qq.com/air/#58444676"> QQ群 68428921</a> <i>- Nutz ② 群</i>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
