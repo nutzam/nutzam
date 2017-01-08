@@ -5,9 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${doc.title} - ${siteTitle}</title>
-    <script language="Javascript" src="${doc.bpath}js/jquery.js"></script>
-    <script language="Javascript" src="${doc.bpath}js/page.js"></script>
     <link rel="stylesheet" type="text/css" href="${doc.bpath}css/page.css">
+    <link rel="stylesheet" type="text/css" href="${doc.bpath}css/prism.css">
 </head>
 <body 
 tree-depth="${page.treeDepth}" 
@@ -22,4 +21,7 @@ page-depth="${page.depth}">
     </div>
     <#include "lib:footer.ftl">
 </body>
+<script language="Javascript" src="${doc.bpath}js/jquery.js"></script>
+<script language="Javascript" src="${doc.bpath}js/page.js"></script>
+<script language="Javascript" src="${doc.bpath}js/prism.js"></script>
 </html>

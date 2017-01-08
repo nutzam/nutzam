@@ -278,25 +278,9 @@ a:hover {
   margin-bottom: 10px;
   margin-left: 40px;
 }
-.doc-content pre {
-  color: #126;
-  font-family: Courier New;
-  font-size: 12px;
-  line-height: 18px;
-  letter-spacing: 0px;
+.code-block {
   padding: 10px;
   margin: 0 10px 0 60px;
-  background-color: #EEE;
-  border: 1px dashed #BBB;
-  word-wrap: break-word;
-  word-break: break-all;
-}
-.doc-content code {
-  color: #621;
-  background: #FFD;
-  border: 1px solid #CCC;
-  margin: 0 2px;
-  padding: 0 4px;
 }
 .doc-content ul,
 .doc-content ol {
