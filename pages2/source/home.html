@@ -7,68 +7,57 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>${doc.title} - ${siteTitle}</title>
     <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/nutz-bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/nutzam-bs3.css">
     <link rel="stylesheet" type="text/css" href="../css/nutzam.css">
     <script src="../js/jquery.min.js"></script>
-    <script src="../js/tether.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="fixed-top navbar-container">
-    <nav class="container navbar navbar-toggleable-md navbar-light">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="#">
-            <img src="../imgs/logo_32.png" class="brand-img" alt=""><span class="brand-text">Nutz</span>
-        </a>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="${page.bpath}index.html">首页</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="nutz-project"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        项目
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="nutz-project">
-                        <a class="dropdown-item" href="https://github.com/nutzam/nutz">Nutz(核心包)</a>
-                        <a class="dropdown-item" href="https://github.com/nutzam/nutzmore">NutzMore(插件与扩展)</a>
-                        <a class="dropdown-item" href="https://github.com/nutzam/nutzwx">NutzWx(公众号操作封装库)</a>
-                        <a class="dropdown-item" href="https://github.com/nutzam/nutzmongo">NutzMongo(MongoDB驱动的薄封装)</a>
-                        <a class="dropdown-item" href="https://github.com/nutzam/nutz-web">NutzWeb(A Jetty launcher)</a>
-                        <a class="dropdown-item"
-                           href="https://github.com/nutzam/nutz-quartz">NutzQuartz(Quartz表达式解析执行类库)</a>
-                        <a class="dropdown-item" href="https://github.com/nutzam/nutz-qrcode">NutzQrcode(二维码生成/解析)</a>
-                        <a class="dropdown-item" href="https://github.com/zozoh/zdoc">zdoc(支持zDoc,markdown文档生成工具)</a>
-                        <a class="dropdown-item" href="https://github.com/pangwu86/nutz-logo">NutzLogo(跳蛋版实现)</a>
-                        <a class="dropdown-item" href="https://nutz.cn/yvr/t/tdb5l3e7pajv1ptl1f0nveg1bk">Demo(社区提供)</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="nutz-doc"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        文档
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="nutz-doc">
-                        <a class="dropdown-item" href="http://nutzbook.wendal.net/">进阶手册(Wendal出品，偏实战)</a>
-                        <a class="dropdown-item" href="${page.bpath}core/nutz_preface.html">Nutz使用手册(核心包)</a>
-                        <a class="dropdown-item" href="${page.bpath}/javadoc/1.r.59/">NutzAPI文档(核心包)</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://nutz.cn/nutzdw/">下载</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://nutz.cn">社区</a>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Brand</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
                 </li>
             </ul>
-        </div>
-    </nav>
-</div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
 <div class="main-container container">
     <h1>这是新的nutz官网首页</h1>
 </div>

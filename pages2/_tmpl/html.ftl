@@ -7,10 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>${doc.title} - ${siteTitle}</title>
     <link rel="stylesheet" type="text/css" href="${doc.bpath}css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="${doc.bpath}css/nutz-bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="${doc.bpath}css/nutzam-bs3.css">
     <link rel="stylesheet" type="text/css" href="${doc.bpath}css/nutzam.css">
     <script src="${doc.bpath}js/jquery.min.js"></script>
-    <script src="${doc.bpath}js/tether.min.js"></script>
     <script src="${doc.bpath}js/bootstrap.min.js"></script>
 </head>
 <body tree-depth="${page.treeDepth}"
