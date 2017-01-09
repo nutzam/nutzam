@@ -5,10 +5,11 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Maven基本配置 - Nutz</title>
+    <title>zDoc 的语法 - Nutz</title>
     <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../css/balloon.min.css">
     <link rel="stylesheet" type="text/css" href="../css/nutz-bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/prism.css">
     <link rel="stylesheet" type="text/css" href="../css/nutzam.css">
     <script src="../js/jquery.min.js"></script>
     <script src="../js/jquery.toTop.min.js"></script>
@@ -27,7 +28,7 @@
     }
     </style>
 </head>
-<body tree-depth="1" tree-name="tree.html" page-depth="3" class="show-sidetree">
+<body tree-depth="1" tree-name="tree.html" page-depth="2">
 <div class="fixed-top navbar-container">
     <nav class="container navbar navbar-toggleable-md navbar-light">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -38,14 +39,14 @@
         <a class="navbar-brand" href="#">
             <div class="brand-logo">
                 <div class="logo-tail"></div>
-                <img src="../../imgs/nutz_logo28.png" class="brand-img" alt="">
+                <img src="../imgs/nutz_logo28.png" class="brand-img" alt="">
             </div>
             <span class="brand-text">Nutz</span>
         </a>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="../../index.html">首页</a>
+                    <a class="nav-link" href="../index.html">首页</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="http://example.com" id="nutz-project"
@@ -60,7 +61,7 @@
                         <a class="dropdown-item" href="https://github.com/nutzam/nutz-web">NutzWeb(A Jetty launcher)</a>
                         <a class="dropdown-item" href="https://github.com/nutzam/nutz-quartz">NutzQuartz(Quartz表达式解析执行类库)</a>
                         <a class="dropdown-item" href="https://github.com/nutzam/nutz-qrcode">NutzQrcode(二维码生成/解析)</a>
-                        <a class="dropdown-item" href="https://github.com/zozoh/zdoc">zdoc(支持zDoc,markdown文档生成工具)</a>
+                        <a class="dropdown-item" href="https://github.com/zozoh/zdoc">zDoc(支持zDoc,markdown文档生成工具)</a>
                         <a class="dropdown-item" href="https://github.com/pangwu86/nutz-logo">NutzLogo(跳蛋版实现)</a>
                         <a class="dropdown-item" href="https://nutz.cn/yvr/t/tdb5l3e7pajv1ptl1f0nveg1bk">Demo(社区提供)</a>
                     </div>
@@ -71,9 +72,10 @@
                         文档
                     </a>
                     <div class="dropdown-menu" aria-labelledby="nutz-doc">
+                        <a class="dropdown-item" href="../core/nutz_preface.html">Nutz使用手册(核心包)</a>
+                        <a class="dropdown-item" href="../javadoc/1.r.59/">NutzAPI文档(核心包)</a>
                         <a class="dropdown-item" href="http://nutzbook.wendal.net/">进阶手册(Wendal出品，偏实战)</a>
-                        <a class="dropdown-item" href="../../core/nutz_preface.html">Nutz使用手册(核心包)</a>
-                        <a class="dropdown-item" href="../..//javadoc/1.r.59/">NutzAPI文档(核心包)</a>
+                        <a class="dropdown-item" href="../zdoc/syntax.html">zDoc使用手册</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -85,334 +87,566 @@
             </ul>
         </div>
     </nav>
-</div>
-<div class="doc-sidetree">
-    <div id="siteIndex" tree-title="Nutz核心包">
-        <ol class="zdoc-index-container">
-            <li class="doc-index-item"><a href="../nutz_preface.html">写在前面的话</a></li>
-            <li class="doc-index-item"><a href="../nutz_release_notes.html">1.r.60 发行注记</a></li>
-            <li class="zdoc-index-node"><b>通用知识</b>
-                <ol class="zdoc-index-wrapper">
-                    <li class="doc-index-item"><a href="../basic/maven.html" class="current">Maven基本配置</a></li>
-                    <li class="doc-index-item"><a href="../basic/encoding.html">编码与乱码</a></li>
-                    <li class="doc-index-item"><a href="../basic/support.html">技术支持</a></li>
-                </ol>
-            </li>
-            <li class="zdoc-index-node hidesub"><b>Mvc 手册</b>
-                <ol class="zdoc-index-wrapper">
-                    <li class="doc-index-item"><a href="../mvc/overview.html">Nutz.Mvc 概述</a></li>
-                    <li class="doc-index-item"><a href="../mvc/hello.html">Hello World</a></li>
-                    <li class="doc-index-item"><a href="../mvc/web_xml.html">如何配置 web.xml</a></li>
-                    <li class="doc-index-item"><a href="../mvc/modules.html">主模块-子模块-入口函数</a></li>
-                    <li class="doc-index-item"><a href="../mvc/url_mapping.html">URL 映射</a></li>
-                    <li class="doc-index-item"><a href="../mvc/action_chain.html">动作链</a></li>
-                    <li class="doc-index-item"><a href="../mvc/http_adaptor.html">适配器</a></li>
-                    <li class="doc-index-item"><a href="../mvc/view.html">视图</a></li>
-                    <li class="doc-index-item"><a href="../mvc/with_ioc.html">同 Ioc 容器一起工作</a></li>
-                    <li class="doc-index-item"><a href="../mvc/localization.html">本地化字符串</a></li>
-                    <li class="doc-index-item"><a href="../mvc/action_filter.html">过滤器</a></li>
-                    <li class="doc-index-item"><a href="../mvc/file_upload.html">文件上传</a></li>
-                    <li class="doc-index-item"><a href="../mvc/module_of_request.html">请求范围的模块</a></li>
-                    <li class="doc-index-item"><a href="../mvc/rest.html">REST 的支持</a></li>
-                    <li class="doc-index-item"><a href="../mvc/annotations.html">Nutz.Mvc 注解一览表</a></li>
-                    <li class="doc-index-item"><a href="../mvc/session.html">Session机制</a></li>
-                    <li class="doc-index-item"><a href="../mvc/setupby.html">应用启动以及关闭时的额外处理</a></li>
-                    <li class="doc-index-item"><a href="../mvc/cross_origin.html">跨域请求</a></li>
-                    <li class="doc-index-item"><a href="../mvc/websocket.html">WebSocket的支持</a></li>
-                </ol>
-            </li>
-            <li class="zdoc-index-node hidesub"><b>Dao 手册</b>
-                <ol class="zdoc-index-wrapper">
-                    <li class="doc-index-item"><a href="../dao/hello.html">Hello world</a></li>
-                    <li class="doc-index-item"><a href="../dao/basic_operations.html">Dao 接口的基本操作</a></li>
-                    <li class="doc-index-item"><a href="../dao/primary_key.html">关于主键</a></li>
-                    <li class="doc-index-item"><a href="../dao/condition.html">复杂的SQL条件</a></li>
-                    <li class="doc-index-item"><a href="../dao/pager.html">分页查询</a></li>
-                    <li class="doc-index-item"><a href="../dao/next_prev.html">插入前后的设置</a></li>
-                    <li class="doc-index-item"><a href="../dao/view.html">使用视图</a></li>
-                    <li class="doc-index-item"><a href="../dao/field_filter.html">过滤字段</a></li>
-                    <li class="doc-index-item"><a href="../dao/dynamic_table_name.html">动态表名</a></li>
-                    <li class="doc-index-item"><a href="../dao/links_one.html">一对一映射</a></li>
-                    <li class="doc-index-item"><a href="../dao/links_many.html">一对多映射</a></li>
-                    <li class="doc-index-item"><a href="../dao/links_many_many.html">多对多映射</a></li>
-                    <li class="doc-index-item"><a href="../dao/customized_sql.html">自定义 SQL</a></li>
-                    <li class="doc-index-item"><a href="../dao/transaction.html">事务模板</a></li>
-                    <li class="doc-index-item"><a href="../dao/transaction_complex.html">交叉事务</a></li>
-                    <li class="doc-index-item"><a href="../dao/runner.html">更底层定制NutDao</a></li>
-                    <li class="doc-index-item"><a href="../dao/entity.html">实体解析</a></li>
-                    <li class="doc-index-item"><a href="../dao/services.html">内置的服务类</a></li>
-                    <li class="doc-index-item"><a href="../dao/pojo.html">更快的构建你的POJO</a></li>
-                    <li class="doc-index-item"><a href="../dao/record.html">不构建 POJO 访问数据库</a></li>
-                    <li class="doc-index-item"><a href="../dao/annotations.html">注解列表</a></li>
-                    <li class="doc-index-item"><a href="../dao/interceptors.html">Dao拦截器</a></li>
-                    <li class="doc-index-item"><a href="../dao/procedure.html">调用存储过程</a></li>
-                    <li class="doc-index-item"><a href="../dao/slave.html">读写分离</a></li>
-                    <li class="doc-index-item"><a href="../dao/multiple_datasource.html">多数据源</a></li>
-                </ol>
-            </li>
-            <li class="zdoc-index-node hidesub"><b>Ioc 手册</b>
-                <ol class="zdoc-index-wrapper">
-                    <li class="doc-index-item"><a href="../ioc/hello.html">Hello world</a></li>
-                    <li class="doc-index-item"><a href="../ioc/injecting.html">你都可以注入什么</a></li>
-                    <li class="doc-index-item"><a href="../ioc/events.html">事件监听</a></li>
-                    <li class="doc-index-item"><a href="../ioc/ioc_loader.html">如何配置一个 IocBean</a></li>
-                    <li class="doc-index-item"><a href="../ioc/loader_annotation.html">Ioc - Annotation 加载器</a></li>
-                    <li class="doc-index-item"><a href="../ioc/loader_combo.html">Ioc - 复合加载器</a></li>
-                    <li class="doc-index-item"><a href="../ioc/ioc_annos.html">Ioc 注解列表</a></li>
-                    <li class="doc-index-item"><a href="../ioc/ioc_by_hand.html">获取ioc对象的特殊场景</a></li>
-                    <li class="doc-index-item"><a href="../ioc/scope.html">对象生命范围</a></li>
-                    <li class="doc-index-item"><a href="../ioc/inner_object.html">如何定义对象</a></li>
-                    <li class="doc-index-item"><a href="../ioc/xml_ioc_loader.html">使用XML作为配置文件格式</a></li>
-                    <li class="doc-index-item"><a href="../ioc/ioc_and_java.html">ioc配置与Java代码的互相转换</a></li>
-                </ol>
-            </li>
-            <li class="zdoc-index-node hidesub"><b>Aop 手册</b>
-                <ol class="zdoc-index-wrapper">
-                    <li class="doc-index-item"><a href="../aop/aop_mvc.html">AOP -- 在Mvc中的使用</a></li>
-                    <li class="doc-index-item"><a href="../aop/aop_trans.html">声明式Aop事务</a></li>
-                    <li class="doc-index-item"><a href="../aop/aop_async.html">异步执行</a></li>
-                    <li class="doc-index-item"><a href="../aop/aop_solution.html">AOP模型 -- NutAop的实现思路</a></li>
-                    <li class="doc-index-item"><a href="../aop/aop.html">AOP -- 声明式切片</a></li>
-                    <li class="doc-index-item"><a href="../aop/aop_json.html">用json文件声明Aop切片</a></li>
-                </ol>
-            </li>
-            <li class="zdoc-index-node hidesub"><b>Json 手册</b>
-                <ol class="zdoc-index-wrapper">
-                    <li class="doc-index-item"><a href="../json/base.html">Nutz.Json 基本用法</a></li>
-                    <li class="doc-index-item"><a href="../json/from.html">Nutz.Json 转为Java对象</a></li>
-                    <li class="doc-index-item"><a href="../json/to.html">Nutz.Json 转为Json字符串</a></li>
-                    <li class="doc-index-item"><a href="../json/mvc.html">Nutz.Json 在Mvc中的用法</a></li>
-                    <li class="doc-index-item"><a href="../json/annotations.html">Nutz.Json 注解一览表</a></li>
-                </ol>
-            </li>
-            <li class="zdoc-index-node hidesub"><b>表达式引擎</b>
-                <ol class="zdoc-index-wrapper">
-                    <li class="doc-index-item"><a href="../el/overview.html">表达式引擎简介</a></li>
-                </ol>
-            </li>
-            <li class="zdoc-index-node hidesub"><b>maplist结构</b>
-                <ol class="zdoc-index-wrapper">
-                    <li class="doc-index-item"><a href="../maplist/overview.html">Mapl 结构</a></li>
-                </ol>
-            </li>
-            <li class="zdoc-index-node hidesub"><b>甜 Java</b>
-                <ol class="zdoc-index-wrapper">
-                    <li class="doc-index-item"><a href="../lang/lang.html">Java 的函数糖</a></li>
-                    <li class="doc-index-item"><a href="../lang/castors.html">让 Java 类型不那么强</a></li>
-                    <li class="doc-index-item"><a href="../lang/mirror.html">增强反射 -- Mirror</a></li>
-                    <li class="doc-index-item"><a href="../lang/segment.html">代码模板</a></li>
-                    <li class="doc-index-item"><a href="../lang/filepool.html">文件池</a></li>
-                    <li class="doc-index-item"><a href="../lang/log.html">日志</a></li>
-                </ol>
-            </li>
-            <li class="zdoc-index-node hidesub"><b>Http轻客户端</b>
-                <ol class="zdoc-index-wrapper">
-                    <li class="doc-index-item"><a href="../http/overview.html">小巧的Http客户端</a></li>
-                    <li class="doc-index-item"><a href="../http/httpdns.html">HttpDNS集成</a></li>
-                </ol>
-            </li>
-            <li class="zdoc-index-node hidesub"><b>图像处理小军刀</b>
-                <ol class="zdoc-index-wrapper">
-                    <li class="doc-index-item"><a href="../img/overview.html">图像处理小军刀</a></li>
-                </ol>
-            </li>
-            <li class="zdoc-index-node hidesub"><b>插件与集成</b>
-                <ol class="zdoc-index-wrapper">
-                    <li class="doc-index-item"><a href="../integration/nutzmore.html">编写插件或集成库</a></li>
-                    <li class="doc-index-item"><a href="../integration/freemarker.html">集成Freemarker</a></li>
-                    <li class="doc-index-item"><a href="../integration/velocity.html">集成Velocity</a></li>
-                    <li class="doc-index-item"><a href="../integration/beetl.html">集成beetl</a></li>
-                    <li class="doc-index-item"><a href="../integration/shiro.html">集成Shiro</a></li>
-                    <li class="doc-index-item"><a href="../integration/quartz.html">集成Quartz</a></li>
-                    <li class="doc-index-item"><a href="../integration/ehcache.html">集成Ehcache</a></li>
-                    <li class="doc-index-item"><a href="../integration/daocache.html">NutDao的缓存插件</a></li>
-                </ol>
-            </li>
-            <li class="zdoc-index-node hidesub"><b>单元测试</b>
-                <ol class="zdoc-index-wrapper">
-                    <li class="doc-index-item"><a href="../testing/junit_testing.html">JUnit支持</a></li>
-                </ol>
-            </li>
-            <li class="zdoc-index-node hidesub"><b>关于源码</b>
-                <ol class="zdoc-index-wrapper">
-                    <li class="doc-index-item"><a href="../committer/git_project.html">从 Git 编译源码</a></li>
-                    <li class="doc-index-item"><a href="../committer/compile_with_maven.html">运行 JUnit 测试 - Maven</a>
-                    </li>
-                    <li class="doc-index-item"><a href="../committer/ant.html">使用 Ant 编译</a></li>
-                    <li class="doc-index-item"><a href="../committer/packages.html">Nutz 的包结构</a></li>
-                    <li class="doc-index-item"><a href="../committer/version_naming.html">Nutz 的版本命名规范</a></li>
-                    <li class="doc-index-item"><a href="../committer/coding.html">Nutz Java 编码规范 (V1.0)</a></li>
-                    <li class="doc-index-item"><a href="../committer/be_committer.html">成为代码提交者</a></li>
-                </ol>
-            </li>
-            <li class="zdoc-index-node hidesub"><b>版本历史</b>
-                <ol class="zdoc-index-wrapper">
-                    <li class="doc-index-item"><a href="../history/1_r_59.html">1.r.59 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_r_58.html">1.r.58 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_r_57.html">1.r.57 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_r_56.html">1.r.56 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_r_55.html">1.r.55 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_r_54.html">1.r.54 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_b_53.html">1.b.53 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_b_52.html">1.b.52 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_b_51.html">1.b.51 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_b_50.html">1.b.50 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_b_49.html">1.b.49 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_b_48.html">1.b.48 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_b_47.html">1.b.47 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_b_46.html">1.b.46 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_b_45.html">1.b.45 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_b_44.html">1.b.44 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_b_43.html">1.b.43 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_b_42.html">1.b.42 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_b_41.html">1.b.41 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_b_40.html">1.b.40 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_b_39.html">1.b.39 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_b_38.html">1.b.38 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_b_37.html">1.b.37 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_b_36.html">1.b.36 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_b_35.html">1.b.35 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_b_34.html">1.b.34 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_a_33.html">1.a.33 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_a_32.html">1.a.32 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_a_31.html">1.a.31 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_a_30.html">1.a.30 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_a_29.html">1.a.29 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_a_28.html">1.a.28 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_a_27.html">1.a.27 发行注记</a></li>
-                    <li class="doc-index-item"><a href="../history/1_a_26.html">1.a.26</a></li>
-                    <li class="doc-index-item"><a href="../history/1_a_25.html">1.a.25 及 更早版本</a></li>
-                </ol>
-            </li>
-            <li class="zdoc-index-node hidesub"><b>FAQ</b>
-                <ol class="zdoc-index-wrapper">
-                    <li class="doc-index-item"><a href="../faq/how_to_pronounce_nutz.html">Nutz 该如何发音</a></li>
-                    <li class="doc-index-item"><a
-                            href="../faq/use_nutz_without_other_jar.html">Nutz需要依赖第三方jar吗?Log如何配置?</a></li>
-                    <li class="doc-index-item"><a href="../faq/jar_encoding.html">我的Nutz的源码是乱码怎么办？</a></li>
-                    <li class="doc-index-item"><a href="../faq/common_qa_1.html">社区常见问答 Part 1</a></li>
-                </ol>
-            </li>
-            <li class="zdoc-index-node hidesub"><b>附录</b>
-                <ol class="zdoc-index-wrapper">
-                    <li class="doc-index-item"><a href="../appendix/create_datasource.html">如何创建 DataSource</a></li>
-                    <li class="doc-index-item"><a href="../appendix/resources.html">推荐文章</a></li>
-                </ol>
-            </li>
-        </ol>
-    </div>
-</div>
+</div><!--<div class="doc-sidetree">-->
+<!--<div class="doc-sidetree-inner"></div>-->
+<!--</div>-->
 <div class="container doc-container">
+    <div class="doc-sidetree">
+        <div class="doc-sidetree-inner">
+            <div id="siteIndex" tree-title="zDoc手册">
+                <ol class="zdoc-index-container">
+                    <li class="doc-index-item"><a href="syntax.html" class="current">zDoc 的语法</a></li>
+                    <li class="doc-index-item"><a href="pages.html">zDoc工作目录约定</a></li>
+                    <li class="doc-index-item"><a href="parsing_data.html">zDoc的中间数据结构</a></li>
+                    <li class="doc-index-item"><a href="parsing_am.html">zDoc的解析自动机</a></li>
+                    <li class="doc-index-item"><a href="rendering.html">zDoc的渲染</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
     <div class="row doc-menu">
         <div class="doc-btn toggle-sidetree"><i class="fa fa-list-ul fa-lg"></i></div>
     </div>
-    <div class="doc-title">Maven基本配置</div>
+    <div class="doc-title">zDoc 的语法</div>
     <div class="doc-info row">
-        <div class="col-md-2 col-sm-3 col-xs-12 doc-lm">2017-1-6 17:08:27</div>
-        <div class="col-md-2 col-sm-3 col-xs-12 doc-au doc-authors">
-            <i>作者:</i>
-            <span class="doc-aui doc-author">
-                    <a href="mailto:wendal1985@gmail.com">wendal</a>
-            </span>
-        </div>
+        <div class="col-md-3 col-sm-3 col-xs-12 doc-lm">2014-4-12 17:58:32</div>
     </div>
     <div class="doc-content">
-        <div class="doc-hr"></div>
-        <h1><a name="Nutz核心jar"></a>Nutz核心jar</h1>
-        <p>nutz及周边插件,均已发布到maven中央库库,可以直接配置使用
+        <blockquote>
+            <p>zDoc 是一种 wiki，设计它的目的和 markdown 是一样的。 后来我决定再重写一个解析器， 同时支持 zDoc 和 markdown 这两种语法。由于 markdown 语法偏弱，所以我选择了
+                GFM(github 的一种 markdown 方言) 来进行支持。
+            </p></blockquote>
+        <p><b>下面几点，在你阅读本篇文档的时候，需要先了解一下 …</b>
         </p>
-        <pre code-type="xml">    &lt;dependency&gt;
-        &lt;groupId&gt;org.nutz&lt;/groupId&gt;
-        &lt;artifactId&gt;nutz&lt;/artifactId&gt;
-        &lt;version&gt;1.r.59&lt;/version&gt;
-    &lt;/dependency&gt;</pre>
-        <div class="doc-hr"></div>
-        <h1><a name="常用配置模板"></a>常用配置模板</h1>
-        <p>新建项目的参考配置,nutz+mysql+druid,并应用了nutzcn提供的maven镜像服务及快照库.
+        <ol>
+            <li>根据不同的文件扩展名，zDoc 解析器可以决定用哪种方法来解析 wiki 文件。</li>
+        </ol>
+        <p> 默认的，<code>.md</code> 文件就是 <code>GFM</code> 格式，<code>.zdoc</code> 文件就是 <code>zDoc</code> 格式
+            2. 在同一个文件里，你不能混用 zDoc 和 GFM 语法，但是你可以混用 HTML
+            3. 对于解析器，一个制表符和4个空格，是一样的
         </p>
-        <pre code-type="xml">&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
-&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
-&lt;groupId&gt;mygroupId&lt;/groupId&gt;
-&lt;artifactId&gt;myartifactId&lt;/artifactId&gt;
-&lt;packaging&gt;war&lt;/packaging&gt;
-&lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
-&lt;properties&gt;
-    &lt;!-- UTF8大法好 --&gt;
-    &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
-&lt;/properties&gt;
-&lt;dependencies&gt;
-    &lt;!-- 核心jar --&gt;
-    &lt;dependency&gt;
-        &lt;groupId&gt;org.nutz&lt;/groupId&gt;
-        &lt;artifactId&gt;nutz&lt;/artifactId&gt;
-        &lt;version&gt;1.r.59&lt;/version&gt;
-    &lt;/dependency&gt;
-    &lt;!-- mysql驱动 --&gt;
-    &lt;dependency&gt;
-        &lt;groupId&gt;mysql&lt;/groupId&gt;
-        &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
-        &lt;version&gt;5.1.40&lt;/version&gt;
-    &lt;/dependency&gt;
-    &lt;dependency&gt;
-        &lt;groupId&gt;javax.servlet&lt;/groupId&gt;
-        &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;
-        &lt;version&gt;3.1.0&lt;/version&gt;
-        &lt;scope&gt;provided&lt;/scope&gt;
-    &lt;/dependency&gt;
-    &lt;!-- Druid连接池 --&gt;
-    &lt;dependency&gt;
-        &lt;groupId&gt;com.alibaba&lt;/groupId&gt;
-        &lt;artifactId&gt;druid&lt;/artifactId&gt;
-        &lt;version&gt;1.0.25&lt;/version&gt;
-    &lt;/dependency&gt;
-    &lt;dependency&gt;
-        &lt;groupId&gt;junit&lt;/groupId&gt;
-        &lt;artifactId&gt;junit&lt;/artifactId&gt;
-        &lt;version&gt;4.12&lt;/version&gt;
-        &lt;scope&gt;test&lt;/scope&gt;
-    &lt;/dependency&gt;
-&lt;/dependencies&gt;
-&lt;build&gt;
-    &lt;plugins&gt;
-        &lt;plugin&gt;
-            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
-            &lt;version&gt;3.3&lt;/version&gt;
-            &lt;configuration&gt;
-                &lt;source&gt;1.8&lt;/source&gt;
-                &lt;target&gt;1.8&lt;/target&gt;
-                &lt;compilerArgs&gt;
-                    &lt;arg&gt;-parameters&lt;/arg&gt;
-                &lt;/compilerArgs&gt;
-                &lt;useIncrementalCompilation&gt;false&lt;/useIncrementalCompilation&gt;
-            &lt;/configuration&gt;
-        &lt;/plugin&gt;
-    &lt;/plugins&gt;
-&lt;/build&gt;
-&lt;repositories&gt;
-    &lt;repository&gt;
-        &lt;id&gt;nutz&lt;/id&gt;
-        &lt;url&gt;https://jfrog.nutz.cn/artifactory/jcenter&lt;/url&gt;
-    &lt;/repository&gt;
-    &lt;repository&gt;
-        &lt;id&gt;nutz-snapshots&lt;/id&gt;
-        &lt;url&gt;https://jfrog.nutz.cn/artifactory/snapshots&lt;/url&gt;
-        &lt;snapshots&gt;
-            &lt;enabled&gt;true&lt;/enabled&gt;
-            &lt;updatePolicy&gt;always&lt;/updatePolicy&gt;
-        &lt;/snapshots&gt;
-        &lt;releases&gt;
-            &lt;enabled&gt;false&lt;/enabled&gt;
-        &lt;/releases&gt;
-    &lt;/repository&gt;
-&lt;/repositories&gt;
-&lt;/project&gt;</pre>
+        <div class="doc-hr"></div>
+        <h1><a name="文档的元数据"></a>文档的元数据</h1>
+        <blockquote>
+            <p>我支持你用 zDoc，GFM(markdown的方言)和 HTML的一个我规定的子集书写你的文档。 一个文档可以有任意的元数据，以便其他程序使用。通常，这些元数据是声明在文档的开头部分。
+            </p></blockquote>
+        <h3><a name="zDoc_文档"></a>zDoc 文档</h3>
+        <p> #title : 文档标题
+            #author : zozoh
+            #author : wendal
+            #tags : [Git,编译]
+        </p>
+        <ul>
+            <li>对于名称为 "author" 或者 "verifier" 的元数据，一定认其值为一个列表</li>
+            <li>或者用 <code>[</code> 和 <code>]</code> 包裹的值，半角逗号分隔也表示列表</li>
+        </ul>
+        <h3><a name="GFM_文档"></a>GFM 文档</h3>
+        <p><i>除了文档标题，均采用 HTML 注释</i>
+        </p>
+        <div class="code-block"><pre class=" language-txt"><code class=" language-txt">---
+author : zozoh
+tags   :
+- Git
+- 编译
+---</code>
+</pre>
+        </div>
+        <h3><a name="HTML_文档"></a>HTML 文档</h3>
+        <div class="code-block"><pre class=" language-txt"><code class=" language-txt">&lt;html&gt;
+...
+&lt;/html&gt; </code>
+</pre>
+        </div>
+        <ul>
+            <li>zDoc 解析器将任何 HTML 文件理解成根节点下仅有多个 <code>HTML</code> 类型的节点</li>
+            <li>根据占位符和链接，来拆分 HTML 字符串</li>
+        </ul>
+        <h1><a name="zDoc和GFM_的语法"></a>zDoc和GFM 的语法</h1>
+        <h3><a name="段落标题"></a>段落标题</h3>
+        <div class="code-block"><pre class=" language-txt"><code class=" language-txt">zDoc 的标题层级根据缩进的级别来划分
+---------------------------------------- zdoc
+标题 A
+    内容 A
+
+    标题 B
+        内容 B</code>
+</pre>
+        </div>
+        <div class="code-block"><pre class=" language-txt"><code class=" language-txt">---------------------------------------- GFM
+## 标题 A
+内容 A
+### 标题 B
+内容 B</code>
+</pre>
+        </div>
+        <ul>
+            <li>zDoc 的文档层级划分是参考了 Python 语言，这是它 <code>GFM</code> 最大的区别</li>
+            <li>对于 zDoc 来说，确定一个段落是否是标题，主要是看它后面有没有一个段落缩进层级比它更多。</li>
+        </ul>
+        <h3><a name="段落"></a>段落</h3>
+        <div class="code-block"><pre class=" language-txt"><code class=" language-txt">zDoc 和 GFM 一样，段落为连续两个段内换行，
+段内换行 `\n` 表示一个空格，符号`\`表示跳过段内换行
+下面两段文字输出的效果是一致的
+---------------------------------------- zdoc
+这里是段落A
+这里还是段落A，实际是与上一行是一行
+
+---------------------------------------- GFM
+这里是段落A
+这里还是段落A，实际是与上一行是一行
+</code>
+</pre>
+        </div>
+        <blockquote>
+            <p>对于段落，是自动作为自己前一个标题的内容，对于 zDoc 来说会根据缩进多一些判断。判断是否是一个 新标题的开始
+            </p></blockquote>
+        <h3><a name="内嵌锚点"></a>内嵌锚点</h3>
+        <div class="code-block"><pre class=" language-txt"><code class=" language-txt">对应 GFM 和 zDoc 任何一个标题都会有一个自动的锚点，锚点的值为
+    MD5(标题保留字母数字下划线和一切256以上的字符)
+同时你可以通过内嵌 HTML 来做到这一点，声明自己自定义的锚点
+
+&lt;a name="my_anchor"&gt;&lt;/a&gt;
+</code>
+</pre>
+        </div>
+        <h3><a name="链接"></a>链接</h3>
+        <div class="code-block"><pre class=" language-txt"><code class=" language-txt">zDoc 的链接写在 [..] 中，如果 [^..] 表示要在新窗口打开
+---------------------------------------- zDoc
+[http://nutzam.com]            本窗口跳转
+[^http://nutzam.com]           新窗口跳转
+[http://nutzam.com Google]     本窗口跳转, 带文字
+[http://nutzam.com &lt;abc.png&gt;]  本窗口跳转, 带图标
+[#$标题A]           页内链接，会根据"标题A"自动计算锚点的值
+[#my_anchor]       自定义的页内链接
+[../readme.md]     指向一个 GFM 文档，链接文字会被这个文档标题替代
+[../readme.zdoc]   指向一个 zDoc 文档，链接文字会被这个文档标题替代
+
+---------------------------------------- GFM
+[Nutz](http://nutzam.com)  相当于 [http://nutzam.com Nutz]
+http://nutzam.com          相当于 [http://nutzam.com]
+[](#$标题A)                 相当于 [#$标题A]
+[](#my_anchor)             相当于 [#my_anchor]
+[](../readme.md)           相当于 [../readme.md]
+[](../readme.zdoc)         相当于 [../readme.zdoc]</code>
+</pre>
+        </div>
+        <h3><a name="图片"></a>图片</h3>
+        <div class="code-block"><pre class=" language-txt"><code class=" language-txt">zDoc 的图片写在 &lt;..&gt; 中，只要不和它支持的 HTML 标签冲突即不会有问题
+---------------------------------------- zDoc
+&lt;../imgs/abc.png&gt;          采用原始宽高
+&lt;../imgs/abc.png alt text&gt; 采用原始宽高，指定鼠标悬停文字
+&lt;80:../imgs/abc.png&gt;       指定宽度为 80
+&lt;x90:..imgs/abc.png&gt;       指定高度为 90
+&lt;80x90:imgs/abc.png&gt;       指定宽高为 80x90
+
+---------------------------------------- GFM
+![](../imgs/abc.png)           相当于  &lt;../imgs/abc.png&gt;
+![alt text](../imgs/abc.png)   相当于  &lt;../imgs/abc.png alt text&gt;
+![80:](../imgs/abc.png)        相当于  &lt;80:../imgs/abc.png&gt;
+</code>
+</pre>
+        </div>
+        <h3><a name="列表"></a>列表</h3>
+        <div class="code-block"><pre class=" language-txt"><code class=" language-txt">---------------------------------------- zDoc
+# 有序列表
+    # 有序列表
+    # 有序列表
+* 无序列表
+    * 无序列表
+    * 无序列表
+
+---------------------------------------- GFM
+1. 有序列表
+    a. 有序列表
+    B. 有序列表
+* 无序列表
+    - 无序列表
+    + 无序列表
+    </code>
+</pre>
+        </div>
+        <blockquote>
+            <p>对于列表来说，只有遇到了和自己类型不一致的列表，或者非列表段落才算终止。 列表内的缩进段落均属于当前列表
+            </p></blockquote>
+        <h3><a name="代码"></a>代码</h3>
+        <div class="code-block"><pre class=" language-txt"><code class=" language-txt">通过 `&lt;Java&gt;` 来声明代码的语言类型，可选
+---------------------------------------- zDoc
+{{{&lt;Java&gt;
+public class Abc {
+    ...
+}
+}}}
+
+GFM 的代码片段，语言声明也是可选的
+---------------------------------------- GFM
+```Java
+public class Abc {
+    ...
+}
+```
+或者所有代码至少带一个缩进
+
+    public class Abc {
+        ...
+    }
+</code>
+</pre>
+        </div>
+        <h3><a name="表格"></a>表格</h3>
+        <div class="code-block"><pre class=" language-txt"><code class=" language-txt">对 zDoc 来说，行开始是否为 `||` 很重要，表头可选
+---------------------------------------- zDoc
+|| A1  || B1  || C1  ||
+|| --- ||:---:|| ---:||
+|| A2  || B2  || C2  ||
+
+对 GFM 来说，表头为必须，是否有有表头分隔行很重要
+---------------------------------------- GFM
+| A1  | B1  | C1 |
+| --- |:---:|---:|
+| A2  | B2  | C2 |
+</code>
+</pre>
+        </div>
+        <blockquote>
+            <p>对于 <code>.zdoc</code> 的文件，你可以用 GFM 支持的表格形式编写表格
+            </p></blockquote>
+        <h3><a name="引用"></a>引用</h3>
+        <div class="code-block"><pre class=" language-txt"><code class=" language-txt">zDoc 和 GFM 支持同样的引用格式
+
+&gt; 一级引用
+&gt; &gt; 二级引用
+&gt; 回到一级引用
+Z</code>
+</pre>
+        </div>
+        <h3><a name="行内文字"></a>行内文字</h3>
+        <div class="code-block"><pre class=" language-txt"><code class=" language-txt">通过 {..} 来为一段文字声明特殊的样式
+---------------------------------------- zDoc
+粗体         {*some text}
+斜体         {/some text}
+下划线    {_some text}
+穿越线    {~some text}
+红色斜体       {#F00;_some text}
+穿越线斜体  {*/~some text}
+标注         {^sup}
+底注         {,sub}
+
+---------------------------------------- GFM
+粗体         **some text** 或 __some text__
+斜体         *some text*   或 _some text_
+穿越线    &lt;del&gt;some text&lt;/del&gt;
+    </code>
+</pre>
+        </div>
+        <h3><a name="分割线"></a>分割线</h3>
+        <div class="code-block"><pre class=" language-txt"><code class=" language-txt">支持连续 ---- 以上的减号作为分割线</code>
+</pre>
+        </div>
+        <h3><a name="逃逸字符"></a>逃逸字符</h3>
+        <div class="code-block"><pre class=" language-txt"><code class=" language-txt">任何一个被 `` 包裹的文字，都被逃逸，连续两个 `` 表示一个普通的 ` 字符
+如果仅仅想逃逸特殊符号，之前加一个 '\' 即可，特殊字符 '\' 如果不是在行尾
+那么它就是用来逃逸下一个字符，因此它也能被用来逃逸自身
+</code>
+</pre>
+        </div>
+        <h3><a name="占位符"></a>占位符</h3>
+        <ul>
+            <li>无论 zDoc 和 GFM，以及 HTML 都支持 <code>${placeholder}</code> 来声明占位符，</li>
+            <li>根据 <code>zdoc.conf</code> 中声明的 <code>zdoc-vars</code> 来为占位符设值</li>
+        </ul>
+        <h3><a name="外部链接文档"></a>外部链接文档</h3>
+        <p>如果很多文档都有共同的段落，你可以声明一个外部链接段落，引入共同的部分，这是个补充语法，
+            zDoc,GFM, HTML 都支持，你只需要在任意的地方声明一个 HTML 注释即可
+        </p>
+        <div class="code-block"><pre class=" language-txt"><code class=" language-txt">&lt;!--@import head.menu--&gt;
+</code>
+</pre>
+        </div>
+        <p>需要说明的一点是， zDoc 和 GFM 你必须把这个声明放到一个单独的段落里，所以下面的链接是不生效的，
+            其效果就是普通的注释:
+        </p>
+        <div class="code-block"><pre class=" language-txt"><code
+                class=" language-txt">A&lt;!--@import head.menu--&gt;B</code>
+</pre>
+        </div>
+        <p>你必须写成这样才行
+        </p>
+        <div class="code-block"><pre class=" language-txt"><code class=" language-txt">A
+
+&lt;!--@import head.menu--&gt;
+
+B
+</code>
+</pre>
+        </div>
+        <p>当然，在一行中，前后空格是无所谓的
+        </p>
+        <h3><a name="嵌入式_HTML"></a>嵌入式 HTML</h3>
+        <p><code>zDoc</code> 还是 <code>GFM</code> 都支持直接书写 <code>HTML 子集</code>， GFM 由于 markdown 的语法对于缩进不敏感,
+            因此可以在任何段落里书写 HTML，比如
+        </p>
+        <div class="code-block"><pre class=" language-txt"><code class=" language-txt">这是我的一段&lt;b style="color:red"&gt;加粗加红色&lt;/b&gt; 文字
+&lt;p&gt;
+我可以用 `&lt;p&gt;` 声明一个段落
+</code>
+</pre>
+        </div>
+        <p>对于 <code>zDoc</code>，你也可以在任何段落写 HTML，但是如果你想写大段的 HTML，比如表格等比较复杂的 HTML
+            结构，你需要这么写
+        </p>
+        <div class="code-block"><pre class=" language-txt"><code class=" language-txt">&lt;HTML&gt;
+&lt;Table&gt;
+    &lt;tr&gt;&lt;td&gt;列A&lt;/td&gt;&lt;td&gt;列B&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;aa&lt;/td&gt;&lt;td&gt;bb&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/HTML&gt;
+</code>
+</pre>
+        </div>
+        <p>即，你的 HTML 代码，由 <code>&lt;html&gt;</code> 标签包裹，且这两个开始结束标签必须是单独一行。这时，会调用
+            <code>HTML 子集</code> 对应的解析方式来分析 HTML。
+        </p>
+        <p>当然如果你想在普通的段落里随便嵌入 <code>&lt;a&gt;</code> 和 <code>&lt;img&gt;</code> 等 <code>HTML 子集</code> 允许的行内标签，对于
+            <code>zDoc</code> 和 <code>GFM</code> 都是一样的，您随意 ^
+        </p>
+        <h1><a name="HTML_子集"></a>HTML 子集</h1>
+        <blockquote>
+            <p>无论是 GFM 还是 zDoc 都支持内嵌 HTML 标签，当解析器遇到和可以理解的 HTML 标签 它会将其进行解析，丢弃不支持的属性，你可以在行内或者段落甚至文档级别应用 HTML 标签。
+                同时，如果你的文档本身就是 html 文档，zDoc 从 开始，会统一理解你的这些标签。
+            </p></blockquote>
+        <p><b>下面有一些注意事项</b>
+        </p>
+        <ul>
+            <li>所有不认识的属性和标签将被丢弃，就好像你没写过它们一样</li>
+            <li>标签的大小写并不敏感</li>
+            <li>标签的属性可以不必用双引号包裹，单引号，或者不包裹均可</li>
+            <li>对于 <code>.html|.htm</code> 文件，如果没有元数据 <code>zdoc=true</code>，则认为是普通 HTML 文件
+                <ul>
+                    <li>普通 HTML 将会替换相应的 src,href 等属性</li>
+                    <li>仅仅是这样</li>
+                </ul>
+            </li>
+        </ul>
+        <table border="1" cellspacing="2" cellpadding="4">
+            <thead>
+            <tr>
+                <th>TAG
+                </th>
+                <th> Name
+                </th>
+                <th> Attributes
+                </th>
+                <th> Example
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td> A
+                </td>
+                <td> 链接
+                </td>
+                <td> href,target="<i>blank"</i>
+                </td>
+                <td><code>&lt;a href="http://nutzam.com"&gt;Nutzam&lt;/a&gt;</code>
+                </td>
+            </tr>
+            <tr>
+                <td> A
+                </td>
+                <td> 锚点
+                </td>
+                <td> name
+                </td>
+                <td><code>&lt;a name="my_anchor"&gt;&lt;/a&gt;</code>
+                </td>
+            </tr>
+            <tr>
+                <td> BR
+                </td>
+                <td> 换行
+                </td>
+                <td> --
+                </td>
+                <td><code>&lt;br&gt;</code>
+                </td>
+            </tr>
+            <tr>
+                <td> B,I,U,EM
+                </td>
+                <td> 文字
+                </td>
+                <td> style
+                </td>
+                <td><code>&lt;b style="color:red"&gt;哈哈&lt;/b&gt;</code>
+                </td>
+            </tr>
+            <tr>
+                <td> STRONG
+                </td>
+                <td> 文字
+                </td>
+                <td> style
+                </td>
+                <td><code>&lt;strong style="color:red"&gt;哈哈&lt;/strong&gt;</code>
+                </td>
+            </tr>
+            <tr>
+                <td> SUB,SUP
+                </td>
+                <td> 文字
+                </td>
+                <td> style
+                </td>
+                <td> 脚注和尾注
+                </td>
+            </tr>
+            <tr>
+                <td> CODE
+                </td>
+                <td> 文字
+                </td>
+                <td> --
+                </td>
+                <td> 相当于反引号引用的部分
+                </td>
+            </tr>
+            <tr>
+                <td> IMG
+                </td>
+                <td> 图片
+                </td>
+                <td> src,width,height,title
+                </td>
+                <td><code>&lt;img src="abc.png"&gt;</code>
+                </td>
+            </tr>
+            <tr>
+                <td> P
+                </td>
+                <td> 段落
+                </td>
+                <td> align
+                </td>
+                <td><code>&lt;p align="left"&gt;我是一段文字</code>
+                </td>
+            </tr>
+            <tr>
+                <td> BLOCKQUOTE
+                </td>
+                <td> 引用
+                </td>
+                <td> --
+                </td>
+                <td><code>&lt;blockquote&gt;我是引用文字&lt;/blockquote&gt;</code>
+                </td>
+            </tr>
+            <tr>
+                <td> H1-H6
+                </td>
+                <td> 标题
+                </td>
+                <td> --
+                </td>
+                <td><code>&lt;h2&gt;我是二级标题&lt;/h2&gt;</code>
+                </td>
+            </tr>
+            <tr>
+                <td> OL,UL,LI
+                </td>
+                <td> 列表
+                </td>
+                <td> --
+                </td>
+                <td> --
+                </td>
+            </tr>
+            <tr>
+                <td> TABLE
+                </td>
+                <td> 表格
+                </td>
+                <td> --
+                </td>
+                <td> --
+                </td>
+            </tr>
+            <tr>
+                <td> COLGROUP,COL
+                </td>
+                <td> 表格
+                </td>
+                <td> align
+                </td>
+                <td> 只有这里才能声明单元格左右对齐
+                </td>
+            </tr>
+            <tr>
+                <td> TR,THEAD
+                </td>
+                <td> 表格
+                </td>
+                <td> --
+                </td>
+                <td><code>THEAD</code> 里只能是 <code>TH</code>, <code>TR</code> 里只能是 <code>TD</code>
+                </td>
+            </tr>
+            <tr>
+                <td> TH,TD
+                </td>
+                <td> 表格
+                </td>
+                <td> --
+                </td>
+                <td> --
+                </td>
+            </tr>
+            <tr>
+                <td> HR
+                </td>
+                <td> 水平线
+                </td>
+                <td> --
+                </td>
+                <td><code>&lt;hr&gt;</code>
+                </td>
+            </tr>
+            <tr>
+                <td> !--
+                </td>
+                <td> 注释
+                </td>
+                <td> --
+                </td>
+                <td><code>&lt;!--这里随便写什么注释--&gt;</code>
+                </td>
+            </tr>
+            <tr>
+                <td> PRE
+                </td>
+                <td> 代码
+                </td>
+                <td> title
+                </td>
+                <td><code>&lt;pre title="java"&gt;public class .. &lt;/pre&gt;</code>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p><b>对于文字的 HTML 标签，支持 style 指定的 CSS</b>
+        </p>
+        <div class="code-block"><pre class=" language-txt"><code class=" language-txt">color : #FF0 | #FF00AA | red
+background-color :  #FF0 | #FF00AA | red
+text-decoration: line-through
+</code>
+</pre>
+        </div>
     </div>
 </div>
 <div class="footer-container">
     <footer class="container">
         <div class="footer-info">
-            <img src="../../imgs/nutz-footer.jpg" alt="">
+            <img src="../imgs/nutz-footer.jpg" alt="">
         </div>
         <div class="footer-follow">
             <h6>Follow us</h6>
@@ -430,7 +664,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
         </p>
     </footer>
 </div>
-<div class="to-top" style="cursor: pointer; position: fixed; right: 15px; bottom: 85px; display: none;">Top ↑</div>
+<div class="to-top" style="cursor: pointer; display: none; position: fixed; right: 15px; bottom: 85px;">Top ↑</div>
 <script>
     $(document).ready(function () {
         $('.to-top').toTop({
@@ -445,6 +679,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 </script>
 <script src="../js/tether.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
+<script src="../js/prism.js"></script>
 <script src="../js/nutzam-doc.js"></script>
 
 </body>

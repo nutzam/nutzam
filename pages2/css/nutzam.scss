@@ -17,7 +17,7 @@ body {
     }
 
     .doc-container {
-      padding-left: $sidetree-w + 5px;
+      padding-left: $sidetree-w + 15px;
     }
 
     .doc-content, .doc-title, .doc-info {
@@ -25,6 +25,21 @@ body {
       overflow: hidden;
     }
   }
+
+  @include media-breakpoint-up(lg) {
+    .doc-sidetree {
+      display: block;
+    }
+
+    .doc-container {
+      padding-left: $sidetree-w + 15px;
+    }
+
+    .doc-menu {
+      display: none;
+    }
+  }
+
 }
 
 .navbar-container {

@@ -3,10 +3,17 @@ body {
   body.show-sidetree .doc-sidetree {
     display: block; }
   body.show-sidetree .doc-container {
-    padding-left: 275px; }
+    padding-left: 285px; }
   body.show-sidetree .doc-content, body.show-sidetree .doc-title, body.show-sidetree .doc-info {
     opacity: 0.3;
     overflow: hidden; }
+  @media (min-width: 992px) {
+    body .doc-sidetree {
+      display: block; }
+    body .doc-container {
+      padding-left: 285px; }
+    body .doc-menu {
+      display: none; } }
 
 .navbar-container {
   padding: 0;
