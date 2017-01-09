@@ -44,7 +44,7 @@
                     <div class="dropdown-menu" aria-labelledby="nutz-doc">
                         <a class="dropdown-item" href="http://nutzbook.wendal.net/">进阶手册(Wendal出品，偏实战)</a>
                         <a class="dropdown-item" href="${page.bpath}core/nutz_preface.html">Nutz使用手册(核心包)</a>
-                        <a class="dropdown-item" href="${page.bpath}/javadoc/1.r.59/">NutzAPI文档(核心包)</a>
+                        <a class="dropdown-item" href="${page.bpath}javadoc/1.r.59/">NutzAPI文档(核心包)</a>
                     </div>
                 </li>
                 <li class="nav-item">
