@@ -480,11 +480,12 @@ section.fe-right {
     margin: 1rem 0;
     padding: 0 0.5rem;
   }
+
   blockquote {
     border-left: 3px solid #CCC;
-    margin: 10px 60px;
-    padding: 4px 10px;
-    font-size: 12px;
+    margin: 10px 10px;
+    padding: 4px 5px;
+    font-size: 1rem;
     color: #888;
   }
   .pa-img {
@@ -510,6 +511,7 @@ section.fe-right {
     overflow: hidden;
     border-top: 1px dashed #CCC;
   }
+
   h1 {
     color: #000;
     font-size: 20px;
@@ -523,7 +525,7 @@ section.fe-right {
     font-weight: bold;
     margin: 2px;
     padding: 5px;
-    padding-left: 40px;
+    padding-left: 10px;
   }
   h3, h4, h5, h6 {
     color: #000000;
@@ -531,12 +533,10 @@ section.fe-right {
     font-weight: bold;
     margin: 2px;
     padding: 5px;
-    padding-left: 60px;
+    padding-left: 20px;
   }
   table {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 40px;
+    margin: 5px 10px;
   }
   pre {
     color: #126;
@@ -553,9 +553,6 @@ section.fe-right {
     overflow-x: auto;
   }
   code {
-    color: #621;
-    background: #FFD;
-    border: 1px solid #CCC;
     margin: 0 2px;
     padding: 0 4px;
   }
