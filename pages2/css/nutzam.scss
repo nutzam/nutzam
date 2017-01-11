@@ -17,7 +17,7 @@ body {
     }
 
     .doc-container {
-      padding-left: $sidetree-w + 15px;
+      padding-left: $sidetree-w + 5px;
     }
 
     .doc-content, .doc-title, .doc-info {
@@ -32,7 +32,7 @@ body {
     }
 
     .doc-container {
-      padding-left: $sidetree-w + 15px;
+      padding-left: $sidetree-w + 5px;
     }
 
     .doc-menu {
@@ -568,8 +568,6 @@ section.fe-right {
     overflow-x: auto;
   }
   code {
-    margin: 0 2px;
-    padding: 0 4px;
   }
   ul, ol {
     margin-left: 50px;

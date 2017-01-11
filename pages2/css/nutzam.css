@@ -3,7 +3,7 @@ body {
   body.show-sidetree .doc-sidetree {
     display: block; }
   body.show-sidetree .doc-container {
-    padding-left: 285px; }
+    padding-left: 275px; }
   body.show-sidetree .doc-content, body.show-sidetree .doc-title, body.show-sidetree .doc-info {
     opacity: 0.3;
     overflow: hidden; }
@@ -11,7 +11,7 @@ body {
     body .doc-sidetree {
       display: block; }
     body .doc-container {
-      padding-left: 285px; }
+      padding-left: 275px; }
     body .doc-menu {
       display: none; } }
 
@@ -399,9 +399,6 @@ section.fe-right {
   word-wrap: break-word;
   word-break: break-all;
   overflow-x: auto; }
-.doc-content code {
-  margin: 0 2px;
-  padding: 0 4px; }
 .doc-content ul, .doc-content ol {
   margin-left: 50px;
   padding-left: 20px; }
