@@ -1,13 +1,15 @@
-@import "variables";
-@import "../bs4-scss/mixins";
-
-$nutz-blue: #7da7d9;
-$nutz-grey: #898989;
-$border-color: #f0f0f0;
 $nav-h: 58px;
 $sidetree-w: 270px;
 
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
 body {
+  background: $body-bg;
+  color: $body-color;
+
   position: relative;
 
   &.show-sidetree {
@@ -51,15 +53,15 @@ body {
     }
 
     .doc-container {
-      padding-left: $sidetree-w /2 + 5px;
-      padding-right: $sidetree-w/2 + 5px;
+      padding-left: $sidetree-w / 3  + 10px;
+      padding-right: $sidetree-w/ 3 + 10px;
     }
 
     .doc-doctree {
-      right: -$sidetree-w /2;
+      right: -$sidetree-w / 3 * 2;
     }
     .doc-sidetree {
-      left: -$sidetree-w /2;
+      left: -$sidetree-w / 3 * 2;
     }
 
     .doc-menu {
@@ -89,8 +91,9 @@ body {
 .navbar-container {
   padding: 0;
   margin: 0 auto;
-  border-bottom: 1px solid $border-color;
-  background: rgba(255, 255, 255, 1);
+  border-bottom: 1px solid $nutz-border-color;
+  background: $body-bg;
+  color: $body-color;
 
   .navbar {
 
@@ -118,7 +121,7 @@ body {
         left: -11px;
         width: 30px;
         height: 20px;
-        border-right: 5px solid #7DA7D9;
+        border-right: 5px solid $nutz-blue;
         border-bottom-right-radius: 60px 45px;
         -moz-transform-origin: bottom right;
         -moz-transform: rotate(-90deg);
@@ -439,9 +442,9 @@ section.fe-right {
   width: $sidetree-w;
   padding: 0.5rem;
   font-size: 0.9rem;
-  border-left: 1px solid $border-color;
-  border-right: 1px solid $border-color;
-  background: #fafafa;
+  border-left: 1px solid $nutz-border-color;
+  border-right: 1px solid $nutz-border-color;
+  background: $nutz-doc-bg;
   overflow-y: auto;
   overflow-x: hidden;
 
@@ -454,13 +457,12 @@ section.fe-right {
     padding-left: 25px;
     li {
       padding: 2px 0;
-      color: #949393;
-
+      color: $nutz-doc-color;
       a.current, a.current:hover {
         font-size: 14px;
         font-weight: bold;
-        color: #000;
-        background-color: #FFA;
+        color: $nutz-doc-hover-color;
+        background-color: $nutz-doc-hover-bg;
       }
       &.hidesub {
         b:after {
@@ -487,9 +489,9 @@ section.fe-right {
   width: $sidetree-w;
   padding: 0.5rem;
   font-size: 0.9rem;
-  border-left: 1px solid $border-color;
-  border-right: 1px solid $border-color;
-  background: #fafafa;
+  border-left: 1px solid $nutz-border-color;
+  border-right: 1px solid $nutz-border-color;
+  background: $nutz-doc-bg;
   overflow-y: auto;
   overflow-x: hidden;
 
@@ -501,14 +503,12 @@ section.fe-right {
 
   a {
     padding: 2px 0;
-    //color: #949393;
     font-size: 0.9rem;
   }
 
 }
 
 .doc-container {
-  margin-bottom: 2.5rem;
   position: relative;
 
   .doc-menu {
@@ -517,7 +517,7 @@ section.fe-right {
     margin-right: 0.05rem;
   }
   .doc-btn {
-    color: #7da7d9;
+    color: $nutz-blue;
     display: inline-block;
     font-weight: normal;
     line-height: 1.25;
@@ -587,6 +587,7 @@ section.fe-right {
   }
   .pa-img {
     img {
+      margin: auto;
       display: block;
       border: 0px;
       max-width: 640px;
@@ -610,14 +611,14 @@ section.fe-right {
   }
 
   h1 {
-    color: #000;
+    color: $nutz-doc-h1;
     font-size: 20px;
     font-weight: bold;
     margin: 2px;
     padding: 5px;
   }
   h2 {
-    color: #00C;
+    color: $nutz-doc-h2;
     font-size: 16px;
     font-weight: bold;
     margin: 2px;
@@ -625,7 +626,7 @@ section.fe-right {
     padding-left: 10px;
   }
   h3, h4, h5, h6 {
-    color: #000000;
+    color: $nutz-doc-h3p;
     font-size: 14px;
     font-weight: bold;
     margin: 2px;

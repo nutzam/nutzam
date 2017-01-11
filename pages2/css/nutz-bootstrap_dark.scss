@@ -6,7 +6,7 @@
  */
 // Core variables and mixins
 //@import "../bs4-scss/variables";
-@import "variables";
+@import "variables_dark";
 @import "../bs4-scss/mixins";
 @import "../bs4-scss/custom";
 // Reset and dependencies
@@ -48,5 +48,8 @@
 @import "../bs4-scss/carousel";
 // Utility classes
 @import "../bs4-scss/utilities";
+// nutzam
+//@import "nutzam";
+
 // Nutzam
 @import "nutzam";

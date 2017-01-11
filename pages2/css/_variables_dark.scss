@@ -176,8 +176,8 @@ $sizes: (
 //
 // Settings for the `<body>` element.
 
-$body-bg: $white !default;
-$body-color: $gray-dark !default;
+$body-bg: lighten($gray-dark, 5%) !default;
+$body-color: $gray-lighter !default;
 $inverse-bg: $gray-dark !default;
 $inverse-color: $gray-lighter !default;
 
@@ -548,24 +548,24 @@ $form-icon-danger: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns
 $dropdown-min-width: 10rem !default;
 $dropdown-padding-y: .5rem !default;
 $dropdown-margin-top: .125rem !default;
-$dropdown-bg: $white !default;
-$dropdown-border-color: rgba($black, .15) !default;
+$dropdown-bg: $black !default;
+$dropdown-border-color: rgba($gray, .15) !default;
 $dropdown-border-width: $border-width !default;
-$dropdown-divider-bg: $gray-lighter !default;
-$dropdown-box-shadow: 0 .5rem 1rem rgba($black, .175) !default;
+$dropdown-divider-bg: $gray-dark !default;
+$dropdown-box-shadow: 0 .5rem 1rem rgba($gray, .175) !default;
 
-$dropdown-link-color: $gray-dark !default;
-$dropdown-link-hover-color: darken($gray-dark, 5%) !default;
-$dropdown-link-hover-bg: $gray-lightest !default;
+$dropdown-link-color: $gray-light !default;
+$dropdown-link-hover-color: darken($gray-light, 5%) !default;
+$dropdown-link-hover-bg: $gray-dark !default;
 
 $dropdown-link-active-color: $component-active-color !default;
 $dropdown-link-active-bg: $component-active-bg !default;
 
-$dropdown-link-disabled-color: $gray-light !default;
+$dropdown-link-disabled-color: $gray-dark !default;
 
 $dropdown-item-padding-x: 1.5rem !default;
 
-$dropdown-header-color: $gray-light !default;
+$dropdown-header-color: $gray-dark !default;
 
 // Z-index master list
 //
@@ -595,19 +595,19 @@ $navbar-toggler-padding-y: .25rem !default;
 $navbar-toggler-font-size: $font-size-lg !default;
 $navbar-toggler-border-radius: $btn-border-radius !default;
 
-$navbar-inverse-color: rgba($white, .5) !default;
-$navbar-inverse-hover-color: rgba($white, .75) !default;
-$navbar-inverse-active-color: rgba($white, 1) !default;
-$navbar-inverse-disabled-color: rgba($white, .25) !default;
+$navbar-inverse-color: rgba($black, .5) !default;
+$navbar-inverse-hover-color: rgba($black, .7) !default;
+$navbar-inverse-active-color: rgba($black, .9) !default;
+$navbar-inverse-disabled-color: rgba($black, .3) !default;
 $navbar-inverse-toggler-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-inverse-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"), "#", "%23") !default;
-$navbar-inverse-toggler-border: rgba($white, .1) !default;
+$navbar-inverse-toggler-border: rgba($black, .1) !default;
 
-$navbar-light-color: rgba($black, .5) !default;
-$navbar-light-hover-color: rgba($black, .7) !default;
-$navbar-light-active-color: rgba($black, .9) !default;
-$navbar-light-disabled-color: rgba($black, .3) !default;
+$navbar-light-color: rgba($white, .5) !default;
+$navbar-light-hover-color: rgba($white, .75) !default;
+$navbar-light-active-color: rgba($white, 1) !default;
+$navbar-light-disabled-color: rgba($white, .25) !default;
 $navbar-light-toggler-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"), "#", "%23") !default;
-$navbar-light-toggler-border: rgba($black, .1) !default;
+$navbar-light-toggler-border: rgba($white, .1) !default;
 
 // Navs
 
@@ -927,20 +927,20 @@ $pre-color: $gray-dark !default;
 $pre-border-color: #ccc !default;
 $pre-scrollable-max-height: 340px !default;
 
-
 $nutz-blue: #7da7d9;
 $nutz-grey: #898989;
-$nutz-border-color: #f0f0f0;
-$nutz-doc-bg: #fafafa;
-$nutz-doc-color: #949393;
+$nutz-border-color: #4c4c4c;
+$nutz-doc-bg: #222425;
+$nutz-doc-color: #EEE;
 $nutz-doc-hover-color: #000;
-$nutz-doc-hover-bg: #FFA;
+$nutz-doc-hover-bg: #fff33e;
+
 
 $nutz-doc-blockquote: #888;
 $nutz-doc-blockquote-left: #CCC;
 
-$nutz-doc-h1: #000;
-$nutz-doc-h2: #00C;
-$nutz-doc-h3p: #000000;
+$nutz-doc-h1: #ADADAD;
+$nutz-doc-h2: #00b9ff;
+$nutz-doc-h3p: #ffffff;
 
 $nutz-doc-pre: #126;

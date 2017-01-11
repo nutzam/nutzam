@@ -8,8 +8,7 @@
     <title>${doc.title} - ${siteTitle}</title>
     <link rel="stylesheet" type="text/css" href="${doc.bpath}css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="${doc.bpath}css/balloon.min.css">
-    <link rel="stylesheet" type="text/css" href="${doc.bpath}css/nutz-bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="${doc.bpath}css/nutzam.css">
+    <link rel="stylesheet" type="text/css" href="${doc.bpath}css/nutz-bootstrap_dark.css">
     <script src="${doc.bpath}js/jquery.min.js"></script>
     <script src="${doc.bpath}js/jquery.toTop.min.js"></script>
 </head>
