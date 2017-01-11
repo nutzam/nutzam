@@ -8,7 +8,7 @@ $nav-h: 58px;
 $sidetree-w: 270px;
 
 body {
-  padding-top: $nav-h; // 顶部navbar高度
+  position: relative;
 
   &.show-sidetree {
 
@@ -16,23 +16,50 @@ body {
       display: block;
     }
 
+    .doc-btn.toggle-doctree {
+      display: none;
+    }
+
     .doc-container {
       padding-left: $sidetree-w + 5px;
     }
+  }
 
+  &.show-doctree {
+    .doc-doctree {
+      display: block;
+    }
+    .doc-btn.toggle-sidetree {
+      display: none;
+    }
+    .doc-container {
+      padding-right: $sidetree-w + 5px;
+    }
+  }
+
+  &.show-doctree, &.show-sidetree {
     .doc-content, .doc-title, .doc-info {
       opacity: 0.3;
       overflow: hidden;
     }
   }
 
-  @include media-breakpoint-up(lg) {
-    .doc-sidetree {
+  // 窗口特别大时
+  @media (min-width: 1440px) {
+    .doc-sidetree, .doc-doctree {
       display: block;
     }
 
     .doc-container {
-      padding-left: $sidetree-w + 5px;
+      padding-left: $sidetree-w /2 + 5px;
+      padding-right: $sidetree-w/2 + 5px;
+    }
+
+    .doc-doctree {
+      right: -$sidetree-w /2;
+    }
+    .doc-sidetree {
+      left: -$sidetree-w /2;
     }
 
     .doc-menu {
@@ -40,6 +67,23 @@ body {
     }
   }
 
+  // 最小的时候，container
+  @include media-breakpoint-down(xs) {
+    .container {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+}
+
+.body-header {
+  width: 100%;
+  height: $nav-h;
+}
+
+.body-inner {
+  position: relative;
+  width: 100%;
 }
 
 .navbar-container {
@@ -241,6 +285,7 @@ body {
   background: $nutz-blue;
   color: #FFF;
   border-radius: 2px;
+  z-index: 200000;
 }
 
 // 主页滚动条
@@ -384,7 +429,6 @@ section.fe-right {
 }
 
 // 文档页部分
-
 .doc-sidetree {
   display: none;
   position: absolute;
@@ -395,6 +439,7 @@ section.fe-right {
   width: $sidetree-w;
   padding: 0.5rem;
   font-size: 0.9rem;
+  border-left: 1px solid $border-color;
   border-right: 1px solid $border-color;
   background: #fafafa;
   overflow-y: auto;
@@ -432,14 +477,45 @@ section.fe-right {
   }
 }
 
+.doc-doctree {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  width: $sidetree-w;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  border-left: 1px solid $border-color;
+  border-right: 1px solid $border-color;
+  background: #fafafa;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .doc-doctree-inner {
+    width: $sidetree-w - 16px;
+    position: fixed;
+    top: $nav-h + 8px;
+  }
+
+  a {
+    padding: 2px 0;
+    //color: #949393;
+    font-size: 0.9rem;
+  }
+
+}
+
 .doc-container {
   margin-bottom: 2.5rem;
   position: relative;
+
   .doc-menu {
     margin-bottom: 0.5rem;
     margin-left: 0.05rem;
+    margin-right: 0.05rem;
   }
-
   .doc-btn {
     color: #7da7d9;
     display: inline-block;
@@ -454,6 +530,12 @@ section.fe-right {
     font-size: 1rem;
     border-radius: 0.25rem;
     transition: all 0.2s ease-in-out;
+
+    &.right {
+      display: block;
+      float: right;
+    }
+
   }
 }
 

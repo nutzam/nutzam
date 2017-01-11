@@ -16,10 +16,13 @@
 <body tree-depth="${page.treeDepth}"
       tree-name="${page.treeName}"
       page-depth="${page.depth}">
-<#include "lib:sky.ftl">
-${doc.content}
-<#include "lib:footer.ftl">
-<script src="${doc.bpath}js/tether.min.js"></script>
-<script src="${doc.bpath}js/bootstrap.min.js"></script>
+<div class="body-header"></div>
+<div class="body-inner">
+    <#include "lib:sky.ftl">
+    ${doc.content}
+    <#include "lib:footer.ftl">
+    <script src="${doc.bpath}js/tether.min.js"></script>
+    <script src="${doc.bpath}js/bootstrap.min.js"></script>
+</div>
 </body>
 </html>
