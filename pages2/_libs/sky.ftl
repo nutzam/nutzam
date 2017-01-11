@@ -65,24 +65,9 @@
 </div>
 <script>
     $(document).ready(function () {
-
-        var ctheme = Cookies.get('nutzam-theme') || "light";
-        var $switch = $("[name='nutz-theme-switch']");
-        var $tcss = $('#theme-css');
-        var cpath = $tcss.attr("path");
-
-        function modifyThemeCSS(theme) {
-            var href = cpath + "nutz-bootstrap_" + theme + ".css";
-            if ($tcss.attr('href') != href) {
-                $tcss.attr('href', href);
-            }
-            Cookies.set('nutzam-theme', theme);
-        }
-
-        modifyThemeCSS(ctheme);
-        $switch.attr('checked', ctheme == "light" ? 'checked' : null);
-
         // 切换主题
+        var $switch = $("[name='nutz-theme-switch']");
+        $switch.attr('checked', getThemeCSSName() == "light" ? 'checked' : null);
         $switch.bootstrapSwitch({
             onText: "Light",
             offText: "Dark",
