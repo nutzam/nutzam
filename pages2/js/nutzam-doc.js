@@ -37,7 +37,8 @@ $(document).ready(function () {
     $('.doc-content h1').each(function () {
         var $h = $(this);
         var nm = $h.find('a').attr('name');
-        nm = nm.replace("_", " ");
+        // nm = nm.replace("_", " ");
+        nm = nm.replace(/_/g, " ");
         var nobj = {
             index: 'ndoc-' + docIndex++,
             name: nm
