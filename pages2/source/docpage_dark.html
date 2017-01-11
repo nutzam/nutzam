@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../css/balloon.min.css">
     <link rel="stylesheet" type="text/css" href="../css/prism.css">
     <link rel="stylesheet" type="text/css" href="../css/nutz-bootstrap_dark.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-switch.min.css">
     <script src="../js/jquery.min.js"></script>
     <script src="../js/jquery.toTop.min.js"></script>
     <style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
@@ -45,7 +46,7 @@
                 <span class="brand-text">Nutz</span>
             </a>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="../index.html">首页</a>
                     </li>
@@ -91,6 +92,11 @@
                         <a class="nav-link" href="https://nutz.cn">社区</a>
                     </li>
                 </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <div class="switch switch-small my-2 my-sm-0">
+                        <input type="checkbox" name="my-checkbox" checked/>
+                    </div>
+                </div>
             </div>
         </nav>
     </div>
@@ -494,10 +500,19 @@
                 right: 15,
                 bottom: 85
             });
+
+            $("[name='my-checkbox']").bootstrapSwitch({
+                onText: "Light",
+                offText: "Dark",
+                onSwitchChange: function (event, state) {
+                    console.log(state);
+                }
+            });
         });
     </script>
     <script src="../js/tether.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-switch.min.js"></script>
     <script src="../js/prism.js"></script>
     <script src="../js/nutzam-doc.js"></script>
 </div>

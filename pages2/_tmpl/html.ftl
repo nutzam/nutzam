@@ -8,7 +8,8 @@
     <title>${doc.title} - ${siteTitle}</title>
     <link rel="stylesheet" type="text/css" href="${doc.bpath}css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="${doc.bpath}css/balloon.min.css">
-    <link rel="stylesheet" type="text/css" href="${doc.bpath}css/nutz-bootstrap_dark.css">
+    <link rel="stylesheet" type="text/css" href="${doc.bpath}css/nutz-bootstrap_light.css" id="theme-css" path="${doc.bpath}css/">
+    <link rel="stylesheet" type="text/css" href="${doc.bpath}css/bootstrap-switch.min.css">
     <script src="${doc.bpath}js/jquery.min.js"></script>
     <script src="${doc.bpath}js/jquery.toTop.min.js"></script>
 </head>
@@ -22,6 +23,7 @@
     <#include "lib:footer.ftl">
     <script src="${doc.bpath}js/tether.min.js"></script>
     <script src="${doc.bpath}js/bootstrap.min.js"></script>
+    <script src="${doc.bpath}js/bootstrap-switch.min.js"></script>
 </div>
 </body>
 </html>

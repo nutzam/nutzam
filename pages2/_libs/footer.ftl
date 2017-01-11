@@ -22,6 +22,7 @@
 <div class="to-top">Top &uarr;</div>
 <script>
     $(document).ready(function () {
+        // 返回顶部
         $('.to-top').toTop({
             autohide: true,
             offset: 420,

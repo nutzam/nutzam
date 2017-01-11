@@ -13,7 +13,7 @@
             <span class="brand-text">Nutz</span>
         </a>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="${page.bpath}index.html">首页</a>
                 </li>
@@ -55,6 +55,40 @@
                     <a class="nav-link" href="https://nutz.cn">社区</a>
                 </li>
             </ul>
+            <div class="form-inline my-2 my-lg-0">
+                <div class="switch switch-small my-2 my-sm-0">
+                    <input type="checkbox" name="nutz-theme-switch" checked/>
+                </div>
+            </div>
         </div>
     </nav>
 </div>
+<script>
+    $(document).ready(function () {
+
+        var $tcss = $('#theme-css');
+        var cpath = $tcss.attr("path");
+
+        function modifyThemeCSS(theme) {
+            var href = cpath + "nutz-bootstrap_" + theme + ".css";
+            if ($tcss.attr('href') != href) {
+                $tcss.attr('href', href);
+            }
+        }
+
+        // 切换主题
+        $("[name='nutz-theme-switch']").bootstrapSwitch({
+            onText: "Light",
+            offText: "Dark",
+//            state: true,
+//            onInit: function (event, state) {
+//                console.log("theme-init:" + state);
+//                modifyThemeCSS(state ? "light" : "dark");
+//            },
+            onSwitchChange: function (event, state) {
+                console.log("theme-change:" + state);
+                modifyThemeCSS(state ? "light" : "dark");
+            }
+        });
+    });
+</script>
