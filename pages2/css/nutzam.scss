@@ -28,6 +28,7 @@ body {
   }
 
   &.show-doctree {
+
     .doc-doctree {
       display: block;
     }
@@ -47,7 +48,7 @@ body {
   }
 
   // 窗口特别大时
-  @media (min-width: 1440px) {
+  @media (min-width: 1400px) {
     .doc-sidetree, .doc-doctree {
       display: block;
     }
@@ -64,7 +65,7 @@ body {
       left: -$sidetree-w / 3 * 2;
     }
 
-    .doc-menu {
+    .doc-container .doc-menu {
       display: none;
     }
   }
@@ -512,13 +513,16 @@ section.fe-right {
   position: relative;
 
   .doc-menu {
+    display: flex;
+    width: 100%;
     margin-bottom: 0.5rem;
     margin-left: 0.05rem;
     margin-right: 0.05rem;
   }
   .doc-btn {
     color: $nutz-blue;
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
     font-weight: normal;
     line-height: 1.25;
     text-align: center;
@@ -532,10 +536,8 @@ section.fe-right {
     transition: all 0.2s ease-in-out;
 
     &.right {
-      display: block;
-      float: right;
+      margin-left: auto;
     }
-
   }
 }
 

@@ -6664,7 +6664,7 @@ body {
   body.show-doctree .doc-content, body.show-doctree .doc-title, body.show-doctree .doc-info, body.show-sidetree .doc-content, body.show-sidetree .doc-title, body.show-sidetree .doc-info {
     opacity: 0.3;
     overflow: hidden; }
-  @media (min-width: 1440px) {
+  @media (min-width: 1400px) {
     body .doc-sidetree, body .doc-doctree {
       display: block; }
     body .doc-container {
@@ -6674,7 +6674,7 @@ body {
       right: -180px; }
     body .doc-sidetree {
       left: -180px; }
-    body .doc-menu {
+    body .doc-container .doc-menu {
       display: none; } }
   @media (max-width: 575px) {
     body .container {
@@ -6995,12 +6995,15 @@ section.fe-right {
 .doc-container {
   position: relative; }
   .doc-container .doc-menu {
+    display: flex;
+    width: 100%;
     margin-bottom: 0.5rem;
     margin-left: 0.05rem;
     margin-right: 0.05rem; }
   .doc-container .doc-btn {
     color: #7da7d9;
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
     font-weight: normal;
     line-height: 1.25;
     text-align: center;
@@ -7013,8 +7016,7 @@ section.fe-right {
     border-radius: 0.25rem;
     transition: all 0.2s ease-in-out; }
     .doc-container .doc-btn.right {
-      display: block;
-      float: right; }
+      margin-left: auto; }
 
 .doc-title {
   font-size: 28px;

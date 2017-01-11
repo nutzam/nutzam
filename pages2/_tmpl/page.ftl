@@ -37,12 +37,12 @@
                     <div class="doc-content">${doc.content}</div>
             </div>
         </div>
-        <#include "lib:footer.ftl">
-            <script src="${doc.bpath}js/tether.min.js"></script>
-            <script src="${doc.bpath}js/bootstrap.min.js"></script>
-            <script src="${doc.bpath}js/bootstrap-switch.min.js"></script>
-            <script src="${doc.bpath}js/prism.js"></script>
-            <script src="${doc.bpath}js/nutzam-doc.js"></script>
+    <#include "lib:footer.ftl">
+    <script src="${doc.bpath}js/tether.min.js"></script>
+    <script src="${doc.bpath}js/bootstrap.min.js"></script>
+    <script src="${doc.bpath}js/bootstrap-switch.min.js"></script>
+    <script src="${doc.bpath}js/prism.js"></script>
+    <script src="${doc.bpath}js/nutzam-doc.js"></script>
 </div>
 </body>
 </html>

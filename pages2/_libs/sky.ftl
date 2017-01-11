@@ -80,11 +80,6 @@
         $("[name='nutz-theme-switch']").bootstrapSwitch({
             onText: "Light",
             offText: "Dark",
-//            state: true,
-//            onInit: function (event, state) {
-//                console.log("theme-init:" + state);
-//                modifyThemeCSS(state ? "light" : "dark");
-//            },
             onSwitchChange: function (event, state) {
                 console.log("theme-change:" + state);
                 modifyThemeCSS(state ? "light" : "dark");
