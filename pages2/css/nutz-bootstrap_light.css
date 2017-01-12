@@ -6992,7 +6992,8 @@ section.fe-right {
 
 .doc-container {
   position: relative;
-  zoom: 1; }
+  zoom: 1;
+  padding-bottom: 1rem; }
   .doc-container:after {
     clear: both;
     content: '.';
