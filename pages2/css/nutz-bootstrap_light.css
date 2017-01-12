@@ -6985,18 +6985,24 @@ section.fe-right {
   overflow-y: auto;
   overflow-x: hidden; }
   .doc-doctree .doc-doctree-inner {
-    width: 254px;
-    position: fixed;
-    top: 66px; }
+    width: 100%; }
   .doc-doctree a {
     padding: 2px 0;
     font-size: 0.9rem; }
 
 .doc-container {
-  position: relative; }
+  position: relative;
+  zoom: 1; }
+  .doc-container:after {
+    clear: both;
+    content: '.';
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden; }
   @media (min-width: 768px) {
     .doc-container {
-      min-height: 650px; } }
+      min-height: 680px; } }
   .doc-container .doc-menu {
     display: flex;
     width: 100%;

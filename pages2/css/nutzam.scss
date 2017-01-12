@@ -451,6 +451,10 @@ section.fe-right {
 
   .doc-sidetree-inner {
     width: 100%;
+    //width: $sidetree-w - 16px;
+    //height: 100%;
+    //position: fixed;
+    //top: $nav-h + 8px;
   }
 
   ol {
@@ -497,9 +501,11 @@ section.fe-right {
   overflow-x: hidden;
 
   .doc-doctree-inner {
-    width: $sidetree-w - 16px;
-    position: fixed;
-    top: $nav-h + 8px;
+    //width: $sidetree-w - 16px;
+    //height: 100%;
+    //position: fixed;
+    //top: $nav-h + 8px;
+    width: 100%;
   }
 
   a {
@@ -511,9 +517,19 @@ section.fe-right {
 
 .doc-container {
   position: relative;
+  zoom: 1;
+
+  &:after {
+    clear: both;
+    content: '.';
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
 
   @include media-breakpoint-up(md) {
-    min-height: 650px;
+    min-height: 680px;
   }
 
   .doc-menu {
