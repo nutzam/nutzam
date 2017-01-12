@@ -6994,6 +6994,9 @@ section.fe-right {
 
 .doc-container {
   position: relative; }
+  @media (min-width: 768px) {
+    .doc-container {
+      min-height: 650px; } }
   .doc-container .doc-menu {
     display: flex;
     width: 100%;

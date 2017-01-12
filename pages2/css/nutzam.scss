@@ -512,6 +512,10 @@ section.fe-right {
 .doc-container {
   position: relative;
 
+  @include media-breakpoint-up(md) {
+    min-height: 650px;
+  }
+
   .doc-menu {
     display: flex;
     width: 100%;
