@@ -72,8 +72,7 @@
             onText: "Light",
             offText: "Dark",
             onSwitchChange: function (event, state) {
-                console.log("theme-change:" + state);
-                modifyThemeCSS(state ? "light" : "dark");
+                useDarkTheme(!state);
             }
         });
     });
