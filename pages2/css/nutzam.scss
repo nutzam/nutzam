@@ -463,6 +463,7 @@ section.fe-right {
     li {
       padding: 2px 0;
       color: $nutz-doc-color;
+      cursor: pointer;
       a.current, a.current:hover {
         font-size: 14px;
         font-weight: bold;

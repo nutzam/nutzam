@@ -6956,7 +6956,8 @@ section.fe-right {
     padding-left: 25px; }
     .doc-sidetree ol li {
       padding: 2px 0;
-      color: #949393; }
+      color: #949393;
+      cursor: pointer; }
       .doc-sidetree ol li a.current, .doc-sidetree ol li a.current:hover {
         font-size: 14px;
         font-weight: bold;
