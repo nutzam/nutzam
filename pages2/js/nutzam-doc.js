@@ -87,6 +87,19 @@ $(document).ready(function () {
         }
     });
 
+    // 双飞翼跟随滚动条
+    var $doctree = $('.doc-doctree');
+    var $sidetree = $('.doc-sidetree');
+    var win = $(window);
+    win.scroll(function () {
+        var scrolling = win.scrollTop();
+        console.log('doc scroll:' + scrolling);
+        var padd = scrolling - 0;
+        padd = padd < 0 ? 0 : padd;
+        $sidetree.css('top', padd);
+        $doctree.css('top', padd);
+    });
+
     // function viewHeight() {
     //     var height = window.innerHeight
     //         || document.documentElement.clientHeight
