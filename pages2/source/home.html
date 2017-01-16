@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nutz-程序员小伙伴们的另一个选择 - Nutz</title>
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/balloon.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/nutz-bootstrap_light.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.toTop.min.js"></script>
+</head>
+<body tree-depth="1" tree-name="tree.html" page-depth="1">
+<div class="body-header"></div>
+<div class="body-inner">
+    <div class="fixed-top navbar-container">
+        <nav class="container navbar navbar-toggleable-md navbar-light">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                    data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <div class="brand-logo">
+                    <div class="logo-tail"></div>
+                    <img src="imgs/nutz_logo28.png" class="brand-img" alt="">
+                </div>
+                <span class="brand-text">Nutz</span>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">首页</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="http://example.com" id="nutz-project"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            项目
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="nutz-project">
+                            <a class="dropdown-item" href="https://github.com/nutzam/nutz">Nutz(核心包)</a>
+                            <a class="dropdown-item" href="https://github.com/nutzam/nutzmore">NutzMore(插件与扩展)</a>
+                            <a class="dropdown-item" href="https://github.com/nutzam/nutzwx">NutzWx(公众号操作封装库)</a>
+                            <a class="dropdown-item"
+                               href="https://github.com/nutzam/nutzmongo">NutzMongo(MongoDB驱动的薄封装)</a>
+                            <a class="dropdown-item" href="https://github.com/nutzam/nutz-web">NutzWeb(A Jetty
+                                launcher)</a>
+                            <a class="dropdown-item" href="https://github.com/nutzam/nutz-quartz">NutzQuartz(Quartz表达式解析执行类库)</a>
+                            <a class="dropdown-item"
+                               href="https://github.com/nutzam/nutz-qrcode">NutzQrcode(二维码生成/解析)</a>
+                            <a class="dropdown-item"
+                               href="https://github.com/zozoh/zdoc">zDoc(支持zDoc,markdown文档生成工具)</a>
+                            <a class="dropdown-item" href="https://github.com/pangwu86/nutz-logo">NutzLogo(跳蛋版实现)</a>
+                            <a class="dropdown-item"
+                               href="https://nutz.cn/yvr/t/tdb5l3e7pajv1ptl1f0nveg1bk">Demo(社区提供)</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="http://example.com" id="nutz-doc"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            文档
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="nutz-doc">
+                            <a class="dropdown-item" href="core/nutz_preface.html">Nutz使用手册(核心包)</a>
+                            <a class="dropdown-item" href="javadoc/1.r.59/">NutzAPI文档(核心包)</a>
+                            <a class="dropdown-item" href="http://nutzbook.wendal.net/">进阶手册(Wendal出品，偏实战)</a>
+                            <a class="dropdown-item" href="zdoc/syntax.html">zDoc使用手册</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://nutz.cn/nutzdw/">下载</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://nutz.cn">社区</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div id="release-bg" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#release-bg" data-slide-to="0" class="active"></li>
+            <li data-target="#release-bg" data-slide-to="1"></li>
+            <li data-target="#release-bg" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                <img class="d-block img-fluid" src="../imgs/1_r_59/00.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block img-fluid" src="../imgs/1_r_59/01.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block img-fluid" src="../imgs/1_r_59/02.jpg" alt="Third slide">
+            </div>
+        </div>
+        <section class="fe-right">
+            <h4>Nutz1.r.59(盐焗腰果)发布</h4>
+            <ul>
+                <li>体积小巧(1M+) 且无依赖</li>
+                <li>功能强大: Dao, Mvc, Json, Ioc 以及各种帮助函数</li>
+                <li>全面的文档 + 极低的学习曲线</li>
+                <li>1000+ JUnit 保证质量坚若磐石</li>
+                <li>数年来被广泛应用到包括服务器，Android，嵌入式等各种开发场景</li>
+                <li>活跃的 <a target="_blank" href="http://github.com/nutzam/nutz/issues">Issue 列表</a>推动功能不断进化</li>
+                <li>充满JI情的<a target="_blank" href="https://nutz.cn">社区</a> ...</li>
+            </ul>
+            <a class="downbtn" href="https://downloads.nutzam.com">下载 Nutz1.r.59</a>
+            <div class="morelink">
+                <a href="/core/history/1_r_59.html">Nutz1.r.59发行注记</a>
+            </div>
+        </section>
+    </div>
+    <div class="container fetures-container">
+        <div class="row">
+            <div class="col-md-4 col-sm-12 fe-item">
+                <h4>最新更新</h4>
+                <ul>
+                    <li><a target="_blank"
+                           href="https://jfrog.nutz.cn/artifactory/snapshots/org/nutz/nutz/">最新Nutz.jar</a>
+                    </li>
+                    <li><a target="_blank" href="https://github.com/nutzam/nutz/commits/master">最新的代码提交</a>
+                    </li>
+                    <li><a target="_blank" href="https://github.com/nutzam/nutz/graphs/contributors">贡献者们</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4  col-sm-12 fe-item">
+                <h4>相关资源</h4>
+                <ul>
+                    <li><a target="_blank" href="https://github.com/nutzam/nutz">项目代码托管(Github)</a>
+                    </li>
+                    <li><a href="http://downloads.nutzam.com">下载列表</a>
+                    </li>
+                    <li><a href="https://github.com/nutzam/nutz/releases">发布列表</a>
+                    </li>
+                    <li><a target="_blank"
+                           href="https://github.com/nutzam/nutz/issues?labels=FAQ&amp;milestone=&amp;page=1&amp;state=closed">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4  col-sm-12 fe-item">
+                <h4>社区</h4>
+                <ul>
+                    <li><a target="_blank" href="https://nutz.cn">Nutz官方社区</a> <i>(你的问题总会被解答)</i>
+                    </li>
+                    <li><a target="_blank" href="http://qun.qq.com/air/#68428921"> Nutz社区群：68428921</a></li>
+                    <li><a target="_blank" href="http://qun.qq.com/air/#58444676"> Nutz&amp;XBlink群：58444676</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-container">
+        <footer class="container">
+            <div class="footer-info">
+                <img src="imgs/nutz-footer.jpg" alt="">
+            </div>
+            <div class="footer-follow">
+                <h6>Follow us</h6>
+                <ul class="social">
+                    <li><a href="javascript:;" title="公众号" data-balloon="微信号：rain_on_sand，欢迎订阅"
+                           data-balloon-pos="up"><span class="icon fa fa-weixin"></span></a></li>
+                    <li><a href="javascript:;" title="qq群" data-balloon="Nutz社区群：68428921，Nutz&amp;XBlink：58444676。欢迎加入"
+                           data-balloon-pos="up"><span class="icon fa fa-qq"></span></a></li>
+                    <li><a href="https://github.com/nutzam" title="github"><span
+                            class="icon fa fa-github-alt"></span></a>
+                    </li>
+                </ul>
+            </div>
+            <p>
+                All Rights Reserved 2009-2017 Nutz 备案中
+            </p>
+        </footer>
+    </div>
+    <div class="to-top" style="cursor: pointer; display: none; position: fixed; right: 15px; bottom: 85px;">Top ↑</div>
+    <script>
+        $(document).ready(function () {
+            $('.to-top').toTop({
+                autohide: true,
+                offset: 420,
+                speed: 500,
+                position: true,
+                right: 15,
+                bottom: 85
+            });
+        });
+    </script>
+    <script src="../js/tether.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</div>
+
+</body>
+</html>

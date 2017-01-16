@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<doc title="Nutz的网站" author="zozoh(zozohtnt@gmail.com)">
+    <doc path="index.html" title="Nutz-程序员小伙伴们的另一个选择"/>
+    <doc path="core" title="Nutz核心包" doc-base="~/gitrep/nutz-project/nutz/doc/manual"/>
+    <doc path="zdoc" title="zDoc" doc-base="~/gitrep/nutz-project/zdoc/doc/md"/>
+</doc>

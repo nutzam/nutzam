@@ -1,0 +1,692 @@
+$nav-h: 58px;
+$sidetree-w: 270px;
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: $body-bg;
+  color: $body-color;
+
+  position: relative;
+
+  &.show-sidetree {
+
+    .doc-sidetree {
+      display: block;
+    }
+
+    .doc-btn.toggle-doctree {
+      display: none;
+    }
+
+    .doc-container {
+      padding-left: $sidetree-w + 5px;
+    }
+  }
+
+  &.show-doctree {
+
+    .doc-doctree {
+      display: block;
+    }
+    .doc-btn.toggle-sidetree {
+      display: none;
+    }
+    .doc-container {
+      padding-right: $sidetree-w + 5px;
+    }
+  }
+
+  &.show-doctree, &.show-sidetree {
+    .doc-content, .doc-title, .doc-info {
+      opacity: 0.3;
+      overflow: hidden;
+    }
+  }
+
+  // 窗口特别大时
+  @media (min-width: 1400px) {
+    .doc-sidetree, .doc-doctree {
+      display: block;
+    }
+
+    .doc-container {
+      padding-left: $sidetree-w / 3  + 10px;
+      padding-right: $sidetree-w/ 3 + 10px;
+    }
+
+    .doc-doctree {
+      right: -$sidetree-w / 3 * 2;
+    }
+    .doc-sidetree {
+      left: -$sidetree-w / 3 * 2;
+    }
+
+    .doc-container .doc-menu {
+      display: none;
+    }
+  }
+
+  // 最小的时候，container
+  @include media-breakpoint-down(xs) {
+    .container {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+}
+
+.body-header {
+  width: 100%;
+  height: $nav-h;
+}
+
+.body-inner {
+  position: relative;
+  width: 100%;
+}
+
+.navbar-container {
+  padding: 0;
+  margin: 0 auto;
+  border-bottom: 1px solid $nutz-border-color;
+  background: $body-bg;
+  color: $body-color;
+
+  .navbar {
+
+    .navbar-brand {
+
+      $brand-h: 30px;
+
+      .brand-logo {
+        vertical-align: middle;
+        position: relative;
+        display: inline-block;
+      }
+
+      .brand-img {
+        width: $brand-h;
+        height: $brand-h;
+        //position: absolute;
+        //z-index: 101;
+      }
+
+      .logo-tail {
+        position: absolute;
+        z-index: -100;
+        top: -18px;
+        left: -11px;
+        width: 30px;
+        height: 20px;
+        border-right: 5px solid $nutz-blue;
+        border-bottom-right-radius: 60px 45px;
+        -moz-transform-origin: bottom right;
+        -moz-transform: rotate(-90deg);
+        -ms-transform-origin: bottom right;
+        -ms-transform: rotate(-90deg);
+        -webkit-transform-origin: bottom right;
+        -webkit-transform: rotate(-90deg);
+        transform-origin: bottom right;
+        transform: rotate(-90deg);
+        -webkit-animation-duration: 1.2s;
+        animation-duration: 1.2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-name: tail-wobble;
+        animation-name: tail-wobble;
+      }
+      @-webkit-keyframes tail-wobble {
+        0% {
+          transform: rotate(-90deg);
+          -webkit-transform: rotate(-90deg);
+        }
+        15% {
+          transform: rotate(-65deg);
+          -webkit-transform: rotate(-65deg);
+        }
+        30% {
+          transform: rotate(-70deg);
+          -webkit-transform: rotate(-70deg);
+        }
+        45% {
+          transform: rotate(-80deg);
+          -webkit-transform: rotate(-80deg);
+        }
+        60% {
+          transform: rotate(-100deg);
+          -webkit-transform: rotate(-100deg);
+        }
+        75% {
+          transform: rotate(-95deg);
+          -webkit-transform: rotate(-95deg);
+        }
+        100% {
+          transform: rotate(-90deg);
+          -webkit-transform: rotate(-90deg);
+        }
+      }
+      @keyframes tail-wobble {
+        0% {
+          transform: rotate(-90deg);
+          -webkit-transform: rotate(-90deg);
+        }
+        15% {
+          transform: rotate(-65deg);
+          -webkit-transform: rotate(-65deg);
+        }
+        30% {
+          transform: rotate(-70deg);
+          -webkit-transform: rotate(-70deg);
+        }
+        45% {
+          transform: rotate(-80deg);
+          -webkit-transform: rotate(-80deg);
+        }
+        60% {
+          transform: rotate(-100deg);
+          -webkit-transform: rotate(-100deg);
+        }
+        75% {
+          transform: rotate(-95deg);
+          -webkit-transform: rotate(-95deg);
+        }
+        100% {
+          transform: rotate(-90deg);
+          -webkit-transform: rotate(-90deg);
+        }
+      }
+
+      .brand-text {
+        font-size: 1.45rem;
+        padding-left: 3px;
+        vertical-align: middle;
+      }
+    }
+
+    .dropdown-menu {
+      overflow: hidden;
+    }
+  }
+
+}
+
+.fetures-container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  .fe-item {
+    margin-bottom: 1.2rem
+  }
+
+  h4 {
+    margin-bottom: 1.2rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0 0 0 10px;
+    margin: 0 0 0 10px;
+    border-left: 3px solid #EEE;
+
+    li {
+      padding: 0.5rem 0;
+    }
+
+  }
+}
+
+.footer-container {
+  padding: 0 0 1.5rem;
+  margin: 0 auto;
+  text-align: center;
+  color: #c8c9ca;
+  background: #717071;
+
+  .footer-follow {
+    margin-top: 30px;
+  }
+
+  .footer-info img {
+    height: 70px;
+  }
+
+  ul.social {
+    margin: 1rem auto;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    > li {
+      display: inline-block;
+      > a {
+        display: inline-block;
+        font-size: 18px;
+        line-height: 30px;
+        height: 30px;
+        width: 30px;
+        border-radius: 36px;
+        background-color: #FFF;
+        color: $nutz-grey;
+        margin: 0 3px 3px 0;
+        &:hover {
+          text-decoration: none;
+          background-color: $nutz-blue;
+          color: #FFF;
+        }
+      }
+    }
+  }
+}
+
+// 回到顶部
+.to-top {
+  padding: 2px 4px;
+  background: $nutz-blue;
+  color: #FFF;
+  border-radius: 2px;
+  z-index: 200000;
+}
+
+// 主页滚动条
+
+$release-img-h: 310px;
+$release-img-h2: 370px;
+
+#release-bg {
+
+  @include media-breakpoint-up(xs) {
+    img {
+      height: $release-img-h2;
+      max-width: inherit;
+    }
+    .carousel-indicators {
+      display: none;
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    img {
+      height: $release-img-h;
+      max-width: inherit;
+    }
+    .carousel-indicators {
+      display: none;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    img {
+      height: $release-img-h;
+      max-width: inherit;
+    }
+    .carousel-indicators {
+      display: none;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    img {
+      height: 440px;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    img {
+      height: 540px;
+    }
+  }
+}
+
+section.fe-right {
+  position: absolute;
+  padding: 20px;
+  width: 100%;
+  height: $release-img-h2;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  color: #CCC;
+  h4 {
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.4);
+    margin-bottom: 1rem;
+  }
+  a {
+    color: #DDD;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #FFF;
+    text-decoration: underline;
+  }
+  a.downbtn {
+    display: block;
+    padding: 8px;
+    text-align: center;
+    background: #08F;
+    color: #FFF;
+    border-radius: 4px;
+    box-shadow: 2px 2px 6px #333;
+  }
+  a.downbtn:hover {
+    text-decoration: none;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+  }
+  .morelink {
+    display: none;
+    padding: 10px;
+    text-align: center;
+  }
+
+  @include media-breakpoint-up(xs) {
+    border-radius: 0px;
+    width: 100%;
+    height: $release-img-h2;
+    top: 0;
+    right: 0;
+    .morelink {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    border-radius: 0px;
+    width: 100%;
+    top: 0;
+    right: 0;
+    height: $release-img-h;
+    .morelink {
+      display: none;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    border-radius: 0px;
+    width: 100%;
+    top: 0;
+    right: 0;
+    height: $release-img-h;
+    .morelink {
+      display: none;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    width: 400px;
+    top: 20px;
+    right: 60px;
+    height: auto;
+    border-radius: 6px;
+    .morelink {
+      display: block;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    width: 400px;
+    top: 60px;
+    right: 150px;
+    height: auto;
+    border-radius: 6px;
+    .morelink {
+      display: block;
+    }
+  }
+}
+
+// 文档页部分
+.doc-sidetree {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  width: $sidetree-w;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  border-left: 1px solid $nutz-border-color;
+  border-right: 1px solid $nutz-border-color;
+  background: $nutz-doc-bg;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .doc-sidetree-inner {
+    width: 100%;
+    //width: $sidetree-w - 16px;
+    //height: 100%;
+    //position: fixed;
+    //top: $nav-h + 8px;
+  }
+
+  ol {
+    margin: 0;
+    padding-left: 25px;
+    li {
+      padding: 2px 0;
+      color: $nutz-doc-color;
+      cursor: pointer;
+      a.current, a.current:hover {
+        font-size: 14px;
+        font-weight: bold;
+        color: $nutz-doc-hover-color;
+        background-color: $nutz-doc-hover-bg;
+      }
+      &.hidesub {
+        b:after {
+          content: "...";
+        }
+        ol {
+          display: none;
+        }
+      }
+      ol {
+        padding-left: 15px;
+      }
+    }
+  }
+}
+
+.doc-doctree {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  width: $sidetree-w;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  border-left: 1px solid $nutz-border-color;
+  border-right: 1px solid $nutz-border-color;
+  background: $nutz-doc-bg;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .doc-doctree-inner {
+    //width: $sidetree-w - 16px;
+    //height: 100%;
+    //position: fixed;
+    //top: $nav-h + 8px;
+    width: 100%;
+  }
+
+  a {
+    padding: 2px 0;
+    font-size: 0.9rem;
+  }
+
+}
+
+.doc-container {
+  position: relative;
+  zoom: 1;
+  padding-bottom: 1rem;
+
+
+  &:after {
+    clear: both;
+    content: '.';
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+
+  @include media-breakpoint-up(md) {
+    min-height: 680px;
+  }
+
+  .doc-menu {
+    display: flex;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    margin-left: 0.05rem;
+    margin-right: 0.05rem;
+  }
+  .doc-btn {
+    color: $nutz-blue;
+    display: flex;
+    flex-direction: row;
+    font-weight: normal;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: all 0.2s ease-in-out;
+
+    &.right {
+      margin-left: auto;
+    }
+  }
+}
+
+.doc-title {
+  font-size: 28px;
+  font-weight: bold;
+  padding: 16px;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.doc-info {
+  padding: 8px 20px;
+  text-align: center;
+
+  > div {
+    margin-bottom: 0.3rem;
+  }
+
+  .doc-lm {
+    font-size: 1rem;
+    float: left;
+    color: #CCC;
+    font-family: Times;
+  }
+  .doc-au {
+    font-size: 1rem;
+    float: right;
+    padding: 0 10px;
+    i, em, b {
+      font-style: normal;
+      color: #AAA;
+    }
+  }
+}
+
+.doc-content {
+  p {
+    margin: 1rem 0;
+    padding: 0 0.5rem;
+  }
+
+  blockquote {
+    border-left: 3px solid #CCC;
+    margin: 10px 10px;
+    padding: 4px 5px;
+    font-size: 1rem;
+    color: #888;
+  }
+  .pa-img {
+    img {
+      margin: auto;
+      display: block;
+      border: 0px;
+      max-width: 640px;
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
+    }
+  }
+  blockquote p {
+    margin: 0px;
+  }
+  i {
+    color: #666;
+  }
+  .doc-hr {
+    margin: 16px 0;
+    height: 1px;
+    line-height: 1px;
+    overflow: hidden;
+    border-top: 1px dashed #CCC;
+  }
+
+  h1 {
+    color: $nutz-doc-h1;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 2px;
+    padding: 5px;
+  }
+  h2 {
+    color: $nutz-doc-h2;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 2px;
+    padding: 5px;
+    padding-left: 10px;
+  }
+  h3, h4, h5, h6 {
+    color: $nutz-doc-h3p;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 2px;
+    padding: 5px;
+    padding-left: 20px;
+  }
+  table {
+    margin: 5px 10px;
+  }
+  pre {
+    color: #126;
+    font-family: Courier New;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    padding: 10px;
+    margin: 0 10px;
+    background-color: #EEE;
+    border: 1px dashed #BBB;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow-x: auto;
+  }
+  code {
+  }
+  ul, ol {
+    margin-left: 50px;
+    padding-left: 20px;
+    @include media-breakpoint-down(sm) {
+      margin-left: 20px;
+      padding-left: 10px;
+    }
+  }
+  ul ul, ul ol, ol ol, ol ul {
+    margin-left: 10px;
+    padding-left: 10px;
+  }
+}

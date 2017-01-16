@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>写在前面的话 - Nutz</title>
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/balloon.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/prism.css">
+    <link rel="stylesheet" type="text/css" href="../css/nutz-bootstrap_dark.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-switch.min.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.toTop.min.js"></script>
+    <style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+    .en-markup-crop-options {
+        top: 18px !important;
+        left: 50% !important;
+        margin-left: -100px !important;
+        width: 200px !important;
+        border: 2px rgba(255, 255, 255, .38) solid !important;
+        border-radius: 4px !important;
+    }
+
+    .en-markup-crop-options div div:first-of-type {
+        margin-left: 0px !important;
+    }
+    </style>
+</head>
+<body tree-depth="1" tree-name="tree.html" page-depth="2" data-spy="scroll" data-target="#pagedoc-nav">
+<div class="body-header"></div>
+<div class="body-inner">
+    <div class="fixed-top navbar-container">
+        <nav class="container navbar navbar-toggleable-md navbar-light">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                    data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <div class="brand-logo">
+                    <div class="logo-tail"></div>
+                    <img src="../imgs/nutz_logo28.png" class="brand-img" alt="">
+                </div>
+                <span class="brand-text">Nutz</span>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">首页</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="http://example.com" id="nutz-project"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            项目
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="nutz-project">
+                            <a class="dropdown-item" href="https://github.com/nutzam/nutz">Nutz(核心包)</a>
+                            <a class="dropdown-item" href="https://github.com/nutzam/nutzmore">NutzMore(插件与扩展)</a>
+                            <a class="dropdown-item" href="https://github.com/nutzam/nutzwx">NutzWx(公众号操作封装库)</a>
+                            <a class="dropdown-item"
+                               href="https://github.com/nutzam/nutzmongo">NutzMongo(MongoDB驱动的薄封装)</a>
+                            <a class="dropdown-item" href="https://github.com/nutzam/nutz-web">NutzWeb(A Jetty
+                                launcher)</a>
+                            <a class="dropdown-item" href="https://github.com/nutzam/nutz-quartz">NutzQuartz(Quartz表达式解析执行类库)</a>
+                            <a class="dropdown-item"
+                               href="https://github.com/nutzam/nutz-qrcode">NutzQrcode(二维码生成/解析)</a>
+                            <a class="dropdown-item"
+                               href="https://github.com/zozoh/zdoc">zDoc(支持zDoc,markdown文档生成工具)</a>
+                            <a class="dropdown-item" href="https://github.com/pangwu86/nutz-logo">NutzLogo(跳蛋版实现)</a>
+                            <a class="dropdown-item"
+                               href="https://nutz.cn/yvr/t/tdb5l3e7pajv1ptl1f0nveg1bk">Demo(社区提供)</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="http://example.com" id="nutz-doc"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            文档
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="nutz-doc">
+                            <a class="dropdown-item" href="../core/nutz_preface.html">Nutz使用手册(核心包)</a>
+                            <a class="dropdown-item" href="../javadoc/1.r.59/">NutzAPI文档(核心包)</a>
+                            <a class="dropdown-item" href="http://nutzbook.wendal.net/">进阶手册(Wendal出品，偏实战)</a>
+                            <a class="dropdown-item" href="../zdoc/syntax.html">zDoc使用手册</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://nutz.cn/nutzdw/">下载</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://nutz.cn">社区</a>
+                    </li>
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <div class="switch switch-small my-2 my-sm-0">
+                        <input type="checkbox" name="my-checkbox" checked/>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container doc-container">
+        <div class="doc-sidetree">
+            <div class="doc-sidetree-inner">
+                <div id="siteIndex" tree-title="Nutz核心包">
+                    <ol class="zdoc-index-container">
+                        <li class="doc-index-item"><a href="nutz_preface.html" class="current">写在前面的话</a></li>
+                        <li class="doc-index-item"><a href="nutz_release_notes.html">1.r.60 发行注记</a></li>
+                        <li class="zdoc-index-node hidesub"><b>通用知识</b>
+                            <ol class="zdoc-index-wrapper">
+                                <li class="doc-index-item"><a href="basic/maven.html">Maven基本配置</a></li>
+                                <li class="doc-index-item"><a href="basic/encoding.html">编码与乱码</a></li>
+                                <li class="doc-index-item"><a href="basic/support.html">技术支持</a></li>
+                                <li class="doc-index-item"><a href="basic/logging.html">Log配置</a></li>
+                            </ol>
+                        </li>
+                        <li class="zdoc-index-node hidesub"><b>Mvc 手册</b>
+                            <ol class="zdoc-index-wrapper">
+                                <li class="doc-index-item"><a href="mvc/overview.html">Nutz.Mvc 概述</a></li>
+                                <li class="doc-index-item"><a href="mvc/hello.html">Hello World</a></li>
+                                <li class="doc-index-item"><a href="mvc/web_xml.html">如何配置 web.xml</a></li>
+                                <li class="doc-index-item"><a href="mvc/modules.html">主模块-子模块-入口函数</a></li>
+                                <li class="doc-index-item"><a href="mvc/url_mapping.html">URL 映射</a></li>
+                                <li class="doc-index-item"><a href="mvc/action_chain.html">动作链</a></li>
+                                <li class="doc-index-item"><a href="mvc/http_adaptor.html">适配器</a></li>
+                                <li class="doc-index-item"><a href="mvc/view.html">视图</a></li>
+                                <li class="doc-index-item"><a href="mvc/with_ioc.html">同 Ioc 容器一起工作</a></li>
+                                <li class="doc-index-item"><a href="mvc/localization.html">本地化字符串</a></li>
+                                <li class="doc-index-item"><a href="mvc/action_filter.html">过滤器</a></li>
+                                <li class="doc-index-item"><a href="mvc/file_upload.html">文件上传</a></li>
+                                <li class="doc-index-item"><a href="mvc/module_of_request.html">请求范围的模块</a></li>
+                                <li class="doc-index-item"><a href="mvc/rest.html">REST 的支持</a></li>
+                                <li class="doc-index-item"><a href="mvc/annotations.html">Nutz.Mvc 注解一览表</a></li>
+                                <li class="doc-index-item"><a href="mvc/session.html">Session机制</a></li>
+                                <li class="doc-index-item"><a href="mvc/setupby.html">应用启动以及关闭时的额外处理</a></li>
+                                <li class="doc-index-item"><a href="mvc/cross_origin.html">跨域请求</a></li>
+                                <li class="doc-index-item"><a href="mvc/websocket.html">WebSocket的支持</a></li>
+                            </ol>
+                        </li>
+                        <li class="zdoc-index-node hidesub"><b>Dao 手册</b>
+                            <ol class="zdoc-index-wrapper">
+                                <li class="doc-index-item"><a href="dao/hello.html">Hello world</a></li>
+                                <li class="doc-index-item"><a href="dao/basic_operations.html">Dao 接口的基本操作</a></li>
+                                <li class="doc-index-item"><a href="dao/primary_key.html">关于主键</a></li>
+                                <li class="doc-index-item"><a href="dao/condition.html">复杂的SQL条件</a></li>
+                                <li class="doc-index-item"><a href="dao/pager.html">分页查询</a></li>
+                                <li class="doc-index-item"><a href="dao/next_prev.html">插入前后的设置</a></li>
+                                <li class="doc-index-item"><a href="dao/view.html">使用视图</a></li>
+                                <li class="doc-index-item"><a href="dao/field_filter.html">过滤字段</a></li>
+                                <li class="doc-index-item"><a href="dao/dynamic_table_name.html">动态表名</a></li>
+                                <li class="doc-index-item"><a href="dao/links_one.html">一对一映射</a></li>
+                                <li class="doc-index-item"><a href="dao/links_many.html">一对多映射</a></li>
+                                <li class="doc-index-item"><a href="dao/links_many_many.html">多对多映射</a></li>
+                                <li class="doc-index-item"><a href="dao/customized_sql.html">自定义 SQL</a></li>
+                                <li class="doc-index-item"><a href="dao/transaction.html">事务模板</a></li>
+                                <li class="doc-index-item"><a href="dao/transaction_complex.html">交叉事务</a></li>
+                                <li class="doc-index-item"><a href="dao/runner.html">更底层定制NutDao</a></li>
+                                <li class="doc-index-item"><a href="dao/entity.html">实体解析</a></li>
+                                <li class="doc-index-item"><a href="dao/services.html">内置的服务类</a></li>
+                                <li class="doc-index-item"><a href="dao/pojo.html">更快的构建你的POJO</a></li>
+                                <li class="doc-index-item"><a href="dao/record.html">不构建 POJO 访问数据库</a></li>
+                                <li class="doc-index-item"><a href="dao/annotations.html">注解列表</a></li>
+                                <li class="doc-index-item"><a href="dao/interceptors.html">Dao拦截器</a></li>
+                                <li class="doc-index-item"><a href="dao/procedure.html">调用存储过程</a></li>
+                                <li class="doc-index-item"><a href="dao/slave.html">读写分离</a></li>
+                                <li class="doc-index-item"><a href="dao/multiple_datasource.html">多数据源</a></li>
+                            </ol>
+                        </li>
+                        <li class="zdoc-index-node hidesub"><b>Ioc 手册</b>
+                            <ol class="zdoc-index-wrapper">
+                                <li class="doc-index-item"><a href="ioc/hello.html">Hello world</a></li>
+                                <li class="doc-index-item"><a href="ioc/injecting.html">你都可以注入什么</a></li>
+                                <li class="doc-index-item"><a href="ioc/events.html">事件监听</a></li>
+                                <li class="doc-index-item"><a href="ioc/ioc_loader.html">如何配置一个 IocBean</a></li>
+                                <li class="doc-index-item"><a href="ioc/loader_annotation.html">Ioc - Annotation 加载器</a>
+                                </li>
+                                <li class="doc-index-item"><a href="ioc/loader_combo.html">Ioc - 复合加载器</a></li>
+                                <li class="doc-index-item"><a href="ioc/ioc_annos.html">Ioc 注解列表</a></li>
+                                <li class="doc-index-item"><a href="ioc/ioc_by_hand.html">获取ioc对象的特殊场景</a></li>
+                                <li class="doc-index-item"><a href="ioc/scope.html">对象生命范围</a></li>
+                                <li class="doc-index-item"><a href="ioc/inner_object.html">如何定义对象</a></li>
+                                <li class="doc-index-item"><a href="ioc/xml_ioc_loader.html">使用XML作为配置文件格式</a></li>
+                                <li class="doc-index-item"><a href="ioc/ioc_and_java.html">ioc配置与Java代码的互相转换</a></li>
+                            </ol>
+                        </li>
+                        <li class="zdoc-index-node hidesub"><b>Aop 手册</b>
+                            <ol class="zdoc-index-wrapper">
+                                <li class="doc-index-item"><a href="aop/aop_mvc.html">AOP -- 在Mvc中的使用</a></li>
+                                <li class="doc-index-item"><a href="aop/aop_trans.html">声明式Aop事务</a></li>
+                                <li class="doc-index-item"><a href="aop/aop_async.html">异步执行</a></li>
+                                <li class="doc-index-item"><a href="aop/aop_solution.html">AOP模型 -- NutAop的实现思路</a></li>
+                                <li class="doc-index-item"><a href="aop/aop.html">AOP -- 声明式切片</a></li>
+                                <li class="doc-index-item"><a href="aop/aop_json.html">用json文件声明Aop切片</a></li>
+                            </ol>
+                        </li>
+                        <li class="zdoc-index-node hidesub"><b>Json 手册</b>
+                            <ol class="zdoc-index-wrapper">
+                                <li class="doc-index-item"><a href="json/base.html">Nutz.Json 基本用法</a></li>
+                                <li class="doc-index-item"><a href="json/from.html">Nutz.Json 转为Java对象</a></li>
+                                <li class="doc-index-item"><a href="json/to.html">Nutz.Json 转为Json字符串</a></li>
+                                <li class="doc-index-item"><a href="json/mvc.html">Nutz.Json 在Mvc中的用法</a></li>
+                                <li class="doc-index-item"><a href="json/annotations.html">Nutz.Json 注解一览表</a></li>
+                            </ol>
+                        </li>
+                        <li class="zdoc-index-node hidesub"><b>表达式引擎</b>
+                            <ol class="zdoc-index-wrapper">
+                                <li class="doc-index-item"><a href="el/overview.html">表达式引擎简介</a></li>
+                            </ol>
+                        </li>
+                        <li class="zdoc-index-node hidesub"><b>maplist结构</b>
+                            <ol class="zdoc-index-wrapper">
+                                <li class="doc-index-item"><a href="maplist/overview.html">Mapl 结构</a></li>
+                            </ol>
+                        </li>
+                        <li class="zdoc-index-node hidesub"><b>甜 Java</b>
+                            <ol class="zdoc-index-wrapper">
+                                <li class="doc-index-item"><a href="lang/lang.html">Java 的函数糖</a></li>
+                                <li class="doc-index-item"><a href="lang/castors.html">让 Java 类型不那么强</a></li>
+                                <li class="doc-index-item"><a href="lang/mirror.html">增强反射 -- Mirror</a></li>
+                                <li class="doc-index-item"><a href="lang/segment.html">代码模板</a></li>
+                                <li class="doc-index-item"><a href="lang/filepool.html">文件池</a></li>
+                                <li class="doc-index-item"><a href="lang/log.html">日志</a></li>
+                            </ol>
+                        </li>
+                        <li class="zdoc-index-node hidesub"><b>Http轻客户端</b>
+                            <ol class="zdoc-index-wrapper">
+                                <li class="doc-index-item"><a href="http/overview.html">小巧的Http客户端</a></li>
+                                <li class="doc-index-item"><a href="http/httpdns.html">HttpDNS集成</a></li>
+                            </ol>
+                        </li>
+                        <li class="zdoc-index-node hidesub"><b>图像处理小军刀</b>
+                            <ol class="zdoc-index-wrapper">
+                                <li class="doc-index-item"><a href="img/overview.html">图像处理小军刀</a></li>
+                            </ol>
+                        </li>
+                        <li class="zdoc-index-node hidesub"><b>插件与集成</b>
+                            <ol class="zdoc-index-wrapper">
+                                <li class="doc-index-item"><a href="integration/nutzmore.html">编写插件或集成库</a></li>
+                                <li class="doc-index-item"><a href="integration/freemarker.html">集成Freemarker</a></li>
+                                <li class="doc-index-item"><a href="integration/velocity.html">集成Velocity</a></li>
+                                <li class="doc-index-item"><a href="integration/beetl.html">集成beetl</a></li>
+                                <li class="doc-index-item"><a href="integration/shiro.html">集成Shiro</a></li>
+                                <li class="doc-index-item"><a href="integration/quartz.html">集成Quartz</a></li>
+                                <li class="doc-index-item"><a href="integration/ehcache.html">集成Ehcache</a></li>
+                                <li class="doc-index-item"><a href="integration/daocache.html">NutDao的缓存插件</a></li>
+                            </ol>
+                        </li>
+                        <li class="zdoc-index-node hidesub"><b>单元测试</b>
+                            <ol class="zdoc-index-wrapper">
+                                <li class="doc-index-item"><a href="testing/junit_testing.html">JUnit支持</a></li>
+                            </ol>
+                        </li>
+                        <li class="zdoc-index-node hidesub"><b>关于源码</b>
+                            <ol class="zdoc-index-wrapper">
+                                <li class="doc-index-item"><a href="committer/git_project.html">从 Git 编译源码</a></li>
+                                <li class="doc-index-item"><a href="committer/compile_with_maven.html">运行 JUnit 测试 -
+                                    Maven</a></li>
+                                <li class="doc-index-item"><a href="committer/ant.html">使用 Ant 编译</a></li>
+                                <li class="doc-index-item"><a href="committer/packages.html">Nutz 的包结构</a></li>
+                                <li class="doc-index-item"><a href="committer/version_naming.html">Nutz 的版本命名规范</a></li>
+                                <li class="doc-index-item"><a href="committer/coding.html">Nutz Java 编码规范 (V1.0)</a>
+                                </li>
+                                <li class="doc-index-item"><a href="committer/be_committer.html">成为代码提交者</a></li>
+                            </ol>
+                        </li>
+                        <li class="zdoc-index-node hidesub"><b>版本历史</b>
+                            <ol class="zdoc-index-wrapper">
+                                <li class="doc-index-item"><a href="history/1_r_59.html">1.r.59 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_r_58.html">1.r.58 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_r_57.html">1.r.57 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_r_56.html">1.r.56 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_r_55.html">1.r.55 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_r_54.html">1.r.54 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_b_53.html">1.b.53 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_b_52.html">1.b.52 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_b_51.html">1.b.51 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_b_50.html">1.b.50 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_b_49.html">1.b.49 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_b_48.html">1.b.48 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_b_47.html">1.b.47 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_b_46.html">1.b.46 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_b_45.html">1.b.45 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_b_44.html">1.b.44 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_b_43.html">1.b.43 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_b_42.html">1.b.42 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_b_41.html">1.b.41 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_b_40.html">1.b.40 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_b_39.html">1.b.39 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_b_38.html">1.b.38 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_b_37.html">1.b.37 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_b_36.html">1.b.36 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_b_35.html">1.b.35 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_b_34.html">1.b.34 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_a_33.html">1.a.33 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_a_32.html">1.a.32 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_a_31.html">1.a.31 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_a_30.html">1.a.30 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_a_29.html">1.a.29 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_a_28.html">1.a.28 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_a_27.html">1.a.27 发行注记</a></li>
+                                <li class="doc-index-item"><a href="history/1_a_26.html">1.a.26</a></li>
+                                <li class="doc-index-item"><a href="history/1_a_25.html">1.a.25 及 更早版本</a></li>
+                            </ol>
+                        </li>
+                        <li class="zdoc-index-node hidesub"><b>FAQ</b>
+                            <ol class="zdoc-index-wrapper">
+                                <li class="doc-index-item"><a href="faq/how_to_pronounce_nutz.html">Nutz 该如何发音</a></li>
+                                <li class="doc-index-item"><a href="faq/jar_encoding.html">我的Nutz的源码是乱码怎么办？</a></li>
+                            </ol>
+                        </li>
+                        <li class="zdoc-index-node hidesub"><b>附录</b>
+                            <ol class="zdoc-index-wrapper">
+                                <li class="doc-index-item"><a href="appendix/create_datasource.html">如何创建 DataSource</a>
+                                </li>
+                                <li class="doc-index-item"><a href="appendix/resources.html">推荐文章</a></li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="doc-doctree">
+            <div class="doc-doctree-inner" id="pagedoc-nav">
+                <nav class="nav flex-column" role="tablist"><a class="nav-link" href="#ndoc-1">Java
+                    为什么不能是一门敏捷的语言呢？</a><a class="nav-link" href="#ndoc-2">Nutz 可以做什么？</a><a class="nav-link"
+                                                                                            href="#ndoc-3">Nutz
+                    为谁而设计？</a><a class="nav-link" href="#ndoc-4">Nutz 的质量</a><a class="nav-link" href="#ndoc-5">Nutz
+                    的未来</a><a class="nav-link" href="#ndoc-6">你完全可以让这个项目变得更加美好</a><a class="nav-link" href="#ndoc-7">我使用的时候如果出现问题怎么办？</a>
+                </nav>
+            </div>
+        </div>
+        <div class="doc-page">
+            <div class="doc-menu">
+                <div class="doc-btn toggle-sidetree right-auto"><i class="fa fa-align-left fa-lg"></i></div>
+                <div class="doc-btn right toggle-doctree"><i class="fa fa-align-right fa-lg"></i></div>
+            </div>
+            <div class="doc-title">写在前面的话</div>
+            <div class="doc-info row">
+                <div class="col-md-3 col-sm-3 col-xs-12 doc-lm">Jan 10, 2017 6:33:21 PM</div>
+                <div class="col-md-3 offset-md-6 col-sm-3 offset-sm-6 col-xs-12 doc-au doc-authors">
+                    <i>作者:</i>
+                    <span class="doc-aui doc-author">
+                    <a href="mailto:zozohtnt@gmail.com">zozoh</a>
+            </span>
+                </div>
+            </div>
+            <div class="doc-content">
+                <div class="pa-img"><img src="../core/logo.png" apath="core"></div>
+                <div class="doc-hr"></div>
+                <h1 id="ndoc-1"><a name="Java_为什么不能是一门敏捷的语言呢？"></a>Java 为什么不能是一门敏捷的语言呢？</h1>
+                <p>起码 Java 是一门优美的编程语言，经过10多年的发展，它几乎已经被应用到了任何地方，在高端的企业服务器上，
+                    手持设备的芯片里，车载设备，智能家电甚至火星车上。在功能上，它广泛的涉足到了软件应用的各个领域，现在，
+                    它开始向桌面和图像处理方面频频发力。 从历史上看它是一门成熟的语言，从现在来看，它是世界上使用最广泛的
+                    语言，从将来看，它是最有前途的语言（现在它依然充满了活力和创新）。
+                </p>
+                <p>但是，在越来越流行的 Web 开发领域， Java 似乎逐渐露出了疲态。是的，脚本语言们卷起了一场热潮，似乎已经
+                    快可以用“革命”两个字来形容了。而Java，被“<u>脚本小子们</u>”诟病最多的便是 <b style="color:#F00;">低下的开发效率</b>。
+                </p>
+                <p><b style="color:#00A;">但是，真的是这样的吗？</b>
+                </p>
+                <p>从本质上来说， Java 语言本身为程序员提供的帮助只有两点，一是语言的语法，二是内置的类库。 现在
+                    从事 Web 开发，大多是采用第三方的类库（或者说是框架），比如流行的 SSH。 所谓 Java 在
+                    Web 开发的低效，不妨这样说比较贴切一些: <b style="color:#F80;">采用第三方类库进行开发比较低效</b>。
+                </p>
+                <p>为了证明这一点，我写作了 Nutz， 它是一组轻便小型的框架的集合， 各个部分可以被独立使用。 而 Nutz 的目标
+                    就是
+                </p>
+                <p><b style="color:#F00;">在力所能及的情况下，最大限度的提高Web开发人员的生产力</b>。
+                </p>
+                <p>是的，提高生产力是这个框架唯一的目标。 就像 Java 设计之初，考虑最多的是程序员的易用性和运行时效率
+                    的权衡， Nutz 也是这样。希望通过 Nutz， Java 的开发人员可以获得更快的开发速度，更少的代码量，并且这些
+                    以不损害运行时效率为前提。
+                </p>
+                <div class="doc-hr"></div>
+                <h1 id="ndoc-2"><a name="Nutz_可以做什么？"></a>Nutz 可以做什么？</h1>
+                <ul>
+                    <li>Dao -- 针对 <b>JDBC</b> 的薄封装，事务模板，无缓存</li>
+                    <li>Ioc -- JSON 风格的配置文件，声明时切片支持</li>
+                    <li>Mvc -- 注解风格的配置，内置多文件上传功能</li>
+                    <li>Json -- 解析和渲染</li>
+                    <li>Castors -- Java 对象类型转换</li>
+                    <li>Lang -- 更简洁的 Java 函数以及更丰富的反射支持</li>
+                    <li>Aop -- 轻便快速的切面编程支持</li>
+                    <li>Plugin -- 轻便的插件机制</li>
+                    <li>Resource -- 资源扫描</li>
+                </ul>
+                <p> 它所有的功能均不强制依赖第三方 jar 包
+                </p>
+                <p> 这就意味着：
+                </p>
+                <ul>
+                    <li>如果一个 Web 应用，你在 WEB-INF/lib 下只 需要放置一个 nutz.jar 就够了</li>
+                    <li>当然你要使用连接池，数据库驱动, websocket等功能，还需要自行添置 jar 包。</li>
+                </ul>
+                <p>支持的环境
+                </p>
+                <ul>
+                    <li>JDK5+, 推荐JDK8</li>
+                    <li>任意SQL数据库,例如MySQL,Oracle,SqlServer等等</li>
+                    <li>任意支持servlet 2.5的web容器, 推荐Tomcat 8+/Jetty 9.2+</li>
+                </ul>
+                <div class="doc-hr"></div>
+                <h1 id="ndoc-3"><a name="Nutz_为谁而设计？"></a>Nutz 为谁而设计？</h1>
+                <ul>
+                    <li>如果你觉得 Hibernate 控制比较繁琐，iBatis 编写SQL又比较麻烦，<b style="color:#00F;">Nutz.Dao</b> 专为你设计。</li>
+                    <li>如果你觉得在多个服务器部署或者修改 Spring 配置文件很麻烦，<b style="color:#00F;">Nutz.Ioc</b> 专为你设计</li>
+                    <li>如果你觉得直接写 XML 配置文件很麻烦，可视化编辑器又没控制感，<b style="color:#00F;">Nutz.Mvc</b> 专为你设计</li>
+                    <li>如果你觉得 JSON 转换很麻烦（要写超过一行以上的代码），<b style="color:#00F;">Nutz.Json</b> 专为你设计</li>
+                    <li>如果你觉得 Java 语法不如 Ruby 便捷， Nutz.Castor 以及 <b style="color:#00F;">Nutz.Lang</b> 专为你设计</li>
+                    <li>如果你以前根本没接触过 SSH ，只使用 JDBC 编程， 整个 <b>Nutz</b> 专门为你设计</li>
+                </ul>
+                <div class="doc-hr"></div>
+                <h1 id="ndoc-4"><a name="Nutz_的质量"></a>Nutz 的质量</h1>
+                <p>截至到现在为止，Nutz 的 JUnit 用例覆盖率大概是这样的
+                </p>
+                <div class="pa-img"><img src="../core/emma.png" apath="core"></div>
+                <p>并且这个数字还在不断增加。
+                </p>
+                <p>在一个功能告一段落以后，我通常会花1－2个晚上在一边咂着廉价的红酒一边颇有成就感的书写JUnit测试。
+                    通常我会用 JUnit 把我自己击溃，紧接着的那几天我都努力让那个该死红条变绿，之后，又想方设法写出
+                    新的Junit测试试图让它再度变红。并且我还要保证所做的修改不能让代码膨胀，这的确让我死掉了不少脑
+                    细胞。这些测试中，不仅涵盖各种功能上的测试，也涵盖了一些跨越线程的测试。在以后，我会针对代码执
+                    行的效率加入一些新的测试。
+                </p>
+                <p>我能保证的就是Nutz的代码是小巧的，以及通过尽可能多的 JUnit 测试。但是所有我能做的也就只是
+                    这些了，找出剩下的那些代码上的缺陷，就应该交给 Nutz 第一批“小白”们了。“小白”们，加油！我
+                    支持你们...
+                </p>
+                <p><i style="color:#AAA;">小白： 是小白鼠的简称。小白鼠是实验室的最爱，实验室是产生新东西的地方。</i>
+                </p>
+                <div class="doc-hr"></div>
+                <h1 id="ndoc-5"><a name="Nutz_的未来"></a>Nutz 的未来</h1>
+                <p>Nutz 是一个新兴的开源项目
+                </p>
+                <p><b>它没有过去，只有未来</b>
+                </p>
+                <p>我可以保证，在未来，Nutz 的代码 <b style="color:#F00;">绝对不会膨胀</b>。 所有的功能设计的出发点就是最大限度给予程序员实惠。
+                </p>
+                <div class="doc-hr"></div>
+                <h1 id="ndoc-6"><a name="你完全可以让这个项目变得更加美好"></a>你完全可以让这个项目变得更加美好</h1>
+                <ul>
+                    <li>上 <a href="http://www.nutz.cn/">Nutz社区论坛</a> 发帖讨论</li>
+                    <li><a href="http://xiaofeng.iteye.com/blog/549410">不编写代码，你可以能为这个项目做很多事情</a> @<a
+                            href="http://xiaofeng.iteye.com">hilliate</a></li>
+                    <li>你可以随时 <a href="https://github.com/nutzam/nutz/issues/new">提交你发现的问题</a></li>
+                    <li>任何人 用 任何方式 =&gt; 指出 Nutz 的缺陷，都是被欢迎的</li>
+                    <li>如果你想成为 Nutz Committers 中的一员，请 <a href="../core/committer/be_committer.html"
+                                                         apath="core">阅读这里</a></li>
+                </ul>
+                <div class="doc-hr"></div>
+                <h1 id="ndoc-7"><a name="我使用的时候如果出现问题怎么办？"></a>我使用的时候如果出现问题怎么办？</h1>
+                <ol>
+                    <li>上 <a href="http://www.nutz.cn/">Nutz社区论坛</a>，有问必答，秒回复</li>
+                    <li>到 <a href="https://github.com/nutzam/nutz/issues">github</a> 上报告 issue</li>
+                    <li>或者加入 QQ 群
+                        <ul>
+                            <li><a href="http://qun.qq.com/#jointhegroup/gid/68428921">Nutz社区群（68428921）超级群</a> -- 感谢
+                                <b>c.A</b> 的支持
+                            </li>
+                            <li><a href="http://qun.qq.com/air/#58444676">Nutz &amp; XBlink （58444676 超级群）</a> -- 感谢 <b>E-Hunter</b>
+                                的支持
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="footer-container">
+        <footer class="container">
+            <div class="footer-info">
+                <img src="../imgs/nutz-footer.jpg" alt="">
+            </div>
+            <div class="footer-follow">
+                <h6>Follow us</h6>
+                <ul class="social">
+                    <li><a href="javascript:;" title="公众号" data-balloon="微信号：rain_on_sand，欢迎订阅"
+                           data-balloon-pos="up"><span class="icon fa fa-weixin"></span></a></li>
+                    <li><a href="javascript:;" title="qq群" data-balloon="Nutz社区群：68428921，Nutz&amp;XBlink：58444676。欢迎加入"
+                           data-balloon-pos="up"><span class="icon fa fa-qq"></span></a></li>
+                    <li><a href="https://github.com/nutzam" title="github"><span
+                            class="icon fa fa-github-alt"></span></a>
+                    </li>
+                </ul>
+            </div>
+            <p>
+                All Rights Reserved 2009-2017 Nutz 备案中
+            </p>
+        </footer>
+    </div>
+    <div class="to-top" style="cursor: pointer; display: none; position: fixed; right: 15px; bottom: 85px;">Top ↑</div>
+    <script>
+        $(document).ready(function () {
+            $('.to-top').toTop({
+                autohide: true,
+                offset: 420,
+                speed: 500,
+                position: true,
+                right: 15,
+                bottom: 85
+            });
+
+            $("[name='my-checkbox']").bootstrapSwitch({
+                onText: "Light",
+                offText: "Dark",
+                onSwitchChange: function (event, state) {
+                    console.log(state);
+                }
+            });
+        });
+    </script>
+    <script src="../js/tether.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-switch.min.js"></script>
+    <script src="../js/prism.js"></script>
+    <script src="../js/nutzam-doc.js"></script>
+</div>
+
+</body>
+</html>
