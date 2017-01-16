@@ -6991,6 +6991,42 @@ section.fe-right {
     padding: 2px 0;
     font-size: 0.9rem; }
 
+.doc-nav {
+  display: flex;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  margin-left: 0.05rem;
+  margin-right: 0.05rem; }
+  .doc-nav .doc-nav-btn {
+    color: #7da7d9;
+    display: flex;
+    flex-direction: row;
+    font-weight: normal;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0.5rem; }
+    @media (max-width: 575px) {
+      .doc-nav .doc-nav-btn span {
+        display: none; } }
+    .doc-nav .doc-nav-btn:hover {
+      color: #427fc8; }
+      .doc-nav .doc-nav-btn:hover span {
+        text-decoration: underline; }
+  .doc-nav .doc-nav-left {
+    text-align: left; }
+    .doc-nav .doc-nav-left .fa {
+      margin-right: 4px; }
+  .doc-nav .doc-nav-right {
+    text-align: right;
+    margin-left: auto; }
+    .doc-nav .doc-nav-right .fa {
+      margin-left: 4px; }
+
 .doc-container {
   position: relative;
   zoom: 1;

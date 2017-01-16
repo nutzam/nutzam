@@ -451,10 +451,6 @@ section.fe-right {
 
   .doc-sidetree-inner {
     width: 100%;
-    //width: $sidetree-w - 16px;
-    //height: 100%;
-    //position: fixed;
-    //top: $nav-h + 8px;
   }
 
   ol {
@@ -516,11 +512,61 @@ section.fe-right {
 
 }
 
+.doc-nav {
+  display: flex;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  margin-left: 0.05rem;
+  margin-right: 0.05rem;
+
+  .doc-nav-btn {
+    color: $nutz-blue;
+    display: flex;
+    flex-direction: row;
+    font-weight: normal;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0.5rem;
+
+    @include media-breakpoint-down(xs) {
+      span {
+        display: none;
+      }
+    }
+
+    &:hover {
+      color: darken($nutz-blue, 15%);
+      span {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .doc-nav-left {
+    text-align: left;
+    .fa {
+      margin-right: 4px;
+    }
+  }
+  .doc-nav-right {
+    text-align: right;
+    margin-left: auto;
+    .fa {
+      margin-left: 4px;
+    }
+  }
+
+}
+
 .doc-container {
   position: relative;
   zoom: 1;
   padding-bottom: 1rem;
-
 
   &:after {
     clear: both;
