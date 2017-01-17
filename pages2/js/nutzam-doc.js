@@ -145,12 +145,20 @@ $(document).ready(function () {
     var $sidetree = $('.doc-sidetree');
     var win = $(window);
     win.scroll(function () {
-        var scrolling = win.scrollTop();
-        console.log('doc scroll:' + scrolling);
-        var padd = scrolling - 0;
-        padd = padd < 0 ? 0 : padd;
-        $sidetree.css('top', padd);
-        $doctree.css('top', padd);
+        if ($body.hasClass('show-sidetree')) {
+            $sidetree.css('top', 0);
+        }
+        else if ($body.hasClass('show-doctree')) {
+            $doctree.css('top', 0);
+        }
+        else {
+            var scrolling = win.scrollTop();
+            console.log('doc scroll:' + scrolling);
+            var padd = scrolling - 0;
+            padd = padd < 0 ? 0 : padd;
+            $sidetree.css('top', padd);
+            $doctree.css('top', padd);
+        }
     });
 
     // function viewHeight() {
