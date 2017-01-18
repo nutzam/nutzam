@@ -1,0 +1,51 @@
+$nutz-blue: #7da7d9;
+$nutz-grey: #898989;
+$nutz-border-color: #4c4c4c;
+$nutz-doc-bg: #222425;
+$nutz-doc-color: #EEE;
+$nutz-doc-hover-color: #000;
+$nutz-doc-hover-bg: #fff33e;
+
+$nutz-doc-blockquote: #888;
+$nutz-doc-blockquote-left: #CCC;
+
+$nutz-doc-h1: #ADADAD;
+$nutz-doc-h2: #00b9ff;
+$nutz-doc-h3p: #ffffff;
+
+$nutz-doc-pre: #126;
+
+// bs修改
+
+$body-bg: lighten($gray-dark, 5%);
+$body-color: $gray-lighter;
+
+// Dropdowns
+$dropdown-bg: $black;
+$dropdown-border-color: rgba($gray, .15);
+
+$dropdown-divider-bg: $gray-dark;
+$dropdown-box-shadow: 0 .5rem 1rem rgba($gray, .175);
+
+$dropdown-link-color: $gray-light;
+$dropdown-link-hover-color: darken($gray-light, 5%);
+$dropdown-link-hover-bg: $gray-dark;
+
+$dropdown-link-disabled-color: $gray-dark;
+
+$dropdown-header-color: $gray-dark;
+
+// Navbar
+$navbar-inverse-color: rgba($black, .5);
+$navbar-inverse-hover-color: rgba($black, .7);
+$navbar-inverse-active-color: rgba($black, .9);
+$navbar-inverse-disabled-color: rgba($black, .3);
+$navbar-inverse-toggler-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-inverse-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"), "#", "%23");
+$navbar-inverse-toggler-border: rgba($black, .1);
+
+$navbar-light-color: rgba($white, .5);
+$navbar-light-hover-color: rgba($white, .75);
+$navbar-light-active-color: rgba($white, 1);
+$navbar-light-disabled-color: rgba($white, .25);
+$navbar-light-toggler-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"), "#", "%23");
+$navbar-light-toggler-border: rgba($white, .1);

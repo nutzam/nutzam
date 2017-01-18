@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="${doc.bpath}css/nutz-bootstrap_light.css" id="theme-css-light"
+<link rel="stylesheet" type="text/css" href="${doc.bpath}css/nutzbs_light.css" id="theme-css-light"
       path="${doc.bpath}css/">
 <script>
     function getThemeCSSName() {
@@ -11,7 +11,7 @@
         link.id = "theme-css-dark";
         link.rel = 'stylesheet';
         link.path = '${doc.bpath}css/';
-        link.href = '${doc.bpath}css/nutz-bootstrap_dark.css';
+        link.href = '${doc.bpath}css/nutzbs_dark.css';
         document.getElementsByTagName("head")[0].appendChild(link);
     }
 

@@ -1,8 +1,5 @@
 /*!
- * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
- * Copyright 2011-2017 The Bootstrap Authors
- * Copyright 2011-2017 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * nutzam by bootstrap4
  */
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 html {
@@ -282,8 +279,8 @@ body {
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
-  color: #292b2c;
-  background-color: #fff; }
+  color: #eceeef;
+  background-color: #353839; }
 
 [tabindex="-1"]:focus {
   outline: none !important; }
@@ -1591,7 +1588,7 @@ pre {
   .table tbody + tbody {
     border-top: 2px solid #eceeef; }
   .table .table {
-    background-color: #fff; }
+    background-color: #353839; }
 
 .table-sm th,
 .table-sm td {
@@ -1681,7 +1678,7 @@ pre {
   .table-inverse th,
   .table-inverse td,
   .table-inverse thead th {
-    border-color: #fff; }
+    border-color: #353839; }
   .table-inverse.table-bordered {
     border: 0; }
 
@@ -2291,19 +2288,19 @@ tbody.collapse.show {
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
-  color: #292b2c;
+  color: #eceeef;
   text-align: left;
   list-style: none;
-  background-color: #fff;
+  background-color: #000;
   background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(70, 74, 76, 0.15);
   border-radius: 0.25rem; }
 
 .dropdown-divider {
   height: 1px;
   margin: 0.5rem 0;
   overflow: hidden;
-  background-color: #eceeef; }
+  background-color: #292b2c; }
 
 .dropdown-item {
   display: block;
@@ -2311,21 +2308,21 @@ tbody.collapse.show {
   padding: 3px 1.5rem;
   clear: both;
   font-weight: normal;
-  color: #292b2c;
+  color: #636c72;
   text-align: inherit;
   white-space: nowrap;
   background: none;
   border: 0; }
   .dropdown-item:focus, .dropdown-item:hover {
-    color: #1d1e1f;
+    color: #575f64;
     text-decoration: none;
-    background-color: #f7f7f9; }
+    background-color: #292b2c; }
   .dropdown-item.active, .dropdown-item:active {
     color: #fff;
     text-decoration: none;
     background-color: #0275d8; }
   .dropdown-item.disabled, .dropdown-item:disabled {
-    color: #636c72;
+    color: #292b2c;
     cursor: not-allowed;
     background-color: transparent; }
 
@@ -2347,7 +2344,7 @@ tbody.collapse.show {
   padding: 0.5rem 1.5rem;
   margin-bottom: 0;
   font-size: 0.875rem;
-  color: #636c72;
+  color: #292b2c;
   white-space: nowrap; }
 
 .dropdown-backdrop {
@@ -2988,53 +2985,53 @@ tbody.collapse.show {
 
 .navbar-light .navbar-brand,
 .navbar-light .navbar-toggler {
-  color: rgba(0, 0, 0, 0.9); }
+  color: white; }
   .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover,
   .navbar-light .navbar-toggler:focus,
   .navbar-light .navbar-toggler:hover {
-    color: rgba(0, 0, 0, 0.9); }
+    color: white; }
 .navbar-light .navbar-nav .nav-link {
-  color: rgba(0, 0, 0, 0.5); }
+  color: rgba(255, 255, 255, 0.5); }
   .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-    color: rgba(0, 0, 0, 0.7); }
+    color: rgba(255, 255, 255, 0.75); }
   .navbar-light .navbar-nav .nav-link.disabled {
-    color: rgba(0, 0, 0, 0.3); }
+    color: rgba(255, 255, 255, 0.25); }
 .navbar-light .navbar-nav .open > .nav-link,
 .navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .nav-link.open,
 .navbar-light .navbar-nav .nav-link.active {
-  color: rgba(0, 0, 0, 0.9); }
+  color: white; }
 .navbar-light .navbar-toggler {
-  border-color: rgba(0, 0, 0, 0.1); }
+  border-color: rgba(255, 255, 255, 0.1); }
 .navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
 .navbar-light .navbar-text {
-  color: rgba(0, 0, 0, 0.5); }
+  color: rgba(255, 255, 255, 0.5); }
 
 .navbar-inverse .navbar-brand,
 .navbar-inverse .navbar-toggler {
-  color: white; }
+  color: rgba(0, 0, 0, 0.9); }
   .navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover,
   .navbar-inverse .navbar-toggler:focus,
   .navbar-inverse .navbar-toggler:hover {
-    color: white; }
+    color: rgba(0, 0, 0, 0.9); }
 .navbar-inverse .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.5); }
+  color: rgba(0, 0, 0, 0.5); }
   .navbar-inverse .navbar-nav .nav-link:focus, .navbar-inverse .navbar-nav .nav-link:hover {
-    color: rgba(255, 255, 255, 0.75); }
+    color: rgba(0, 0, 0, 0.7); }
   .navbar-inverse .navbar-nav .nav-link.disabled {
-    color: rgba(255, 255, 255, 0.25); }
+    color: rgba(0, 0, 0, 0.3); }
 .navbar-inverse .navbar-nav .open > .nav-link,
 .navbar-inverse .navbar-nav .active > .nav-link,
 .navbar-inverse .navbar-nav .nav-link.open,
 .navbar-inverse .navbar-nav .nav-link.active {
-  color: white; }
+  color: rgba(0, 0, 0, 0.9); }
 .navbar-inverse .navbar-toggler {
-  border-color: rgba(255, 255, 255, 0.1); }
+  border-color: rgba(0, 0, 0, 0.1); }
 .navbar-inverse .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
 .navbar-inverse .navbar-text {
-  color: rgba(255, 255, 255, 0.5); }
+  color: rgba(0, 0, 0, 0.5); }
 
 .card {
   position: relative;
@@ -4162,7 +4159,7 @@ button.close {
   vertical-align: text-top !important; }
 
 .bg-faded {
-  background-color: #f7f7f7; }
+  background-color: #2e3031; }
 
 .bg-primary {
   background-color: #0275d8 !important; }
@@ -6646,8 +6643,8 @@ body, html {
   height: 100%; }
 
 body {
-  background: #fff;
-  color: #292b2c;
+  background: #353839;
+  color: #eceeef;
   position: relative; }
   body.show-sidetree .doc-sidetree {
     display: block; }
@@ -6692,9 +6689,9 @@ body {
 .navbar-container {
   padding: 0;
   margin: 0 auto;
-  border-bottom: 1px solid #f0f0f0;
-  background: #fff;
-  color: #292b2c; }
+  border-bottom: 1px solid #4c4c4c;
+  background: #353839;
+  color: #eceeef; }
   .navbar-container .navbar .navbar-brand .brand-logo {
     vertical-align: middle;
     position: relative;
@@ -6944,9 +6941,9 @@ section.fe-right {
   width: 270px;
   padding: 0.5rem;
   font-size: 0.9rem;
-  border-left: 1px solid #f0f0f0;
-  border-right: 1px solid #f0f0f0;
-  background: #fafafa;
+  border-left: 1px solid #4c4c4c;
+  border-right: 1px solid #4c4c4c;
+  background: #222425;
   overflow-y: auto;
   overflow-x: hidden; }
   .doc-sidetree .doc-sidetree-inner {
@@ -6956,13 +6953,13 @@ section.fe-right {
     padding-left: 25px; }
     .doc-sidetree ol li {
       padding: 2px 0;
-      color: #949393;
+      color: #EEE;
       cursor: pointer; }
       .doc-sidetree ol li a.current, .doc-sidetree ol li a.current:hover {
         font-size: 14px;
         font-weight: bold;
         color: #000;
-        background-color: #FFA; }
+        background-color: #fff33e; }
       .doc-sidetree ol li.hidesub b:after {
         content: "..."; }
       .doc-sidetree ol li.hidesub ol {
@@ -6980,9 +6977,9 @@ section.fe-right {
   width: 270px;
   padding: 0.5rem;
   font-size: 0.9rem;
-  border-left: 1px solid #f0f0f0;
-  border-right: 1px solid #f0f0f0;
-  background: #fafafa;
+  border-left: 1px solid #4c4c4c;
+  border-right: 1px solid #4c4c4c;
+  background: #222425;
   overflow-y: auto;
   overflow-x: hidden; }
   .doc-doctree .doc-doctree-inner {
@@ -7118,20 +7115,20 @@ section.fe-right {
   overflow: hidden;
   border-top: 1px dashed #CCC; }
 .doc-content h1 {
-  color: #000;
+  color: #ADADAD;
   font-size: 20px;
   font-weight: bold;
   margin: 2px;
   padding: 5px; }
 .doc-content h2 {
-  color: #00C;
+  color: #00b9ff;
   font-size: 16px;
   font-weight: bold;
   margin: 2px;
   padding: 5px;
   padding-left: 10px; }
 .doc-content h3, .doc-content h4, .doc-content h5, .doc-content h6 {
-  color: #000000;
+  color: #ffffff;
   font-size: 14px;
   font-weight: bold;
   margin: 2px;
@@ -7163,4 +7160,4 @@ section.fe-right {
   margin-left: 10px;
   padding-left: 10px; }
 
-/*# sourceMappingURL=nutz-bootstrap_light.css.map */
+/*# sourceMappingURL=nutzbs_dark.css.map */
