@@ -54,6 +54,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="https://nutz.cn">社区</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://git.oschina.net/nutz/nutz">Nutz@Git.OsChina</a>
+                </li>
             </ul>
             <div class="form-inline my-2 my-lg-0">
                 <div class="switch switch-small my-2 my-sm-0">
