@@ -6651,13 +6651,13 @@ body {
   body.show-sidetree .doc-btn.toggle-doctree {
     display: none; }
   body.show-sidetree .doc-container {
-    padding-left: 275px; }
+    padding-left: 245px; }
   body.show-doctree .doc-doctree {
     display: block; }
   body.show-doctree .doc-btn.toggle-sidetree {
     display: none; }
   body.show-doctree .doc-container {
-    padding-right: 275px; }
+    padding-right: 245px; }
   body.show-doctree .doc-content, body.show-doctree .doc-title, body.show-doctree .doc-info, body.show-sidetree .doc-content, body.show-sidetree .doc-title, body.show-sidetree .doc-info {
     opacity: 0.3;
     overflow: hidden; }
@@ -6665,12 +6665,24 @@ body {
     body .doc-sidetree, body .doc-doctree {
       display: block; }
     body .doc-container {
-      padding-left: 100px;
-      padding-right: 100px; }
+      padding-left: 130px;
+      padding-right: 130px; }
     body .doc-doctree {
-      right: -180px; }
+      right: -120px; }
     body .doc-sidetree {
-      left: -180px; }
+      left: -120px; }
+    body .doc-container .doc-menu {
+      display: none; } }
+  @media (min-width: 1680px) {
+    body .doc-sidetree, body .doc-doctree {
+      display: block; }
+    body .doc-container {
+      padding-left: 15px;
+      padding-right: 15px; }
+    body .doc-doctree {
+      right: -240px; }
+    body .doc-sidetree {
+      left: -240px; }
     body .doc-container .doc-menu {
       display: none; } }
   @media (max-width: 575px) {
@@ -6950,8 +6962,8 @@ section.fe-right {
   bottom: 0;
   left: 0;
   z-index: 100;
-  width: 270px;
-  padding: 0.5rem;
+  width: 240px;
+  padding: 0.5rem 0.2rem;
   font-size: 0.9rem;
   border-left: 1px solid #f0f0f0;
   border-right: 1px solid #f0f0f0;
@@ -6986,7 +6998,7 @@ section.fe-right {
   bottom: 0;
   right: 0;
   z-index: 100;
-  width: 270px;
+  width: 240px;
   padding: 0.5rem;
   font-size: 0.9rem;
   border-left: 1px solid #f0f0f0;

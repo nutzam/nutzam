@@ -1,5 +1,5 @@
 $nav-h: 58px;
-$sidetree-w: 270px;
+$sidetree-w: 240px;
 
 body, html {
   width: 100%;
@@ -47,6 +47,10 @@ body {
     }
   }
 
+  $shuangfeiyi-w: 120px;
+
+
+
   // 窗口特别大时
   @media (min-width: 1400px) {
     .doc-sidetree, .doc-doctree {
@@ -54,15 +58,38 @@ body {
     }
 
     .doc-container {
-      padding-left: $sidetree-w / 3  + 10px;
-      padding-right: $sidetree-w/ 3 + 10px;
+      padding-left: $shuangfeiyi-w + 10px;
+      padding-right: $shuangfeiyi-w + 10px;
     }
 
     .doc-doctree {
-      right: -$sidetree-w / 3 * 2;
+      right: -$shuangfeiyi-w;
     }
     .doc-sidetree {
-      left: -$sidetree-w / 3 * 2;
+      left: -$shuangfeiyi-w;
+    }
+
+    .doc-container .doc-menu {
+      display: none;
+    }
+  }
+
+  // 窗口最大时
+  @media (min-width: 1680px) {
+    .doc-sidetree, .doc-doctree {
+      display: block;
+    }
+
+    .doc-container {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .doc-doctree {
+      right: -$shuangfeiyi-w * 2;
+    }
+    .doc-sidetree {
+      left: -$shuangfeiyi-w * 2;
     }
 
     .doc-container .doc-menu {
@@ -460,7 +487,7 @@ section.fe-right {
   left: 0;
   z-index: 100;
   width: $sidetree-w;
-  padding: 0.5rem;
+  padding: 0.5rem 0.2rem;
   font-size: 0.9rem;
   border-left: 1px solid $nutz-border-color;
   border-right: 1px solid $nutz-border-color;
