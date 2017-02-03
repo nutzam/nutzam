@@ -6821,6 +6821,8 @@ body {
           text-decoration: none;
           background-color: #7da7d9;
           color: #FFF; }
+  .footer-container a {
+    color: #c8c9ca; }
 
 .to-top {
   padding: 2px 4px;
