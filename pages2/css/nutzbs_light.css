@@ -6830,19 +6830,19 @@ body {
   z-index: 200000; }
 
 #release-bg img {
-  height: 370px;
+  height: 400px;
   max-width: inherit; }
 #release-bg .carousel-indicators {
   display: none; }
 @media (min-width: 576px) {
   #release-bg img {
-    height: 310px;
+    height: 330px;
     max-width: inherit; }
   #release-bg .carousel-indicators {
     display: none; } }
 @media (min-width: 768px) {
   #release-bg img {
-    height: 310px;
+    height: 330px;
     max-width: inherit; }
   #release-bg .carousel-indicators {
     display: none; } }
@@ -6857,7 +6857,7 @@ section.fe-right {
   position: absolute;
   padding: 20px;
   width: 100%;
-  height: 370px;
+  height: 400px;
   top: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.5);
@@ -6865,7 +6865,7 @@ section.fe-right {
   color: #CCC;
   border-radius: 0px;
   width: 100%;
-  height: 370px;
+  height: 400px;
   top: 0;
   right: 0; }
   section.fe-right h4 {
@@ -6892,6 +6892,8 @@ section.fe-right {
     display: none;
     padding: 10px;
     text-align: center; }
+  section.fe-right h4 {
+    text-align: center; }
   section.fe-right .morelink {
     display: none; }
   @media (min-width: 576px) {
@@ -6900,7 +6902,9 @@ section.fe-right {
       width: 100%;
       top: 0;
       right: 0;
-      height: 310px; }
+      height: 330px; }
+      section.fe-right h4 {
+        text-align: center; }
       section.fe-right .morelink {
         display: none; } }
   @media (min-width: 768px) {
@@ -6909,25 +6913,31 @@ section.fe-right {
       width: 100%;
       top: 0;
       right: 0;
-      height: 310px; }
+      height: 330px; }
+      section.fe-right h4 {
+        text-align: left; }
       section.fe-right .morelink {
         display: none; } }
   @media (min-width: 992px) {
     section.fe-right {
-      width: 400px;
+      width: 470px;
       top: 20px;
       right: 60px;
       height: auto;
       border-radius: 6px; }
+      section.fe-right h4 {
+        text-align: left; }
       section.fe-right .morelink {
         display: block; } }
   @media (min-width: 1200px) {
     section.fe-right {
-      width: 400px;
+      width: 470px;
       top: 60px;
       right: 150px;
       height: auto;
       border-radius: 6px; }
+      section.fe-right h4 {
+        text-align: left; }
       section.fe-right .morelink {
         display: block; } }
 

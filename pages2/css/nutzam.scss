@@ -294,8 +294,8 @@ body {
 
 // 主页滚动条
 
-$release-img-h: 310px;
-$release-img-h2: 370px;
+$release-img-h: 330px;
+$release-img-h2: 400px;
 
 #release-bg {
 
@@ -380,6 +380,9 @@ section.fe-right {
   }
 
   @include media-breakpoint-up(xs) {
+    h4 {
+      text-align: center;
+    }
     border-radius: 0px;
     width: 100%;
     height: $release-img-h2;
@@ -391,6 +394,9 @@ section.fe-right {
   }
 
   @include media-breakpoint-up(sm) {
+    h4 {
+      text-align: center;
+    }
     border-radius: 0px;
     width: 100%;
     top: 0;
@@ -401,6 +407,9 @@ section.fe-right {
     }
   }
   @include media-breakpoint-up(md) {
+    h4 {
+      text-align: left;
+    }
     border-radius: 0px;
     width: 100%;
     top: 0;
@@ -411,7 +420,10 @@ section.fe-right {
     }
   }
   @include media-breakpoint-up(lg) {
-    width: 400px;
+    h4 {
+      text-align: left;
+    }
+    width: 470px;
     top: 20px;
     right: 60px;
     height: auto;
@@ -421,7 +433,10 @@ section.fe-right {
     }
   }
   @include media-breakpoint-up(xl) {
-    width: 400px;
+    h4 {
+      text-align: left;
+    }
+    width: 470px;
     top: 60px;
     right: 150px;
     height: auto;
