@@ -3,6 +3,32 @@ $(document).ready(function () {
     var $sidetree = $('.doc-sidetree-inner');
     var $body = $(document.body);
 
+    // 加载右边侧边栏
+    var docnav = [];
+    var docIndex = 1;
+    $('.doc-content h1').each(function () {
+        var $h = $(this);
+        var nm = $h.find('a').attr('name');
+        // nm = nm.replace("_", " ");
+        nm = nm.replace(/_/g, " ");
+        var nobj = {
+            index: 'ndoc-' + docIndex++,
+            name: nm
+        };
+        docnav.push(nobj);
+        $h.attr('id', nobj.index);
+    });
+
+
+    $sidetree.delegate('a.doc-at', 'click', function (e) {
+        e.stopPropagation();
+        $body.removeClass('show-doctree');
+        // 手动下移
+        setTimeout(function () {
+            var cst = $('body').scrollTop();
+            $('body').scrollTop(cst - 58);
+        }, 1);
+    });
 
     // 加载左边侧边栏
     var treeDepth = $body.attr('tree-depth') * 1;
@@ -21,11 +47,28 @@ $(document).ready(function () {
             if (rpath)
                 $(this).attr('href', rpath + $(this).attr('href'));
             if (this.href == pageHref) {
-                $(this).addClass("current");
-                $(this).parents(".zdoc-index-node").removeClass("hidesub");
+                var cnode = $(this);
+                var cnm = cnode.text();
+                cnode.parents(".zdoc-index-node").removeClass("hidesub");
+                var cp = cnode.parent();
+
+                // 替换当前节点，展开字节点
+                var docnavHtml = '';
+                docnavHtml += '<li class="zdoc-index-node current">';
+                docnavHtml += '<b>' + cnm + '</b>';
+                docnavHtml += '<ol class="zdoc-index-wrapper">';
+                for (var i = 0; i < docnav.length; i++) {
+                    var obj = docnav[i];
+                    docnavHtml += '<li class="doc-index-item doc-at-item">';
+                    docnavHtml += ' <a class="doc-at" href="#' + obj.index + '">' + obj.name + '</a>';
+                    docnavHtml += '</li>';
+                }
+                docnavHtml += '</ol>';
+                docnavHtml += '</li>';
+
+                cp.replaceWith(docnavHtml);
             }
         });
-
 
         // 加载底部导航
         var $nleft = $('.doc-nav-left');
@@ -83,39 +126,6 @@ $(document).ready(function () {
         $(this).parent().toggleClass('hidesub');
     });
 
-
-    // 加载右边侧边栏
-    var docnav = [];
-    var docIndex = 1;
-    $('.doc-content h1').each(function () {
-        var $h = $(this);
-        var nm = $h.find('a').attr('name');
-        // nm = nm.replace("_", " ");
-        nm = nm.replace(/_/g, " ");
-        var nobj = {
-            index: 'ndoc-' + docIndex++,
-            name: nm
-        };
-        docnav.push(nobj);
-        $h.attr('id', nobj.index);
-    });
-
-    var docnavHtml = '';
-    docnavHtml += '<nav class="nav flex-column" role="tablist">';
-    for (var i = 0; i < docnav.length; i++) {
-        var obj = docnav[i];
-        docnavHtml += '<a class="nav-link" href="#' + obj.index + '">' + obj.name + '</a>';
-    }
-    docnavHtml += '</nav>';
-    $('.doc-doctree-inner').html(docnavHtml).delegate('a', 'click', function (e) {
-        e.stopPropagation();
-        $body.removeClass('show-doctree');
-        // 手动下移
-        setTimeout(function () {
-            var cst = $('body').scrollTop();
-            $('body').scrollTop(cst - 58);
-        }, 1);
-    });
 
     $('body').scrollspy({target: '#pagedoc-nav'});
 

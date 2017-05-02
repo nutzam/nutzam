@@ -25,9 +25,6 @@
             <div class="doc-sidetree">
                 <div class="doc-sidetree-inner"></div>
             </div>
-            <div class="doc-doctree">
-                <div class="doc-doctree-inner" id="pagedoc-nav"></div>
-            </div>
             <div class="doc-page">
                 <div class="doc-menu">
                     <div class="doc-btn toggle-sidetree"><i class="fa fa-align-left fa-lg"></i></div>
