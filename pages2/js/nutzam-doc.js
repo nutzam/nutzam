@@ -43,6 +43,11 @@ $(document).ready(function () {
         $('.zdoc-index-node').addClass("hidesub");
         // 修改 tree.html 的链接并高亮 tree.html 的项目
         var pageHref = window.location.href;
+        // 去掉#与后面的内容
+        if (pageHref.indexOf('#') != -1) {
+            pageHref = pageHref.substr(0, pageHref.indexOf('#'));
+        }
+        console.log("pageHref: " + pageHref);
         $('a', this).each(function () {
             if (rpath)
                 $(this).attr('href', rpath + $(this).attr('href'));
@@ -127,7 +132,7 @@ $(document).ready(function () {
     });
 
 
-    $('body').scrollspy({target: '#pagedoc-nav'});
+    // $('body').scrollspy({target: '#pagedoc-nav'});
 
     // 两边侧栏
     $('.doc-btn.toggle-sidetree').on('click', function (e) {
@@ -135,10 +140,6 @@ $(document).ready(function () {
         $body.toggleClass('show-sidetree');
     });
 
-    $('.doc-btn.toggle-doctree').on('click', function (e) {
-        e.stopPropagation();
-        $body.toggleClass('show-doctree');
-    });
 
     $body.delegate(".doc-page", 'click', function (e) {
         e.stopPropagation();
@@ -150,44 +151,4 @@ $(document).ready(function () {
         }
     });
 
-    // 双飞翼跟随滚动条
-    // var $doctree = $('.doc-doctree');
-    // var $sidetree = $('.doc-sidetree');
-    // var win = $(window);
-    // win.scroll(function () {
-    //     if ($body.hasClass('show-sidetree')) {
-    //         $sidetree.css('top', 0);
-    //     }
-    //     else if ($body.hasClass('show-doctree')) {
-    //         $doctree.css('top', 0);
-    //     }
-    //     else {
-    //         var scrolling = win.scrollTop();
-    //         console.log('doc scroll:' + scrolling);
-    //         var padd = scrolling - 0;
-    //         padd = padd < 0 ? 0 : padd;
-    //         $sidetree.css('top', padd);
-    //         $doctree.css('top', padd);
-    //     }
-    // });
-
-    // function viewHeight() {
-    //     var height = window.innerHeight
-    //         || document.documentElement.clientHeight
-    //         || document.body.clientHeight;
-    //     console.log(height);
-    //     return height;
-    // }
-    //
-    // function modifySidetreeHeight() {
-    //     var vh = viewHeight();
-    //     $sidetreeW.css('height', vh - 58);
-    // }
-
-    // modifySidetreeHeight();
-
-    // 动态修正sidebar宽高
-    // window.onresize = function () {
-    //     modifySidetreeHeight();
-    // };
 });
