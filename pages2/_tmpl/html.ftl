@@ -16,7 +16,6 @@
     <link rel="stylesheet" type="text/css" href="${doc.bpath}css/balloon.min.css">
     <link rel="stylesheet" type="text/css" href="${doc.bpath}css/bootstrap-switch.min.css">
     <script src="${doc.bpath}js/jquery.toTop.min.js"></script>
-    <script src="${doc.bpath}js/jquery.scrollUnique.js"></script>
 </head>
 <body tree-depth="${page.treeDepth}"
       tree-name="${page.treeName}"

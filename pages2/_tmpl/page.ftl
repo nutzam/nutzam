@@ -9,12 +9,13 @@
     <script src="${doc.bpath}js/jquery.min.js"></script>
     <script src="${doc.bpath}js/js.cookie.min.js"></script>
     <#include "lib:theme.ftl">
-        <link rel="stylesheet" type="text/css" href="${doc.bpath}css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="${doc.bpath}css/balloon.min.css">
-        <link rel="stylesheet" type="text/css" href="${doc.bpath}css/bootstrap-switch.min.css">
-        <link rel="stylesheet" type="text/css" href="${doc.bpath}css/prism.css">
-        <script src="${doc.bpath}js/jquery.toTop.min.js"></script>
-        </head>
+    <link rel="stylesheet" type="text/css" href="${doc.bpath}css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="${doc.bpath}css/balloon.min.css">
+    <link rel="stylesheet" type="text/css" href="${doc.bpath}css/bootstrap-switch.min.css">
+    <link rel="stylesheet" type="text/css" href="${doc.bpath}css/prism.css">
+    <script src="${doc.bpath}js/jquery.toTop.min.js"></script>
+    <script src="${doc.bpath}js/jquery.scrollUnique.js"></script>
+</head>
 <body tree-depth="${page.treeDepth}"
       tree-name="${page.treeName}"
       page-depth="${page.depth}" data-spy="scroll" data-target="#pagedoc-nav">
