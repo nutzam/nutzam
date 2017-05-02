@@ -27,7 +27,8 @@ $(document).ready(function () {
         setTimeout(function () {
             var cst = $('body').scrollTop();
             $('body').scrollTop(cst - 58 - 16);
-        }, 1);
+        }, 10);
+        return true;
     });
 
     // 加载左边侧边栏
@@ -41,13 +42,20 @@ $(document).ready(function () {
 
     $sidetree.load(rpath + treeName, function () {
         $('.zdoc-index-node').addClass("hidesub");
+
         // 修改 tree.html 的链接并高亮 tree.html 的项目
         var pageHref = window.location.href;
+        var docAt = '';
+
         // 去掉#与后面的内容
         if (pageHref.indexOf('#') != -1) {
+            docAt = pageHref.substr(pageHref.indexOf('#') + 1, pageHref.length - 1);
             pageHref = pageHref.substr(0, pageHref.indexOf('#'));
         }
+
         console.log("pageHref: " + pageHref);
+        console.log("pageDoc@: " + docAt);
+
         $('a', this).each(function () {
             if (rpath)
                 $(this).attr('href', rpath + $(this).attr('href'));
@@ -65,13 +73,20 @@ $(document).ready(function () {
                 for (var i = 0; i < docnav.length; i++) {
                     var obj = docnav[i];
                     docnavHtml += '<li class="doc-index-item doc-at-item">';
-                    docnavHtml += ' <a class="doc-at" href="#' + obj.index + '">' + obj.name + '</a>';
+                    docnavHtml += ' <a class="doc-at" at="' + obj.index + '" href="#' + obj.index + '">' + obj.name + '</a>';
                     docnavHtml += '</li>';
                 }
                 docnavHtml += '</ol>';
                 docnavHtml += '</li>';
 
                 cp.replaceWith(docnavHtml);
+
+                // 點擊觸發
+                if (docAt != '') {
+                    ssetTimeout(function () {
+                        $sidetree.find('.doc-at[at=' + docAt + ']').click();
+                    }, 10);
+                }
             }
         });
 
