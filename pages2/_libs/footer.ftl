@@ -19,17 +19,3 @@
         </p>
     </footer>
 </div>
-<div class="to-top">Top &uarr;</div>
-<script>
-    $(document).ready(function () {
-        // 返回顶部
-        $('.to-top').toTop({
-            autohide: true,
-            offset: 420,
-            speed: 500,
-            position: true,
-            right: 15,
-            bottom: 85
-        });
-    });
-</script>

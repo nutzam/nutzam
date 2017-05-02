@@ -66,6 +66,7 @@
         </div>
     </nav>
 </div>
+<div class="to-top">Top &uarr;</div>
 <script>
     $(document).ready(function () {
         // 切换主题
@@ -77,6 +78,16 @@
             onSwitchChange: function (event, state) {
                 useDarkTheme(!state);
             }
+        });
+
+        // 返回顶部
+        $('.to-top').toTop({
+            autohide: true,
+            offset: 420,
+            speed: 500,
+            position: true,
+            right: 15,
+            bottom: 25
         });
     });
 </script>

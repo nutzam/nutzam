@@ -22,7 +22,7 @@ $(document).ready(function () {
 
     $sidetree.delegate('a.doc-at', 'click', function (e) {
         e.stopPropagation();
-        $body.removeClass('show-doctree');
+        $body.removeClass('show-sidetree');
         // 手动下移
         setTimeout(function () {
             var cst = $('body').scrollTop();
@@ -83,7 +83,7 @@ $(document).ready(function () {
 
                 // 點擊觸發
                 if (docAt != '') {
-                    ssetTimeout(function () {
+                    setTimeout(function () {
                         $sidetree.find('.doc-at[at=' + docAt + ']').click();
                     }, 10);
                 }
@@ -146,24 +146,17 @@ $(document).ready(function () {
         $(this).parent().toggleClass('hidesub');
     });
 
+    $('body').scrollspy({target: '#pagedoc-nav'});
 
-    // $('body').scrollspy({target: '#pagedoc-nav'});
-
-    // 两边侧栏
     $('.doc-btn.toggle-sidetree').on('click', function (e) {
         e.stopPropagation();
         $body.toggleClass('show-sidetree');
     });
-
 
     $body.delegate(".doc-page", 'click', function (e) {
         e.stopPropagation();
         if ($body.hasClass('show-sidetree')) {
             $body.toggleClass('show-sidetree');
         }
-        if ($body.hasClass('show-doctree')) {
-            $body.toggleClass('show-doctree');
-        }
     });
-
 });
