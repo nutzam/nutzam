@@ -3,6 +3,9 @@ $(document).ready(function () {
     var $sidetree = $('.doc-sidetree-inner');
     var $body = $(document.body);
 
+    // 左侧滚动栏限制页面整体滚动
+    $sidetreeW.scrollUnique();
+
     // 加载右边侧边栏
     var docnav = [];
     var docIndex = 1;
