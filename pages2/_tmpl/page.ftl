@@ -21,30 +21,28 @@
 <div class="body-header"></div>
 <div class="body-inner">
     <#include "lib:sky.ftl">
-        <div class="container doc-container">
-            <div class="doc-sidetree">
-                <div class="doc-sidetree-inner"></div>
+    <div class="doc-sidetree">
+        <div class="doc-sidetree-inner"></div>
+    </div>
+    <div class="container doc-container">
+        <div class="doc-page">
+            <div class="doc-menu">
+                <div class="doc-btn toggle-sidetree"><i class="fa fa-align-left fa-lg"></i></div>
             </div>
-            <div class="doc-page">
-                <div class="doc-menu">
-                    <div class="doc-btn toggle-sidetree"><i class="fa fa-align-left fa-lg"></i></div>
-                    <div class="doc-btn right toggle-doctree"><i class="fa fa-align-right fa-lg"></i></div>
-                </div>
-                <div class="doc-title">${doc.title}</div>
-                <#include "lib:docinfo.ftl">
-                    <div class="doc-content">${doc.content}</div>
-            </div>
-            <div class="doc-nav">
-                <div class="doc-nav-btn doc-nav-left "><i class="fa fa-arrow-left"></i><span></span></div>
-                <div class="doc-nav-btn doc-nav-right"><span></span><i class="fa fa-arrow-right"></i></div>
-            </div>
+            <div class="doc-title">${doc.title}</div>
+            <#include "lib:docinfo.ftl">
+                <div class="doc-content">${doc.content}</div>
         </div>
-        <#include "lib:footer.ftl">
-            <script src="${doc.bpath}js/tether.min.js"></script>
-            <script src="${doc.bpath}js/bootstrap.min.js"></script>
-            <script src="${doc.bpath}js/bootstrap-switch.min.js"></script>
-            <script src="${doc.bpath}js/prism.js"></script>
-            <script src="${doc.bpath}js/nutzam-doc.js"></script>
+        <div class="doc-nav">
+            <div class="doc-nav-btn doc-nav-left "><i class="fa fa-arrow-left"></i><span></span></div>
+            <div class="doc-nav-btn doc-nav-right"><span></span><i class="fa fa-arrow-right"></i></div>
+        </div>
+    </div>
 </div>
+<script src="${doc.bpath}js/tether.min.js"></script>
+<script src="${doc.bpath}js/bootstrap.min.js"></script>
+<script src="${doc.bpath}js/bootstrap-switch.min.js"></script>
+<script src="${doc.bpath}js/prism.js"></script>
+<script src="${doc.bpath}js/nutzam-doc.js"></script>
 </body>
 </html>

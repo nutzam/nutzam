@@ -1,5 +1,5 @@
 $nav-h: 58px;
-$sidetree-w: 240px;
+$sidetree-w: 300px;
 
 body, html {
   width: 100%;
@@ -9,101 +9,8 @@ body, html {
 body {
   background: $body-bg;
   color: $body-color;
-
   position: relative;
-
-  &.show-sidetree {
-
-    .doc-sidetree {
-      display: block;
-    }
-
-    .doc-btn.toggle-doctree {
-      display: none;
-    }
-
-    .doc-container {
-      padding-left: $sidetree-w + 5px;
-    }
-  }
-
-  &.show-doctree {
-
-    .doc-doctree {
-      display: block;
-    }
-    .doc-btn.toggle-sidetree {
-      display: none;
-    }
-    .doc-container {
-      padding-right: $sidetree-w + 5px;
-    }
-  }
-
-  &.show-doctree, &.show-sidetree {
-    .doc-content, .doc-title, .doc-info {
-      opacity: 0.3;
-      overflow: hidden;
-    }
-  }
-
-  $shuangfeiyi-w: 120px;
-
-
-
-  // 窗口特别大时
-  @media (min-width: 1400px) {
-    .doc-sidetree, .doc-doctree {
-      display: block;
-    }
-
-    .doc-container {
-      padding-left: $shuangfeiyi-w + 10px;
-      padding-right: $shuangfeiyi-w + 10px;
-    }
-
-    .doc-doctree {
-      right: -$shuangfeiyi-w;
-    }
-    .doc-sidetree {
-      left: -$shuangfeiyi-w;
-    }
-
-    .doc-container .doc-menu {
-      display: none;
-    }
-  }
-
-  // 窗口最大时
-  @media (min-width: 1680px) {
-    .doc-sidetree, .doc-doctree {
-      display: block;
-    }
-
-    .doc-container {
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-
-    .doc-doctree {
-      right: -$shuangfeiyi-w * 2;
-    }
-    .doc-sidetree {
-      left: -$shuangfeiyi-w * 2;
-    }
-
-    .doc-container .doc-menu {
-      display: none;
-    }
-  }
-
-  // 最小的时候，container
-  @include media-breakpoint-down(xs) {
-    .container {
-      padding-left: 5px;
-      padding-right: 5px;
-    }
-  }
+  overflow-x: hidden;
 }
 
 .body-header {
@@ -479,10 +386,11 @@ section.fe-right {
 }
 
 // 文档页部分
+
 .doc-sidetree {
-  display: none;
-  position: absolute;
-  top: 0;
+  display: block;
+  position: fixed;
+  top: $nav-h;
   bottom: 0;
   left: 0;
   z-index: 100;
@@ -543,36 +451,6 @@ section.fe-right {
 
 }
 
-.doc-doctree {
-  display: none;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 100;
-  width: $sidetree-w;
-  padding: 0.5rem;
-  font-size: 0.9rem;
-  border-left: 1px solid $nutz-border-color;
-  border-right: 1px solid $nutz-border-color;
-  background: $nutz-doc-bg;
-  overflow-y: auto;
-  overflow-x: hidden;
-
-  .doc-doctree-inner {
-    //width: $sidetree-w - 16px;
-    //height: 100%;
-    //position: fixed;
-    //top: $nav-h + 8px;
-    width: 100%;
-  }
-
-  a {
-    padding: 2px 0;
-    font-size: 0.9rem;
-  }
-
-}
 
 .doc-nav {
   display: flex;
@@ -626,9 +504,9 @@ section.fe-right {
 }
 
 .doc-container {
-  position: relative;
-  zoom: 1;
   padding-bottom: 1rem;
+  width: 100%;
+  padding-left: $sidetree-w;
 
   &:after {
     clear: both;
@@ -639,9 +517,11 @@ section.fe-right {
     visibility: hidden;
   }
 
-  @include media-breakpoint-up(md) {
-    min-height: 680px;
+
+  .doc-page {
+    padding: 0 0.5rem;
   }
+
 
   .doc-menu {
     display: flex;
@@ -650,6 +530,7 @@ section.fe-right {
     margin-left: 0.05rem;
     margin-right: 0.05rem;
   }
+
   .doc-btn {
     color: $nutz-blue;
     display: flex;

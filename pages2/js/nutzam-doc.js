@@ -26,7 +26,7 @@ $(document).ready(function () {
         // 手动下移
         setTimeout(function () {
             var cst = $('body').scrollTop();
-            $('body').scrollTop(cst - 58);
+            $('body').scrollTop(cst - 58 - 16);
         }, 1);
     });
 
@@ -151,25 +151,25 @@ $(document).ready(function () {
     });
 
     // 双飞翼跟随滚动条
-    var $doctree = $('.doc-doctree');
-    var $sidetree = $('.doc-sidetree');
-    var win = $(window);
-    win.scroll(function () {
-        if ($body.hasClass('show-sidetree')) {
-            $sidetree.css('top', 0);
-        }
-        else if ($body.hasClass('show-doctree')) {
-            $doctree.css('top', 0);
-        }
-        else {
-            var scrolling = win.scrollTop();
-            console.log('doc scroll:' + scrolling);
-            var padd = scrolling - 0;
-            padd = padd < 0 ? 0 : padd;
-            $sidetree.css('top', padd);
-            $doctree.css('top', padd);
-        }
-    });
+    // var $doctree = $('.doc-doctree');
+    // var $sidetree = $('.doc-sidetree');
+    // var win = $(window);
+    // win.scroll(function () {
+    //     if ($body.hasClass('show-sidetree')) {
+    //         $sidetree.css('top', 0);
+    //     }
+    //     else if ($body.hasClass('show-doctree')) {
+    //         $doctree.css('top', 0);
+    //     }
+    //     else {
+    //         var scrolling = win.scrollTop();
+    //         console.log('doc scroll:' + scrolling);
+    //         var padd = scrolling - 0;
+    //         padd = padd < 0 ? 0 : padd;
+    //         $sidetree.css('top', padd);
+    //         $doctree.css('top', padd);
+    //     }
+    // });
 
     // function viewHeight() {
     //     var height = window.innerHeight
