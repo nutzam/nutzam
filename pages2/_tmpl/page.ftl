@@ -26,6 +26,7 @@
         <div class="doc-sidetree-inner">
             <div class="doc-sidetree-searchbar">
                 <input type="text" class="form-control" placeholder="输入关键字进行检索">
+                <i class="fa fa-fw fa-remove"></i>
             </div>
             <div class="doc-sidetree-content"></div>
         </div>

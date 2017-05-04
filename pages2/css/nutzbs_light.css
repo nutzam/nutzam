@@ -6940,14 +6940,6 @@ section.fe-right {
   background: #fafafa;
   overflow-y: auto;
   overflow-x: hidden; }
-  .doc-sidetree .doc-sidetree-inner {
-    width: 100%; }
-  .doc-sidetree .doc-sidetree-searchbar {
-    width: 100%;
-    padding: 6px; }
-    .doc-sidetree .doc-sidetree-searchbar input {
-      height: 30px;
-      font-size: 0.8rem; }
   .doc-sidetree ol {
     margin: 0;
     padding-left: 25px; }
@@ -6976,6 +6968,37 @@ section.fe-right {
     font-weight: bold;
     color: #000;
     background-color: #FFA; }
+
+.doc-sidetree-inner {
+  width: 100%; }
+  .doc-sidetree-inner.with-search .zdoc-index-node.hidesub b:after {
+    content: ""; }
+  .doc-sidetree-inner.with-search .zdoc-index-node.hidesub ol {
+    display: block; }
+  .doc-sidetree-inner.with-search .doc-sidetree-searchbar i {
+    display: block; }
+
+.doc-sidetree-searchbar {
+  width: 100%;
+  padding: 6px;
+  position: relative; }
+  .doc-sidetree-searchbar input {
+    height: 30px;
+    font-size: 0.8rem; }
+  .doc-sidetree-searchbar i {
+    display: none;
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background: #ababab;
+    color: #FFF;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer; }
 
 .doc-nav {
   display: flex;

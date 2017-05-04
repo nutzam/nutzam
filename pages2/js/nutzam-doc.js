@@ -1,13 +1,29 @@
 $(document).ready(function () {
-    var $sidetreeW = $('.doc-sidetree');
-    var $sidetree = $('.doc-sidetree-inner');
+    var $sidetree = $('.doc-sidetree');
+    var $sidetreeInner = $('.doc-sidetree-inner');
     var $sidetreeC = $('.doc-sidetree-content');
+    var $sidetreeSInput = $('.doc-sidetree-searchbar input');
     var $body = $(document.body);
 
-    // 左侧滚动栏限制页面整体滚动
-    $sidetreeW.scrollUnique();
 
-    // 加载右边侧边栏
+    // 搜索过滤功能
+    $sidetreeSInput.on('keyup', function () {
+        var sk = $sidetreeSInput.val();
+        console.log("skey: [" + sk + "]");
+        var skt = sk.trim();
+
+        // 如果不为空，添加清楚按钮
+        if(sk != ''){
+            $sidetreeInner.addClass('with-search');
+        } else {
+            $sidetreeInner.removeClass('with-search');
+        }
+    });
+
+    // 左侧滚动栏限制页面整体滚动
+    $sidetree.scrollUnique();
+
+    // 页内跳转数据
     var docnav = [];
     var docIndex = 1;
     $('.doc-content h1').each(function () {
@@ -23,8 +39,8 @@ $(document).ready(function () {
         $h.attr('id', nobj.index);
     });
 
-
-    $sidetree.delegate('a.doc-at', 'click', function (e) {
+    // 页内跳转事件
+    $sidetreeInner.delegate('a.doc-at', 'click', function (e) {
         e.stopPropagation();
         $body.removeClass('show-sidetree');
         // 手动下移
@@ -88,7 +104,7 @@ $(document).ready(function () {
                 // 點擊觸發
                 if (docAt != '') {
                     setTimeout(function () {
-                        $sidetree.find('.doc-at[at=' + docAt + ']').click();
+                        $sidetreeInner.find('.doc-at[at=' + docAt + ']').click();
                     }, 10);
                 }
             }
@@ -97,7 +113,7 @@ $(document).ready(function () {
         // 加载底部导航
         var $nleft = $('.doc-nav-left');
         var $nright = $('.doc-nav-right');
-        var $ca = $sidetree.find('a.current');
+        var $ca = $sidetreeInner.find('a.current');
         var $cli = $ca.parent();
 
         // nav-prev

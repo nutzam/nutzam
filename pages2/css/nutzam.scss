@@ -431,24 +431,6 @@ section.fe-right {
   overflow-y: auto;
   overflow-x: hidden;
 
-  .doc-sidetree-inner {
-    width: 100%;
-  }
-
-  .doc-sidetree-searchbar {
-    width: 100%;
-    padding: 6px;
-
-    input {
-      height: 30px;
-      font-size: 0.8rem;
-    }
-  }
-
-  .doc-sidetree-content {
-
-  }
-
   ol {
     margin: 0;
     padding-left: 25px;
@@ -495,6 +477,59 @@ section.fe-right {
       background-color: #FFA;
     }
   }
+}
+
+.doc-sidetree-inner {
+  width: 100%;
+
+  &.with-search {
+
+    .zdoc-index-node.hidesub {
+      b:after {
+        content: "";
+      }
+      ol {
+        display: block;
+      }
+    }
+
+    .doc-sidetree-searchbar i {
+      display: block;
+    }
+
+  }
+}
+
+.doc-sidetree-searchbar {
+  width: 100%;
+  padding: 6px;
+  position: relative;
+
+  input {
+    height: 30px;
+    font-size: 0.8rem;
+  }
+
+  $bsize: 20px;
+
+  i {
+    display: none;
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    width: $bsize;
+    height: $bsize;
+    line-height: $bsize;
+    text-align: center;
+    background: #ababab;
+    color: #FFF;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+  }
+}
+
+.doc-sidetree-content {
 
 }
 
