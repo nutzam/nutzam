@@ -23,7 +23,12 @@
 <div class="body-inner">
     <#include "lib:sky.ftl">
     <div class="doc-sidetree">
-        <div class="doc-sidetree-inner"></div>
+        <div class="doc-sidetree-inner">
+            <div class="doc-sidetree-searchbar">
+                <input type="text" class="form-control" placeholder="输入关键字进行检索">
+            </div>
+            <div class="doc-sidetree-content"></div>
+        </div>
     </div>
     <div class="doc-container">
         <div class="doc-page">
@@ -32,7 +37,7 @@
             </div>
             <div class="doc-title">${doc.title}</div>
             <#include "lib:docinfo.ftl">
-                <div class="doc-content">${doc.content}</div>
+            <div class="doc-content">${doc.content}</div>
         </div>
         <div class="doc-nav">
             <div class="doc-nav-btn doc-nav-left "><i class="fa fa-arrow-left"></i><span></span></div>

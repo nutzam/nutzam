@@ -1,6 +1,7 @@
 $(document).ready(function () {
     var $sidetreeW = $('.doc-sidetree');
     var $sidetree = $('.doc-sidetree-inner');
+    var $sidetreeC = $('.doc-sidetree-content');
     var $body = $(document.body);
 
     // 左侧滚动栏限制页面整体滚动
@@ -43,7 +44,7 @@ $(document).ready(function () {
         rpath += '../';
     }
 
-    $sidetree.load(rpath + treeName, function () {
+    $sidetreeC.load(rpath + treeName, function () {
         $('.zdoc-index-node').addClass("hidesub");
 
         // 修改 tree.html 的链接并高亮 tree.html 的项目

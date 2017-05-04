@@ -13,15 +13,13 @@ body {
   overflow-x: hidden;
 
   &.show-sidetree {
-
     .doc-sidetree {
       display: block;
     }
-
   }
 
   // 超过这个宽度时
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
 
     .doc-sidetree {
       display: block;
@@ -435,6 +433,20 @@ section.fe-right {
 
   .doc-sidetree-inner {
     width: 100%;
+  }
+
+  .doc-sidetree-searchbar {
+    width: 100%;
+    padding: 6px;
+
+    input {
+      height: 30px;
+      font-size: 0.8rem;
+    }
+  }
+
+  .doc-sidetree-content {
+
   }
 
   ol {

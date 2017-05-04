@@ -6649,7 +6649,7 @@ body {
   overflow-x: hidden; }
   body.show-sidetree .doc-sidetree {
     display: block; }
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     body .doc-sidetree {
       display: block; }
     body .doc-container {
@@ -6942,6 +6942,12 @@ section.fe-right {
   overflow-x: hidden; }
   .doc-sidetree .doc-sidetree-inner {
     width: 100%; }
+  .doc-sidetree .doc-sidetree-searchbar {
+    width: 100%;
+    padding: 6px; }
+    .doc-sidetree .doc-sidetree-searchbar input {
+      height: 30px;
+      font-size: 0.8rem; }
   .doc-sidetree ol {
     margin: 0;
     padding-left: 25px; }
