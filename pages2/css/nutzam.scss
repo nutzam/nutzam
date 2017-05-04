@@ -498,6 +498,13 @@ section.fe-right {
     }
 
   }
+
+  &.no-match {
+
+    .doc-nomatch {
+      display: block;
+    }
+  }
 }
 
 .doc-sidetree-searchbar {
@@ -516,7 +523,7 @@ section.fe-right {
     display: none;
     position: absolute;
     right: 12px;
-    top: 10px;
+    top: 11px;
     width: $bsize;
     height: $bsize;
     line-height: $bsize;
@@ -531,6 +538,16 @@ section.fe-right {
 
 .doc-sidetree-content {
 
+  .nm-skey {
+    display: none;
+  }
+
+}
+
+.doc-nomatch {
+  display: none;
+  width: 100%;
+  padding: 6px;
 }
 
 .doc-nav {

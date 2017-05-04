@@ -2,6 +2,7 @@ $(document).ready(function () {
     var $sidetree = $('.doc-sidetree');
     var $sidetreeInner = $('.doc-sidetree-inner');
     var $sidetreeC = $('.doc-sidetree-content');
+    var $sidetreeS = $('.doc-sidetree-searchbar');
     var $sidetreeSInput = $('.doc-sidetree-searchbar input');
     var $body = $(document.body);
 
@@ -10,14 +11,61 @@ $(document).ready(function () {
     $sidetreeSInput.on('keyup', function () {
         var sk = $sidetreeSInput.val();
         console.log("skey: [" + sk + "]");
-        var skt = sk.trim();
+        var skt = sk.trim().toLowerCase();
 
         // 如果不为空，添加清楚按钮
-        if(sk != ''){
+        $sidetreeInner.addClass('no-match');
+        if (sk != '') {
             $sidetreeInner.addClass('with-search');
         } else {
             $sidetreeInner.removeClass('with-search');
+            $sidetreeC.find('.zdoc-index-node').removeClass('nm-skey');
+            $sidetreeC.find('.doc-index-item').removeClass('nm-skey');
         }
+
+        var findMatch = false;
+
+        // 过滤信息
+        $sidetreeC.find('.zdoc-index-node').addClass('nm-skey');
+        $sidetreeC.find('.doc-index-item').addClass('nm-skey');
+
+        // 依次判断
+        $sidetreeC.find('.zdoc-index-node').each(function (i, ele) {
+            var $znode = $(ele);
+            if ($znode.attr('skey').indexOf(skt) != -1) {
+                $znode.removeClass('nm-skey');
+                findMatch = true;
+            } else {
+                $znode.addClass('nm-skey');
+            }
+        });
+        $sidetreeC.find('.doc-index-item').each(function (i, ele) {
+            var $znode = $(ele);
+            if ($znode.attr('skey').indexOf(skt) != -1) {
+                $znode.removeClass('nm-skey');
+                findMatch = true;
+                // 查找父亲节点
+                var $pnode = $znode.parent();
+                while (!$pnode.hasClass('zdoc-index-container')) {
+                    $pnode.removeClass('nm-skey');
+                    $pnode = $pnode.parent();
+                }
+            } else {
+                $znode.addClass('nm-skey');
+            }
+        });
+
+        if (findMatch) {
+            $sidetreeInner.removeClass('no-match');
+        }
+    });
+
+    $sidetreeS.find('i').on('click', function () {
+        $sidetreeInner.removeClass('with-search');
+        $sidetreeInner.removeClass('no-match ');
+        $sidetreeC.find('.zdoc-index-node').removeClass('nm-skey');
+        $sidetreeC.find('.doc-index-item').removeClass('nm-skey');
+        $sidetreeSInput.val('');
     });
 
     // 左侧滚动栏限制页面整体滚动
@@ -108,6 +156,21 @@ $(document).ready(function () {
                     }, 10);
                 }
             }
+        });
+
+        // 处理节点，添加过滤用信息
+        $sidetreeInner.find('.zdoc-index-node').each(function (i, ele) {
+            var $znode = $(ele);
+            var znm = $znode.children('b').text();
+            console.log('znm:' + znm);
+            $znode.attr("skey", znm.toLowerCase());
+        });
+
+        $sidetreeInner.find('.doc-index-item').each(function (i, ele) {
+            var $znode = $(ele);
+            var znm = $znode.children('a').text();
+            console.log('dnm:' + znm);
+            $znode.attr("skey", znm.toLowerCase());
         });
 
         // 加载底部导航

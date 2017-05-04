@@ -6977,6 +6977,8 @@ section.fe-right {
     display: block; }
   .doc-sidetree-inner.with-search .doc-sidetree-searchbar i {
     display: block; }
+  .doc-sidetree-inner.no-match .doc-nomatch {
+    display: block; }
 
 .doc-sidetree-searchbar {
   width: 100%;
@@ -6989,7 +6991,7 @@ section.fe-right {
     display: none;
     position: absolute;
     right: 12px;
-    top: 10px;
+    top: 11px;
     width: 20px;
     height: 20px;
     line-height: 20px;
@@ -6999,6 +7001,14 @@ section.fe-right {
     border-radius: 50%;
     overflow: hidden;
     cursor: pointer; }
+
+.doc-sidetree-content .nm-skey {
+  display: none; }
+
+.doc-nomatch {
+  display: none;
+  width: 100%;
+  padding: 6px; }
 
 .doc-nav {
   display: flex;
