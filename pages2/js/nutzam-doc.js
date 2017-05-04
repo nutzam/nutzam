@@ -10,7 +10,7 @@ $(document).ready(function () {
     // 搜索过滤功能
     $sidetreeSInput.on('keyup', function () {
         var sk = $sidetreeSInput.val();
-        console.log("skey: [" + sk + "]");
+        // console.log("skey: [" + sk + "]");
         var skt = sk.trim().toLowerCase();
 
         // 如果不为空，添加清楚按钮
@@ -162,14 +162,14 @@ $(document).ready(function () {
         $sidetreeInner.find('.zdoc-index-node').each(function (i, ele) {
             var $znode = $(ele);
             var znm = $znode.children('b').text();
-            console.log('znm:' + znm);
+            // console.log('znm:' + znm);
             $znode.attr("skey", znm.toLowerCase());
         });
 
         $sidetreeInner.find('.doc-index-item').each(function (i, ele) {
             var $znode = $(ele);
             var znm = $znode.children('a').text();
-            console.log('dnm:' + znm);
+            // console.log('dnm:' + znm);
             $znode.attr("skey", znm.toLowerCase());
         });
 

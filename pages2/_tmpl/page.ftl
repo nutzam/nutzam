@@ -28,6 +28,7 @@
                 <input type="text" class="form-control" placeholder="输入关键字进行检索">
                 <i class="fa fa-fw fa-remove"></i>
             </div>
+            <div class="doc-nomatch">无匹配结果，请重新输入</div>
             <div class="doc-sidetree-content"></div>
         </div>
     </div>
