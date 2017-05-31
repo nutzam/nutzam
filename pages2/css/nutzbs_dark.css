@@ -7181,4 +7181,12 @@ section.fe-right {
   margin-left: 10px;
   padding-left: 10px; }
 
+.doc-wiki {
+  text-align: center;
+  background: #c5c5c5;
+  color: #FFF;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  font-size: 0.9rem; }
+
 /*# sourceMappingURL=nutzbs_dark.css.map */

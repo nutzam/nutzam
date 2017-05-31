@@ -40,6 +40,9 @@
             <div class="doc-title">${doc.title}</div>
             <#include "lib:docinfo.ftl">
             <div class="doc-content">${doc.content}</div>
+                <div class="doc-wiki">
+                    <p>本页面的文字允许在<a class="external text" href="http://zh.wikipedia.org/wiki/Wikipedia:CC-BY-SA-3.0协议文本">知识共享 署名-相同方式共享 3.0协议</a>和<a class="external text" href="http://zh.wikipedia.org/wiki/Wikipedia:GNU自由文档许可证文本">GNU自由文档许可证</a>下修改和再使用。</p>
+                </div>
         </div>
         <div class="doc-nav">
             <div class="doc-nav-btn doc-nav-left "><i class="fa fa-arrow-left"></i><span></span></div>
