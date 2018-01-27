@@ -24,14 +24,9 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="nutz-project">
                         <a class="dropdown-item" href="https://github.com/nutzam/nutz">Nutz(核心包)</a>
+                        <a class="dropdown-item" href="https://github.com/nutzam/nutzboot">NutzBoot(微服务)</a>
                         <a class="dropdown-item" href="https://github.com/nutzam/nutzmore">NutzMore(插件与扩展)</a>
-                        <a class="dropdown-item" href="https://github.com/nutzam/nutzwx">NutzWx(公众号操作封装库)</a>
-                        <a class="dropdown-item" href="https://github.com/nutzam/nutzmongo">NutzMongo(MongoDB驱动的薄封装)</a>
-                        <a class="dropdown-item" href="https://github.com/nutzam/nutz-web">NutzWeb(A Jetty launcher)</a>
-                        <a class="dropdown-item"
-                           href="https://github.com/nutzam/nutz-quartz">NutzQuartz(Quartz表达式解析执行类库)</a>
-                        <a class="dropdown-item" href="https://github.com/nutzam/nutz-qrcode">NutzQrcode(二维码生成/解析)</a>
-                        <a class="dropdown-item" href="https://github.com/zozoh/zdoc">zDoc(支持zDoc,markdown文档生成工具)</a>
+                        <a class="dropdown-item" href="https://github.com/nutzam/nutzwx">NutzWX(微信公众号操作封装库)</a>
                         <a class="dropdown-item" href="https://github.com/pangwu86/nutz-logo">NutzLogo(跳蛋版实现)</a>
                         <a class="dropdown-item" href="https://nutz.cn/yvr/t/tdb5l3e7pajv1ptl1f0nveg1bk">Demo(社区提供)</a>
                     </div>
@@ -43,7 +38,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="nutz-doc">
                         <a class="dropdown-item" href="${page.bpath}core/nutz_preface.html">Nutz使用手册(核心包)</a>
-                        <a class="dropdown-item" href="${page.bpath}javadoc/1.r.59/">NutzAPI文档(核心包)</a>
+                        <a class="dropdown-item" href="${page.bpath}javadoc/">NutzAPI文档(核心包)</a>
                         <a class="dropdown-item" href="http://nutzbook.wendal.net/">进阶手册(Wendal出品，偏实战)</a>
                         <a class="dropdown-item" href="${page.bpath}zdoc/syntax.html">zDoc使用手册</a>
                     </div>
