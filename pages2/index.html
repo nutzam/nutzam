@@ -61,16 +61,17 @@
     new Vue({
         el: "#nutz-home",
         data: {
-            name: "香梨",
-            version: "1.r.63",
-            carousel: 2
+            name: "怪物猎人",
+            version: "1.r.65",
+            carousel: 3,
+            imgtp: "png"
         },
         methods: {
             cimg: function (n) {
                 if(n < 10){
                     n = "0" + n;
                 }
-                return "../imgs/"+ this.version + "/" + n + ".jpg";
+                return "../imgs/"+ this.version + "/" + n + "." + this.imgtp;
             }
         }
     })
