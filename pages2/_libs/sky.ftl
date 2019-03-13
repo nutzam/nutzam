@@ -49,6 +49,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="https://nutz.cn">社区</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://plugins.jetbrains.com/plugin/10311-nutzcodeinsight ">IDEA插件</a>
+                </li>
             </ul>
             <div class="form-inline my-2 my-lg-0">
                 <div class="switch switch-small my-2 my-sm-0">
